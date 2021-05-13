@@ -1,0 +1,16 @@
+@import url("https://db.onlinewebfonts.com/c/c2988552206031b82497c4a05a393759?family=Novecento+Wide+Medium");
+
+@font-face {
+  font-family: "Novecento Wide Medium";
+  src: url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.eot");
+  src: url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c2988552206031b82497c4a05a393759.svg#Novecento Wide Medium")
+      format("svg");
+}

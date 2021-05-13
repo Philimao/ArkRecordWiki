@@ -1,0 +1,7 @@
+a.nav-link {
+  color: black;
+}
+
+.pending-record:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+.form .btn {
+  width: 100%;
+}
+
+a.text-end {
+  color: black;
+  cursor: pointer;
+  text-decoration: wavy;
+}
+
+a.text-end:hover {
+  color: #00B7FF;
+  text-decoration: underline;
+}
+
+.form {
+  width: 90vw;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* At desktop */
+@media (min-width: 768px) {
+  .form {
+    top: 20vh;
+    width: 518px;
+  }
+}

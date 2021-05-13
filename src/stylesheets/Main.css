@@ -1,0 +1,87 @@
+body {
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.tab-content {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.nav-link {
+  min-width: 7rem;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+:required + label:after {
+  content: " *";
+  color: red;
+}
+
+label {
+  opacity: 0.65;
+}
+
+.container {
+  max-width: 992px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 992px;
+  }
+}
+
+/* At desktop */
+@media (min-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  #search_form {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  }
+}
+
+/* At mobile */
+@media (max-width: 992px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.modal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

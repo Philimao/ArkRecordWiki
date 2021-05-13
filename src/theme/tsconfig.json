@@ -1,0 +1,3905 @@
+{
+  "name": "root",
+  "childNodes": [
+    {
+      "story": "活动关卡",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "骑兵与猎人",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "GT-1",
+              "cn_name": "日正当中",
+              "description": "日正当中，黄沙漫天，卡西米尔村外，荒废的绞刑架下，贪婪狡猾的暴徒身后，孤身穿越荒野的骑兵，正悄悄握紧了长枪。 无法携带部分登场角色",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xELm4.png"
+            },
+            {
+              "index": 1,
+              "operation": "GT-2",
+              "cn_name": "察言观色",
+              "description": "各种各样的人和事汇聚在村子里的酒吧，他们各怀鬼胎，权衡利弊，最后在杯酒间作出决定，成群结队的出发，刚到门口就大打出手，这就是赏金猎人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xE7lT.png"
+            },
+            {
+              "index": 2,
+              "operation": "GT-3",
+              "cn_name": "意外之旅",
+              "description": "通向宝藏的旅途总归不会一帆风顺，麻烦总是接踵而至，而其中大部分明显不懂得何为公平决斗。 无法携带部分登场角色",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEH6U.png"
+            },
+            {
+              "index": 3,
+              "operation": "GT-4",
+              "cn_name": "污点证人",
+              "description": "不确定性才是世间一切的正道，信仰和同伴乃至敌人都是如此。 <腐蚀地表>置于其上的我方单位防御力减半",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEbXF.png"
+            },
+            {
+              "index": 4,
+              "operation": "GT-5",
+              "cn_name": "各抒己见",
+              "description": "人们总说巨大财富的背后都隐藏着罪恶，那么巨大财富的面前，就只剩不太雅观的斗殴和流血了。 <腐蚀地表>置于其上的我方单位防御力减半",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xETpV.png"
+            },
+            {
+              "index": 5,
+              "operation": "GT-6",
+              "cn_name": "黄金三角",
+              "description": "每个人都有自己的路，你选择你的，她选择她的，只是有一些人的路比其他人要艰难得多，不过无论如何，总是殊途同归的。 <腐蚀地表>置于其上的我方单位防御力减半。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEO0J.png"
+            },
+            {
+              "index": 6,
+              "operation": "GT-EX-1",
+              "cn_name": "大地惊雷",
+              "description": "这些从地底里爬出来的小东西非常致命，因为寻宝人和淘金者的挖掘摧毁了它们的家园，它们也要如法炮制。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEX79.png"
+            },
+            {
+              "index": 7,
+              "operation": "GT-EX-2",
+              "cn_name": "老无所依",
+              "description": "简单的地形，粗暴的战斗，没什么大用的陷阱和洒了一地的金币！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEvkR.png"
+            },
+            {
+              "index": 8,
+              "operation": "GT-EX-3",
+              "cn_name": "与狼共舞",
+              "description": "“小心狼群” 。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xExt1.png"
+            },
+            {
+              "index": 9,
+              "operation": "GT-HX-1",
+              "cn_name": "碧血金沙",
+              "description": "在地下掘金总会让人心情烦躁，因为你分不清落在头上的是尘土还是源石虫。 <腐蚀地表>置于其上的我方单位防御力减半",
+              "challenge": "我方所有远程单位的部署费用增加至3倍  敌方单位的攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xEzfx.png"
+            },
+            {
+              "index": 10,
+              "operation": "GT-HX-2",
+              "cn_name": "关山飞渡",
+              "description": "想要胜利，就必须在曲折蜿蜒的道路与重重包围下一步不停，杀出血路，这是对敌人而言。 <腐蚀地表>置于其上的我方单位防御力减半",
+              "challenge": "敌方单位的攻击速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xVpp6.png"
+            },
+            {
+              "index": 11,
+              "operation": "GT-HX-3",
+              "cn_name": "西部往事",
+              "description": "拥有精良装备的敌人从四面八方出现，源源不断地发起进攻，毕竟你挡住了这里唯一的洞口。 <腐蚀地表>置于其上的我方单位防御力减半 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "障碍物的部署费用增加至15  敌方单位数值不变",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xVPXD.png"
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "episode": "火蓝之心",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "OF-1",
+              "cn_name": "火山制造",
+              "description": "盛夏的热意辅以激昂的音乐，这似乎是个完美的节日。 不过，完美通常就是用来打破的，巨大的危机，悄然而至。 无法携带部分登场角色",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPWuQ.png"
+            },
+            {
+              "index": 1,
+              "operation": "OF-2",
+              "cn_name": "演出继续",
+              "description": "演出必须被终止，但是，并不是所有人都这么想。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPfBj.png"
+            },
+            {
+              "index": 2,
+              "operation": "OF-3",
+              "cn_name": "竞走赛",
+              "description": "当你想到，只要你一个电话就会有许多人赶过来帮你时，即使是在逃跑途中，大概也会很安心吧。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPINq.png"
+            },
+            {
+              "index": 3,
+              "operation": "OF-4",
+              "cn_name": "他是将军",
+              "description": "必须严肃地指出，在一座普通的城市中，出现一个能与赫拉格将军抗衡的人真的很少。这次真的是个意外。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPhHs.png"
+            },
+            {
+              "index": 4,
+              "operation": "OF-5",
+              "cn_name": "别阻止我",
+              "description": "真正的勇敢，可以是面对并接受真相的勇气。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSP2jg.png"
+            },
+            {
+              "index": 5,
+              "operation": "OF-6",
+              "cn_name": "杀手女皇",
+              "description": "真正的反派，总会最不合时宜地登场 ——当然，对他们来说，那就是他们的时宜。 无法携带部分登场角色",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPo40.png"
+            },
+            {
+              "index": 6,
+              "operation": "OF-7",
+              "cn_name": "一锤定音",
+              "description": "在最盛大的场合，放一朵最美丽的烟花，一个很令人振奋的想法——假如反派不这么想的话。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSP7CV.png"
+            },
+            {
+              "index": 7,
+              "operation": "OF-8",
+              "cn_name": "汐斯塔狂想曲",
+              "description": "虽然只是一个意外，不过，一头巨大的怪兽作为事件的收尾，至少比一个走投无路的反派要来的有趣。 <岩浆喷射处>每隔一定时间会喷出岩浆，对周围8格内的我方单位造成大量伤害且融化障碍物",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPH3T.png"
+            },
+            {
+              "index": 8,
+              "operation": "OF-F1",
+              "cn_name": "水上滑梯",
+              "description": "下水之前，请不要忘记做好热身运动。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPzU1.png"
+            },
+            {
+              "index": 9,
+              "operation": "OF-F2",
+              "cn_name": "激流勇进",
+              "description": "人群混杂，当心混在其中的那些，真正图谋不轨的家伙。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSiS4x.png"
+            },
+            {
+              "index": 10,
+              "operation": "OF-F3",
+              "cn_name": "旋转木马",
+              "description": "守住这里！守住这里干什么？我怎么知道。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSi9C6.png"
+            },
+            {
+              "index": 11,
+              "operation": "OF-F4",
+              "cn_name": "火山攀岩",
+              "description": "众所周知，源石虫移动缓慢而笨拙，是一种十分好对付的生物。 但“庞贝”，就不一定了。 <岩浆喷射处>每隔一定时间会喷出岩浆，对周围8格内的我方单位造成大量伤害且融化障碍物",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSiC8K.png"
+            },
+            {
+              "index": 12,
+              "operation": "OF-EX-1",
+              "cn_name": "预热活动",
+              "description": "你可以放点音乐放松一下，因为，可能你也只有现在能放松了。",
+              "challenge": "敌方单位的生命值、攻击力、防御力都提升至110%  敌方远程单位攻击范围提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPbgU.png"
+            },
+            {
+              "index": 13,
+              "operation": "OF-EX-2",
+              "cn_name": "盛大开幕",
+              "description": "如果不继续深入的话，其实没有你想的那么热。",
+              "challenge": "敌方单位生命值、攻击力都提升至110%，防御力提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPxER.png"
+            },
+            {
+              "index": 14,
+              "operation": "OF-EX-3",
+              "cn_name": "采访环节",
+              "description": "想象你的背后是一个明星，而你要保护他不被狂热粉丝靠近。",
+              "challenge": "敌方单位生命值提升至120%，攻击力提升至110%  攻击速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPjb9.png"
+            },
+            {
+              "index": 15,
+              "operation": "OF-EX-4",
+              "cn_name": "渐入佳境",
+              "description": "众所周知，某些狂热粉丝为了能够接近他们的偶像，往往不择手段。",
+              "challenge": "医疗职业干员的部署费用提升至三倍  敌方单位生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPqvF.png"
+            },
+            {
+              "index": 16,
+              "operation": "OF-EX-5",
+              "cn_name": "高潮迭起",
+              "description": "干员们通常体格强壮，即使岩浆也无法立刻击倒他们，不过记得报销衣服的费用。 <岩浆喷射处>每隔一定时间会喷出岩浆，对周围8格内的我方单位造成大量伤害且融化障碍物",
+              "challenge": "部署费用的自然回复速度降低三分之二  敌方单位生命值提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPOu4.png"
+            },
+            {
+              "index": 17,
+              "operation": "OF-EX-6",
+              "cn_name": "完美落幕",
+              "description": "把障碍物放在岩浆的喷射范围内有惊喜哦，虽然未必是你想要的那种。 <障碍物>部署以后可以阻挡敌人的行进路线 <岩浆喷射处>每隔一定时间喷发，对周围8格内的我方单位造成大量伤害且融化障碍物",
+              "challenge": "障碍物的可部署数量减少至6个  敌方单位生命值提升至120%，攻击力和防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSPXDJ.png"
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "战地秘闻",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "SW-EV-1",
+              "cn_name": "引爆",
+              "description": "在合适的时机按下按钮是赢得战斗的关键。而对时机的判断，区分了不同战地指挥官的能力高低。 <震撼装置>消耗一定部署费用可以开启，伤害并晕眩周围的敌人",
+              "challenge": "敌方单位的移动速度大幅度提升",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFFJ0.png",
+              "custom": []
+            },
+            {
+              "index": 1,
+              "operation": "SW-EV-2",
+              "cn_name": "聚集",
+              "description": "只需要一点点推力…… <医疗符文>部署在其上的干员会持续恢复生命",
+              "challenge": "可部署干员数量减少2",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFkWV.png",
+              "custom": []
+            },
+            {
+              "index": 2,
+              "operation": "SW-EV-3",
+              "cn_name": "斑驳",
+              "description": "当你利用地势时，敌人也在采取相同的行动。小心，战术是种互相针对的艺术。 <侦测器>开启后一段时间内周围敌军的隐匿效果失效",
+              "challenge": "敌方远程单位的射程大幅度提升",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFAzT.png",
+              "custom": []
+            },
+            {
+              "index": "3",
+              "operation": "SW-EV-4",
+              "cn_name": "狡诈戏法",
+              "description": "如果我们能调动一个诱饵的话…… <热泵通道>每隔一段时间便会对其上的我军和敌军造成大量伤害",
+              "challenge": "敌方的技能范围大幅度提升",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFVQU.png",
+              "custom": []
+            },
+            {
+              "index": 4,
+              "operation": "SW-EV-5",
+              "cn_name": "延时毁灭",
+              "description": "拖延敌人的脚步，推迟交战的时机，放缓部署的节奏，倾斜整个战局。",
+              "challenge": "部署费用的自然回复速度降低三分之一",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFiiq.png",
+              "custom": []
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "喧闹法则",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "CB-1",
+              "cn_name": "6:44P.M.",
+              "description": "“热”开场可以吸人眼球，而连续两次“热”开场还能让人尖叫连连。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFIpV.png"
+            },
+            {
+              "index": 1,
+              "operation": "CB-2",
+              "cn_name": "7:15P.M.",
+              "description": "新手上路，保持车距。 <指挥终端>被摧毁时扣1点关卡生命值",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSF4f0.png",
+              "custom": []
+            },
+            {
+              "index": 2,
+              "operation": "CB-3",
+              "cn_name": "7:22P.M.",
+              "description": "糖果，捉迷藏，和高空无保护自由坠落，都是孩子们最喜欢的东西。 <指挥终端>摧毁时扣除1点关卡生命值 无法携带部分登场角色",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFolT.png"
+            },
+            {
+              "index": 3,
+              "operation": "CB-4",
+              "cn_name": "7:59P.M.",
+              "description": "人很难接近天空，但如果通过燃烧和爆炸等各种手段，再忍耐一下灼烧和触地的疼痛，总是有办法的。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFhYq.png"
+            },
+            {
+              "index": 4,
+              "operation": "CB-5",
+              "cn_name": "8:31P.M.",
+              "description": "以武服人，向来是认可这个铁则的人之间用来交流的铁则。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFfkn.png",
+              "custom": []
+            },
+            {
+              "index": 5,
+              "operation": "CB-6",
+              "cn_name": "10:26P.M.",
+              "description": "真正光辉四射的藏品能在不属于它的领域依旧保持无与伦比的光彩，比如绅士的武装，酒吧凶器——红酒瓶。 <便携式补给站>使角色或指挥终端额外获得技力",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSF7XF.png"
+            },
+            {
+              "index": 6,
+              "operation": "CB-7",
+              "cn_name": "11:08P.M.",
+              "description": "兄弟阋墙，老友重逢，敌我不分，皆大欢喜。 <指挥终端>摧毁时扣除1点关卡生命值",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFbm4.png"
+            },
+            {
+              "index": 7,
+              "operation": "CB-8",
+              "cn_name": "11:41P.M.",
+              "description": "有些人的坏习惯会影响办公室的空气质量，而另一些人，会影响整座城市。 <便携式补给站>使角色或指挥终端额外获得技力",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFq0J.png"
+            },
+            {
+              "index": 8,
+              "operation": "CB-9",
+              "cn_name": "0:01A.M.",
+              "description": "露天派对的好处在于，可以毫无顾忌的大打出手，而坏处则在于过度扰民。大部分时候，好处和坏处相辅相成。 <指挥终端>被摧毁时扣1点关卡生命值 <便携式补给站>使角色或指挥终端额外获得技力",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFL79.png"
+            },
+            {
+              "index": 9,
+              "operation": "CB-10",
+              "cn_name": "1:11A.M.",
+              "description": "在闹剧和酒精混合升温的时候，也许只有真正的局外人才会记得今天是什么日子。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFXkR.png"
+            },
+            {
+              "index": 10,
+              "operation": "CB-EX1",
+              "cn_name": "群架诀窍",
+              "description": "当然是不要同时面对太多的对手，这样群架也就只是复数次的单挑罢了。",
+              "challenge": "敌方单位生命值提升至110%  神射手攻击力提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSFvfx.png"
+            },
+            {
+              "index": 11,
+              "operation": "CB-EX2",
+              "cn_name": "南辕北辙",
+              "description": "向右走？向左走！ <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "敌方单位生命值提升至120%  近战敌人生命值提升至120%，攻击力提升至200%，防御力提升至110%  (注:近战敌人同时享受敌方单位BUFF，关系为乘算)",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkS1K.png"
+            },
+            {
+              "index": 12,
+              "operation": "CB-EX3",
+              "cn_name": "林中小屋",
+              "description": "偶尔会在贫民窟或是别的什么地方看到一些后现代建筑艺术，也许是在钢铁丛林中表达的某种奇特崇拜吧。 <便携式补给站>可使角色或指挥终端额外获得技力",
+              "challenge": "允许编入干员下降至5名  敌方单位的生命值提升至115%，攻击力和防御力都提升至105%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkp6O.png"
+            },
+            {
+              "index": "13",
+              "operation": "CB-EX4",
+              "cn_name": "施工现场",
+              "description": "是谁把终端放在这里的？ <指挥终端>被摧毁时扣1点关卡生命值 <便携式补给站>可使角色或指挥终端额外获得技力",
+              "challenge": "敌方单位生命值提升至120%，攻击力和防御力都提升至110%  神射手生命值提升至166.7%，攻击范围提升至110%  (注:神射手同时享受敌方单位BUFF，关系为乘算)",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkPne.png"
+            },
+            {
+              "index": "14",
+              "operation": "CB-EX5",
+              "cn_name": "十字路口",
+              "description": "去马路对面并不麻烦，去斜对面才是最麻烦的。 <指挥终端>摧毁时扣除1点关卡生命值 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "术师干员部署费用增加至3倍  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSk9XD.png"
+            },
+            {
+              "index": 15,
+              "operation": "CB-EX6",
+              "cn_name": "全面冲锋",
+              "description": "但那个似乎很能打的家伙为什么不走直线？",
+              "challenge": "近卫与先锋干员阻挡数-1  敌方单位的生命值和攻击力都提升至105%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkAAA.png"
+            },
+            {
+              "index": 16,
+              "operation": "CB-EX7",
+              "cn_name": "晨练时间",
+              "description": "绕着清晨的公园走两圈，也许会遇到一位遛弯的老爷爷。 <便携式补给站>使角色或指挥终端额外获得技力",
+              "challenge": "战场中的6个位置(右下6高台)无法部署我方单位  敌方单位生命值提升至120%，攻击力和防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkEtI.png"
+            },
+            {
+              "index": 17,
+              "operation": "CB-EX8",
+              "cn_name": "日常",
+              "description": "醉鬼，打手，和流浪汉，鼻青脸肿，并肩坐在废弃的停车场上，歌唱。 <指挥终端>被摧毁时扣1点关卡生命值 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "指挥终端的SP消耗量提高至180  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/27/cSkVht.png"
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "episode": "洪炉示岁"
+        },
+        {
+          "index": "5",
+          "episode": "午间逸话"
+        },
+        {
+          "index": "6",
+          "episode": "生于黑夜",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "DM-1",
+              "cn_name": "埋藏",
+              "description": "把思绪藏好，瞒过大脑，举起刀和法杖，士兵必须向前.",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OalIf.png"
+            },
+            {
+              "index": "1",
+              "operation": "DM-2",
+              "cn_name": "偶然",
+              "description": "几次偶然的背叛，几次必然的拯救。 <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OaGRg.png"
+            },
+            {
+              "index": "2",
+              "operation": "DM-3",
+              "cn_name": "挤压",
+              "description": "活生生的传说与雕塑上的英雄正与你并肩作战，你会感到荣幸吗？还是会对每一段史诗必然的悲剧结果而感到担忧？ <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oa8JS.png"
+            },
+            {
+              "index": "3",
+              "operation": "DM-4",
+              "cn_name": "进军",
+              "description": "每一个局部战场的故事都会被复制千百份，放置在没人看见的地方，不是所有士兵都会被记住。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OaJzQ.png"
+            },
+            {
+              "index": "4",
+              "operation": "DM-5",
+              "cn_name": "旗帜",
+              "description": "每一个局部战场的故事都会被复制千百份，放置在没人看见的地方，不是所有士兵都会被记住。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oa3i8.png"
+            },
+            {
+              "index": "5",
+              "operation": "DM-6",
+              "cn_name": "远遁",
+              "description": "这是一个圈，每一个人都会从这头走到那头，周而复始。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OatMj.png"
+            },
+            {
+              "index": "6",
+              "operation": "DM-7",
+              "cn_name": "龟裂",
+              "description": "一次次蓄谋已久的背叛，像是扭曲的海绵，迟早会恢复原样，然后再次被扭曲。 <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OaNss.png"
+            },
+            {
+              "index": "7",
+              "operation": "DM-8",
+              "cn_name": "离散",
+              "description": "反抗命运的唯一方法就是赌博，只有不确定结果的鲁莽行动才能远离这个殊途同归的必然因果。 <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OaULn.png"
+            },
+            {
+              "index": "8",
+              "operation": "DM-EX-1",
+              "cn_name": "交锋",
+              "description": "酒吧里的每个新手都会觉得自己能对付一万个敌人。而冲锋时，他们只会觉得对面一万个敌人都是冲着自己来的。",
+              "challenge": "敌方单位生命值和攻击力都提升至115%、防御力提升至105% 敌方远程单位射程提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OadZq.png"
+            },
+            {
+              "index": "9",
+              "operation": "DM-EX-2",
+              "cn_name": "爆破",
+              "description": "在重型武装单位误伤友军的事件发生多次后，疤痕商场贴心推出了“误伤保险”，同时他们也加强了装备的爆破力度，以确保那些投保人无法回到这里。 <源石流发生装置>持续喷出气流。气流中顺/逆风部署的干员攻击提升/降低；顺/逆风移动的敌人移速提升/降低。",
+              "challenge": "萨卡兹百夫长与爆破攻坚手获得隐匿效果、敌方单位生命值和攻击力都提升至115%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oawd0.png"
+            },
+            {
+              "index": "10",
+              "operation": "DM-EX-3",
+              "cn_name": "突进",
+              "description": "在疤痕商场定期举办的雇佣兵持枪百米突刺竞赛中，利用源石流是典型的作弊行为。 <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "敌方单位生命值和攻击力都提升至110%、萨卡兹穿刺手的冲锋伤害提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oa0oV.png"
+            },
+            {
+              "index": "11",
+              "operation": "DM-EX-4",
+              "cn_name": "裁判",
+              "description": "而举办方对作弊者的惩罚就是：让他输。偷偷调整路线的方向，改变流向，操纵场外盘口。 <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "敌方单位生命值和防御力都提升至110%、攻击力提升至120%、我方生命值上限降低50%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OarJU.png"
+            },
+            {
+              "index": "12",
+              "operation": "DM-EX-5",
+              "cn_name": "备战",
+              "description": "“状态型佣兵”往往不是一个褒义词，大部分情况下，在他们利用包括酒精在内的各种方式“进入状态”之前，火球和弩箭会优先贯穿他们的胸腔。",
+              "challenge": "禁止部署特种与狙击干员、敌方单位生命值和攻击力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OaDiT.png"
+            },
+            {
+              "index": "13",
+              "operation": "DM-EX-6",
+              "cn_name": "对流",
+              "description": "如果左右的排风口温差很大的话，这条小径会下雪吗？ <源石流发生装置>持续喷出气流。气流中顺风/逆风部署的干员攻击提升/降低；顺风/逆风移动的敌人移速提升/降低。",
+              "challenge": "敌方单位攻击力提升至105%、防御力提升至110%、萨卡兹哨兵组长的移动速度提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OasWF.png"
+            },
+            {
+              "index": "15",
+              "operation": "DM-MO-1",
+              "cn_name": "塔巴镇",
+              "description": "战场未必是什么声名显赫的必争之地，暴力也不是什么讲理的东西——它发生在这里，仅仅因为它发生在这里。 <特殊条件>部署费用不会自然回复",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oayz4.png"
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "episode": "乌萨斯的孩子们"
+        },
+        {
+          "index": "8",
+          "episode": "沃伦姆德的薄暮"
+        },
+        {
+          "index": "9",
+          "episode": "密林悍将归来"
+        },
+        {
+          "index": "10",
+          "episode": "踏寻往昔之风"
+        },
+        {
+          "index": "11",
+          "episode": "玛丽娅·临光"
+        },
+        {
+          "index": "12",
+          "episode": "孤岛风云"
+        },
+        {
+          "index": "13",
+          "episode": "此地之外"
+        },
+        {
+          "index": "14",
+          "episode": "画中人"
+        },
+        {
+          "index": "15",
+          "episode": "源石尘行动"
+        },
+        {
+          "index": "16",
+          "episode": "遗尘漫步",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "WD-1",
+              "cn_name": "赤角小镇之围",
+              "description": "这座平平无奇的萨尔贡小镇，因为一支哥伦比亚队伍的到来而深陷混乱。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnxld.png"
+            },
+            {
+              "index": "1",
+              "operation": "WD-2",
+              "cn_name": "绿洲惊雷",
+              "description": "凯尔希与幸存者徒步抵达了一片宽大绿洲，很多动物会来此处水源饮水，当然，也包括不需要喝水的敌方侦查无人机。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnHw6.png"
+            },
+            {
+              "index": "2",
+              "operation": "WD-3",
+              "cn_name": "仙人掌沙丘",
+              "description": "艾利奥特默数了一下，这座山丘共有三百一十五棵仙人掌。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnLFO.png"
+            },
+            {
+              "index": "3",
+              "operation": "WD-4",
+              "cn_name": "鸣沙狙击战",
+              "description": "沙粒在发出声响，如凯尔希所说那般，追兵如期而至，自投罗网。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRn7ex.png"
+            },
+            {
+              "index": "4",
+              "operation": "WD-5",
+              "cn_name": "沁礁之地",
+              "description": "“礁石环绕之地”，“怀抱礁石之处”，举目望去，艾利奥特没有看到任何一块礁石，难道这里的人们都活在幻觉中吗？ <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnoO1.png"
+            },
+            {
+              "index": "5",
+              "operation": "WD-6",
+              "cn_name": "帕夏的梦",
+              "description": "城市满载人民的希望，绿洲应声而起，清冽的流水与坚固的群山环伺帕夏身边，人群嘈杂，炊烟四起，梦将醒。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnbTK.png"
+            },
+            {
+              "index": "6",
+              "operation": "WD-7",
+              "cn_name": "家园",
+              "description": "穷人和无家可归者委身于失踪富豪的遗产，佣兵杀手在月色下虎视眈眈，战至天明，老伊辛仰望繁星，晨风冷冽，他仍无比怀念他这糟糕的家。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnOYD.png"
+            },
+            {
+              "index": "7",
+              "operation": "WD-8",
+              "cn_name": "大雪将至",
+              "description": "而冰凌漆黑如影。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnvSH.png"
+            },
+            {
+              "index": 8,
+              "operation": "WD-EX-1",
+              "cn_name": "兽群战术",
+              "description": "没有人知道“猎犬”这一物种是怎么出现的，但玻利瓦尔人确实是最先将其应用于军事之中的。训练有素的猎犬将成为作战中的最大助力。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "敌方单位的攻击力、防御力和生命值都提升至110% 移除位于(4,8)的可移动战术机库，启用位于(3,1){蓝门那行最左边那格}的可移动战术机库",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvARU.png"
+            },
+            {
+              "index": 9,
+              "operation": "WD-EX-2",
+              "cn_name": "双线协同",
+              "description": "训练有素的雇佣兵往往能默契地完成双线作战需求，并在复杂地形顺利完成包围——等等，第三小队什么时候进来的？谁让他们行动的！？ <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "敌方单位的攻击力、防御力和生命值都提升至110%，铁砧B型的生命值额外提升至200%",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvkGT.png"
+            },
+            {
+              "index": 10,
+              "operation": "WD-EX-3",
+              "cn_name": "远程打击",
+              "description": "先利用远程打击手段对打击点进行炮轰，再由地面部队进行扫荡围剿，是训练有素的攻坚中常见的——呃，停手！怎么猎犬已经放出去了！？快让弩手停下！",
+              "challenge": "敌方单位的攻击力提升至110%，防御力提升至105%，生命值提升至110%，额外出现以下敌人：战术猎犬×4、战术猎犬pro×8、反装甲步兵×8，所有追加的敌人的属性和本关卡中出现过的同类型敌人相同",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvFiV.png"
+            },
+            {
+              "index": 11,
+              "operation": "WD-EX-4",
+              "cn_name": "破门而入",
+              "description": "一般来说，训练有素的雇佣兵在突击时会依照安排好的行动——等等，你们的猎犬呢？弩手怎么先进去了？重装单位呢？为什么队伍前列只有一个人！？ <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "敌方单位的攻击力提升至110%，防御力提升至120%，生命值提升至115%，破片、破片U型、铁砧、铁砧B型的自动撤退时间增加至300%。",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvCaq.png"
+            },
+            {
+              "index": 12,
+              "operation": "WD-EX-5",
+              "cn_name": "交叉火力支援",
+              "description": "战场地形复杂，当遇到火力交错的作战状况时，训练有素的......呃......你们看不见站在身边的敌人吗？一定要追着最远的目标打吗？ <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "敌方单位的攻击力和生命值提升至110%，防御力提升至105%，可部署单位上限减少1。",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvPI0.png"
+            },
+            {
+              "index": 13,
+              "operation": "WD-EX-6",
+              "cn_name": "小队长",
+              "description": "雇佣兵行动也必须遵循“军衔”，各小队的队长和战场指挥往往是最训练有素......好吧，真的是最训练有素的单位。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战 <障碍物>部署以后可以阻挡敌人的行进路线。",
+              "challenge": "敌方单位的攻击力、防御力和生命值都提升至110%，移除位于(2,4)的可移动战术机库，启用位于(3,10){中间蓝门右边那格}的可移动战术机库",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvEzF.png"
+            },
+            {
+              "index": 14,
+              "operation": "WD-EX-7",
+              "cn_name": "训练有素",
+              "description": "咳咳，我们认为，作为雇佣兵是否真的素质过硬，未必与程式化的训练直接挂钩。战场才是证明雇佣兵能力的地方。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "敌方单位的攻击力、防御力和生命值都提升至110%，破片U型的攻击力额外提升至150%，攻击范围提升至150%",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvZM4.png"
+            },
+            {
+              "index": 15,
+              "operation": "WD-EX-8",
+              "cn_name": "如帝国之影",
+              "description": "自乌萨斯人推翻骏鹰已近千年，帝国的光辉掠过群山峻岭，高楼广厦。而皇帝恩泽洒在大地上的广袤阴影，即是乌萨斯最深远的意志。",
+              "challenge": "敌方单位的生命值提升至110%， (2,3)、(2,4)、(2,5)、(2,6)、(2,7)、(2,8)、(2,9)7个位置无法部署{蓝门上那行中间七格}",
+              "preview": "https://z3.ax1x.com/2021/04/23/cOvesJ.png"
+            },
+            {
+              "index": 16,
+              "operation": "WD-TR-1",
+              "cn_name": "空援应对训练",
+              "description": "少数经费充足的雇佣兵采取的全新作战模式，需要在作战中额外留意。 <可移动战术机库>根据需要可随时发射无人机支援敌方佣兵小队作战。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/15/cRnXfe.png"
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "episode": "覆潮之下",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "SV-1",
+              "cn_name": "闯入者",
+              "description": "赏金猎人和深海猎人是两种东西，她却一直用另一个身份来麻痹自己。她终归不是。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/ge9xqf.png",
+              "custom": []
+            },
+            {
+              "index": 1,
+              "operation": "SV-2",
+              "cn_name": "歌手",
+              "description": "别在意，和她说话的那些真的是生物意义上的普通人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geC9Ig.png",
+              "custom": []
+            },
+            {
+              "index": 2,
+              "operation": "SV-3",
+              "cn_name": "外来者",
+              "description": "如果一个阴谋很显眼的话，要么是它真的很难被挫败，要么是主使者不太聪明。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCpdS.png",
+              "custom": []
+            },
+            {
+              "index": 3,
+              "operation": "SV-4",
+              "cn_name": "海洋",
+              "description": "她不敢在陆地上流血。她知道她的血会引来什么......但她如果身在海边，引来的就不只是凶手那么简单了。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCSZ8.png",
+              "custom": []
+            },
+            {
+              "index": 4,
+              "operation": "SV-5",
+              "cn_name": "遭弃者",
+              "description": "以文明温故自我。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/ge9vsP.png",
+              "custom": []
+            },
+            {
+              "index": 5,
+              "operation": "SV-6",
+              "cn_name": "厌食",
+              "description": "其黑手已自潮湿伸向干燥。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCPiQ.png",
+              "custom": []
+            },
+            {
+              "index": 6,
+              "operation": "SV-7",
+              "cn_name": "守护者",
+              "description": "找回自己在星空下应处的位置。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCiGj.png",
+              "custom": []
+            },
+            {
+              "index": 7,
+              "operation": "SV-8",
+              "cn_name": "亲族",
+              "description": "美丽的怪物也是怪物，人形的怪物也是怪物。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCFRs.png",
+              "custom": []
+            },
+            {
+              "index": 8,
+              "operation": "SV-9",
+              "cn_name": "笃信者",
+              "description": "他也许很有智慧，但他太偏执了，四舍五入他的确不太聪明。比起无边无际的大海，他什么都不是。 <应急救治设施>激活时持续治疗周围我方单位累积的神经损伤。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCkzn.png",
+              "custom": []
+            },
+            {
+              "index": 9,
+              "operation": "SV-EX-1",
+              "cn_name": "喷涌而出",
+              "description": "海岸边上没什么人知道恐鱼的存在，目击者都死了。",
+              "challenge": "敌方单位的攻击力提升至130%，生命值提升至130%。",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ1410.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "operation": "SV-EX-2",
+              "cn_name": "快速失败",
+              "description": "爬上陆地的恐鱼万中无一，但它们中的一部分迅速长出了肢体......这样做似乎不是为了加快移动速度，而是为了抓握。",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%，部署费用的自然回复速度降低至50%。",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ1hpq.png",
+              "custom": []
+            },
+            {
+              "index": 11,
+              "operation": "SV-EX-3",
+              "cn_name": "投怪忌器",
+              "description": "打我。",
+              "challenge": "敌方单位的攻击力提升至110%，生命值提升至110%，我方单位的最大生命值降低至70%。",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ160g.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "operation": "SV-EX-4",
+              "cn_name": "崩溃边缘",
+              "description": "我需要治疗。我需要治疗！",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%。战场上坐标为： (5,4)、(4,4)、(6,3)、(4,3)、(3,8)、(1,8)、(3,7)、(2,7)的8个位置{左装置上、下、右、右下四格和右装置上、下、左、左上四格}无法部署我方单位",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ1c7Q.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "operation": "SV-EX-5",
+              "cn_name": "开枝散叶",
+              "description": "海怪形成的怪物潮水。",
+              "challenge": "敌方单位的生命值提升至110%，富营养的收割者的攻击力提升至150%，造成的范围神经损伤效果提升至2倍。",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ1Whn.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "operation": "SV-EX-6",
+              "cn_name": "牙尖爪利",
+              "description": "我锋利的同胞，醒来吧！",
+              "challenge": "敌方单位的防御力提升至110%，生命值提升至120%，富营养的收割者的防御力额外提升至180%，生命值额外提升至200%。",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ15cV.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 15,
+              "operation": "SV-EX-7",
+              "cn_name": "水火不容",
+              "description": "深海猎人与海嗣就像扭曲镜面的两端。",
+              "challenge": "敌方单位的生命值、攻击力和防御力都提升至110%，首言者的生命值额外提升至150%，攻击范围提升至150%",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ12kj.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 16,
+              "operation": "SV-EX-8",
+              "cn_name": "自由意志",
+              "description": "在此之前，猎人们早就想象过深海教会信徒最后会转化成海怪。只是他们没想到，这一系列的行为都是清醒的，自愿的。",
+              "challenge": "敌方单位的防御力提升至115%，生命值提升至125%，移除位于(4,2)和(4,10)的应急救治设施{左右两个}",
+              "preview": "https://z3.ax1x.com/2021/05/08/gJ1Rts.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            },
+            {
+              "index": 17,
+              "operation": "SV-TR-1",
+              "cn_name": "疼痛增幅",
+              "description": "学习如何应对神经损伤。",
+              "challenge": "敌方单位的防御力提升至115%，生命值提升至125%，移除位于(4,2)和(4,10)的应急救治设施{左右两个}",
+              "preview": "https://z3.ax1x.com/2021/05/02/geCEMq.png",
+              "custom": [
+                {
+                  "name": "<应急救治设施>",
+                  "value": "激活时持续治疗周围我方单位累积的神经损伤"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "index": "0"
+    },
+    {
+      "story": "主线关卡",
+      "index": "1",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "序章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "0-1",
+              "cn_name": "坍塌",
+              "description": "三点方向出现了敌人的先锋部队，请部署近战干员进行拦截。",
+              "challenge": "部署费用不自然回复",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaka8.png",
+              "custom": []
+            },
+            {
+              "index": "1",
+              "operation": "0-2",
+              "cn_name": "守卫",
+              "description": "敌方派来了更多士兵，请确保队伍中有医疗干员能持续进行恢复治疗。",
+              "challenge": "我方所有单位攻击力减半",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaPqP.png",
+              "custom": []
+            },
+            {
+              "index": "2",
+              "operation": "0-3",
+              "cn_name": "追击",
+              "description": "敌方无人机已加入战场，请确保部署狙击干员进行针对。",
+              "challenge": "敌方单位的生命值提升至200%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaAIS.png"
+            },
+            {
+              "index": "3",
+              "operation": "0-4",
+              "cn_name": "混战",
+              "description": "更多敌方无人机已经加入战场，请确保我方狙击干员部署在能对其进行打击的位置。",
+              "challenge": "禁止使用狙击干员  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaFVf.png"
+            },
+            {
+              "index": "4",
+              "operation": "0-5",
+              "cn_name": "腐化",
+              "description": "敌方的猎狗速度极快，容易在前期突破我方防线，请部署先锋干员对其进行拦截。",
+              "challenge": "敌方单位的生命值和防御力都提升至120%，攻击力提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaCrt.png"
+            },
+            {
+              "index": "5",
+              "operation": "0-6",
+              "cn_name": "强击",
+              "description": "战场下方的通路已经被打开，请部署多名先锋干员拦截突袭而来的猎狗。",
+              "challenge": "部署费用的自然回复速度降至一半  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaVPg.png"
+            },
+            {
+              "index": "6",
+              "operation": "0-7",
+              "cn_name": "感染",
+              "description": "敌方持盾士兵拥有较高防御力，请部署术师干员进行击破。",
+              "challenge": "术师职业干员的部署费用增至3倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaZGQ.png"
+            },
+            {
+              "index": "7",
+              "operation": "0-8",
+              "cn_name": "狩猎",
+              "description": "大量源石虫从9点方向涌来，推荐使用群攻型术师干员进行应对。",
+              "challenge": "我方所有单位的最大生命值减半  敌方单位的生命值、攻击力、防御力都提升至120% ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qauMn.png"
+            },
+            {
+              "index": "8",
+              "operation": "0-9",
+              "cn_name": "临光",
+              "description": "更多敌方源石虫和持盾士兵到达了战场，推荐使用群攻型术师干员和重装干员配合进行应对。",
+              "challenge": "禁止使用重装干员  敌方单位的生命值提升至130%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qae2j.png"
+            },
+            {
+              "index": "9",
+              "operation": "0-10",
+              "cn_name": "困境",
+              "description": "敌方拾荒者拥有高生命值和攻击力，请部署重装干员对其进行阻拦，并配合火力输出消灭。",
+              "challenge": "我方所有单位的防御力减半  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qamxs.png"
+            },
+            {
+              "index": "10",
+              "operation": "0-11",
+              "cn_name": "突围",
+              "description": "敌方的混合部队从整个西面扑来，请灵活运用之前回忆起的战术，仔细编队阻挡敌人大军。",
+              "challenge": "我方所有近战干员的部署费用增至3倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaKrq.png"
+            },
+            {
+              "index": "11",
+              "operation": "TR-1",
+              "cn_name": "战地医疗",
+              "description": "学习医疗干员的使用方法。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaMq0.png"
+            },
+            {
+              "index": "12",
+              "operation": "TR-2",
+              "cn_name": "定向瞄准",
+              "description": "学习干员部署方向和攻击范围的意义。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qalZV.png"
+            },
+            {
+              "index": "13",
+              "operation": "TR-3",
+              "cn_name": "精确打击",
+              "description": "学习使用狙击干员应对飞行单位。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qa1aT.png"
+            },
+            {
+              "index": "14",
+              "operation": "TR-4",
+              "cn_name": "小队先锋",
+              "description": "学习先锋干员的使用方法和阻挡数的意义。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qa3IU.png"
+            },
+            {
+              "index": "15",
+              "operation": "TR-5",
+              "cn_name": "源石技艺",
+              "description": "学习使用术师干员应对高防御单位。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaGiF.png"
+            },
+            {
+              "index": "16",
+              "operation": "TR-6",
+              "cn_name": "范围杀伤",
+              "description": "学习重装干员和群攻术师的配合战术。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaJG4.png"
+            },
+            {
+              "index": "17",
+              "operation": "TR-7",
+              "cn_name": "战斗技巧",
+              "description": "学习技能的开启和使用重装干员应对强大敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qaYRJ.png"
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "episode": "第一章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "1-1",
+              "cn_name": "孤岛",
+              "description": "战场变得狭窄，且敌人的质量有所提高。 进入战场前请确保我方干员的能力已得到提升。",
+              "challenge": "同时可布置干员数降至4  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdG0P.png"
+            },
+            {
+              "index": "1",
+              "operation": "1-2",
+              "cn_name": "蔓延",
+              "description": "同一时间，在另外的战场上，接应的行动预备组队员们遭遇了新的敌人……请注意防守上方小路偷袭而来的敌人。 <固定编队>无法更改作战阵容",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdJTf.png"
+            },
+            {
+              "index": "2",
+              "operation": "1-3",
+              "cn_name": "狂奔",
+              "description": "战场变得宽阔起来，并且同样被分为了两条进攻道路。 请注意下方道路中敌人的防御力较高，需要考虑干员的部署位置。",
+              "challenge": "敌方单位的生命值提升至180%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qd8mt.png"
+            },
+            {
+              "index": "3",
+              "operation": "1-4",
+              "cn_name": "先兆",
+              "description": "战场变得更为宽阔，需要至少三名近战干员才能对每条路的敌人进行拦截。",
+              "challenge": "我方所有远程单位的部署费用增至3倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qd1OI.png"
+            },
+            {
+              "index": "4",
+              "operation": "1-5",
+              "cn_name": "麻痹",
+              "description": "这次的战场在切尔诺伯格的大道，请至少编入四名近战干员，确保对每条路的敌人进行阻击。",
+              "challenge": "敌方单位的生命值、攻击力、防御力都提升至120%  移动速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdl6A.png"
+            },
+            {
+              "index": "5",
+              "operation": "1-6",
+              "cn_name": "灾难",
+              "description": "战场中的障碍物能够帮助我们对抗分散的敌人进攻。 请放置障碍物控制敌人的进攻路线。 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "可使用的障碍物数量降至1  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdtk8.png"
+            },
+            {
+              "index": "6",
+              "operation": "1-7",
+              "cn_name": "暴君",
+              "description": "请将战场中的震撼装置和我方火力输出进行配合使用，阻止敌人的高强度进攻。 <震撼装置>消耗一定部署费用可以开启，伤害并晕眩周围的敌人",
+              "challenge": "部署费用的自然回复速度减半  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdNtS.png"
+            },
+            {
+              "index": "7",
+              "operation": "1-8",
+              "cn_name": "意志",
+              "description": "请注意提防前期敌方大量的进攻部队和那名行动敏捷的整合运动干事。 使用战场上的震撼装置可以暂时停止他的行动。 <震撼装置>消耗一定部署费用可以开启，伤害并晕眩周围的敌人",
+              "challenge": "敌方单位的生命值提升至150%，攻击力和防御力都提升至120%  敌方头目的能力冷却降低至35%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdUfg.png"
+            },
+            {
+              "index": "8",
+              "operation": "1-9",
+              "cn_name": "溃散",
+              "description": "天灾降临后敌人的进攻速度依然没有减缓。 请注意提防敌方的远程进攻单位，保护好我方的远程输出。",
+              "challenge": "禁止使用重装干员  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qddpQ.png"
+            },
+            {
+              "index": "9",
+              "operation": "1-10",
+              "cn_name": "残留",
+              "description": "我们离切尔诺伯格的边缘已经不远了，请再坚持一段时间，胜利就在前方。 注意提防敌方的远程进攻单位，保护好我方的远程输出。",
+              "challenge": "敌方单位的生命值、攻击力、防御力都提升至120%  敌方远程单位攻击范围提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdwlj.png"
+            },
+            {
+              "index": "10",
+              "operation": "1-11",
+              "cn_name": "遗忘",
+              "description": "同一时间，前来接应的行动预备组遭遇了敌人的领袖之一，W。请在坚守的同时注意观察W的行动方式，对其进行牵制。 <固定编队>无法更改作战阵容",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qd06s.png"
+            },
+            {
+              "index": "11",
+              "operation": "1-12",
+              "cn_name": "代价",
+              "description": "W率领她的部队从错综复杂的巷道间发动了进攻。请合理利用地形进行迎击。 <震撼装置>消耗一定部署费用可以开启，伤害并晕眩周围的敌人",
+              "challenge": "医疗职业干员的部署费用加倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdrmq.png"
+            },
+            {
+              "index": "12",
+              "operation": "TR-8",
+              "cn_name": "障碍设置",
+              "description": "学习障碍物的使用方法。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdBXn.png"
+            },
+            {
+              "index": "13",
+              "operation": "TR-9",
+              "cn_name": "间接防护",
+              "description": "学习使用战场中的可利用物体。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qds00.png"
+            },
+            {
+              "index": "14",
+              "operation": "TR-10",
+              "cn_name": "小队防御",
+              "description": "学习通过干员部署顺序来保护脆弱干员。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qdy7V.png"
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "第二章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "2-1",
+              "cn_name": "龙门之行",
+              "description": "本次的战场地形迂回，考虑使用辅助干员牵制敌方精英单位的行动。",
+              "challenge": "禁止使用术师干员  敌方单位的生命值提升至130%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwnH0.png"
+            },
+            {
+              "index": "1",
+              "operation": "2-2",
+              "cn_name": "兵不接刃",
+              "description": "战场中心出现了更多的高防御敌人，使用辅助和术师干员能够大幅度削减其战斗力。",
+              "challenge": "禁止使用辅助干员  敌方单位的生命值和防御力都提升至120%，攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwKEV.png"
+            },
+            {
+              "index": "2",
+              "operation": "2-3",
+              "cn_name": "无罪推定",
+              "description": "本次的战场敌人进攻路线过于分散，我方部署地点受到限制。 请放置障碍物控制敌人的进攻路线。 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "障碍物和我方近战单位的部署费用加倍  敌方单位的生命值提升至120%，防御力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwmBq.png"
+            },
+            {
+              "index": "3",
+              "operation": "2-4",
+              "cn_name": "企鹅物流",
+              "description": "已在战场上确认敌方精英术师部队。 该敌人威胁较高，建议分散我方干员的部署位置。",
+              "challenge": "敌方单位的生命值提升至200%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwMNT.png"
+            },
+            {
+              "index": "4",
+              "operation": "2-5",
+              "cn_name": "高空坠物",
+              "description": "确认到敌方大量的精英术师部队。 请考虑对其进行逐个击破。",
+              "challenge": "近卫和狙击职业干员的部署费用加倍  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwVjs.png"
+            },
+            {
+              "index": "5",
+              "operation": "2-6",
+              "cn_name": "握紧扶手",
+              "description": "此处屋顶地形较为开阔，适合我方展开阵型。 但仍请警惕敌方随时可能到来的突袭部队……",
+              "challenge": "禁止使用术师干员  敌方单位的生命值提升至130%，攻击力和防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwQ4U.png"
+            },
+            {
+              "index": "6",
+              "operation": "2-7",
+              "cn_name": "注意卫生",
+              "description": "已在一点和七点方向确认了敌方派遣的新型支援空军，请小心应对。",
+              "challenge": "敌方单位的生命值、攻击力、防御力都提升至120%  敌方远程单位攻击范围提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qw1CF.png"
+            },
+            {
+              "index": "7",
+              "operation": "2-8",
+              "cn_name": "不做约定",
+              "description": "已在一点和七点方向确认了敌方派遣的新型支援空军，请小心应对。",
+              "challenge": "敌方单位的生命值和防御力都提升至120%，攻击力提升至110%  重量增加二个等级",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qw334.png"
+            },
+            {
+              "index": "8",
+              "operation": "2-9",
+              "cn_name": "操作暗箱",
+              "description": "本次的战场十分狭小，请确保有足够多的近战干员阻拦敌军。 <防空符文>置于其中的干员会略微减慢攻速，但大幅度提升对空攻击力",
+              "challenge": "敌方单位的生命值提升至200%，攻击力提升至120%，防御力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qw8gJ.png"
+            },
+            {
+              "index": "9",
+              "operation": "2-10",
+              "cn_name": "病入膏肓",
+              "description": "碎骨带领他的精英部队兵分两路对我方进行了包围！复杂的战场地形将更加考验您的指挥能力。 <医疗符文>部署在其上的干员会持续恢复生命",
+              "challenge": "术师职业干员的部署费用加倍  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwGv9.png"
+            },
+            {
+              "index": "10",
+              "operation": "S2-1",
+              "cn_name": "迟缓-1",
+              "description": "请注意警惕敌方的高防御盾兵。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwYuR.png"
+            },
+            {
+              "index": "11",
+              "operation": "S2-2",
+              "cn_name": "迟缓-2",
+              "description": "请注意敌方从上下两方飞过的飞行单位。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwtD1.png"
+            },
+            {
+              "index": "12",
+              "operation": "S2-3",
+              "cn_name": "封锁-1",
+              "description": "请合理布置障碍物，防守对称的战场中两方攻来的敌方大军。 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwNHx.png"
+            },
+            {
+              "index": "13",
+              "operation": "S2-4",
+              "cn_name": "封锁-2",
+              "description": "战场比之前更加复杂，需要更加小心地配置障碍物的位置。 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwaE6.png"
+            },
+            {
+              "index": "14",
+              "operation": "S2-5",
+              "cn_name": "术师-1",
+              "description": "敌方精英术师的位置更加地分散，建议使用狙击干员进行逐步清除。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwdUK.png"
+            },
+            {
+              "index": "15",
+              "operation": "S2-6",
+              "cn_name": "术师-2",
+              "description": "敌人的精英术师依然是我方最大的威胁，合理地分散站位能有效降低其输出。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qww4O.png"
+            },
+            {
+              "index": "16",
+              "operation": "S2-7",
+              "cn_name": "术师-3",
+              "description": "敌人派出了更多的精英术师，依旧需要我方良好的部署位置来应对。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwBCD.png"
+            },
+            {
+              "index": "17",
+              "operation": "S2-8",
+              "cn_name": "陷阱-1",
+              "description": "屋顶有许多没有遮拦的地形，好好利用的话可以达到事半功倍的效果。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwD8e.png"
+            },
+            {
+              "index": "18",
+              "operation": "S2-9",
+              "cn_name": "陷阱-2",
+              "description": "敌人的质量更高了，好好利用地形依然是战略的关键。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwrgH.png"
+            },
+            {
+              "index": "19",
+              "operation": "S2-10",
+              "cn_name": "窒息-1",
+              "description": "请注意下方可能会进行偷袭的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwsvd.png"
+            },
+            {
+              "index": "20",
+              "operation": "S2-11",
+              "cn_name": "窒息-2",
+              "description": "战场再度被完全分割，需要尽力防守敌方两路的兵力。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwcDI.png"
+            },
+            {
+              "index": "21",
+              "operation": "S2-12",
+              "cn_name": "窒息-3",
+              "description": "请注意从左右两方偷袭而来的敌方飞行单位。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwgbt.png"
+            },
+            {
+              "index": "22",
+              "operation": "TR-11",
+              "cn_name": "战术阻滞",
+              "description": "学习配合使用辅助和术师干员应对敌方大型单位。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qw6KA.png"
+            },
+            {
+              "index": "23",
+              "operation": "TR-12",
+              "cn_name": "施术单元",
+              "description": "学习通过巧妙部署单位降低敌方群攻单位的输出。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwRVP.png"
+            },
+            {
+              "index": "24",
+              "operation": "TR-13",
+              "cn_name": "先发制人",
+              "description": "学习部署干员拦截敌方关键单位的战术。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwWUf.png"
+            },
+            {
+              "index": "25",
+              "operation": "TR-14",
+              "cn_name": "地形攻势",
+              "description": "学习利用地形元素重创棘手敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qwf58.png"
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "第三章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "3-1",
+              "cn_name": "会合",
+              "description": "野外作战时可以利用部分掩护地形减少我方受到的攻击，但同时也请提防敌军的迷彩部队。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "我方所有远程干员的部署费用加倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWr2q.png"
+            },
+            {
+              "index": "1",
+              "operation": "3-2",
+              "cn_name": "记忆",
+              "description": "敌方增援了更多的远程攻击部队。 请优先清除此部分威胁较高的敌军。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "部署费用的自然回复速度降低三分之一  敌方单位的生命值和防御力都提升至120%，攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWsx0.png"
+            },
+            {
+              "index": "2",
+              "operation": "3-3",
+              "cn_name": "回旋",
+              "description": "装备探测装置的敌方侦查单位可以使草丛的效果失效。 请注意提防擅长扰乱作战的敌方头目。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "敌方单位的重量增加一个等级  敌方单位的生命值提升至120%，攻击力和防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qW6MV.png"
+            },
+            {
+              "index": "3",
+              "operation": "3-4",
+              "cn_name": "龟裂",
+              "description": "从未见过的敌方头领以及其精英部队从六点方向发动了巨大攻势。 请立即部署干员迎击！ <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "部署费用的自然回复速度降低三分之一  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWcrT.png"
+            },
+            {
+              "index": "4",
+              "operation": "3-5",
+              "cn_name": "呼叫",
+              "description": "已在战场上确认了敌方穿着迷彩的术师单位。 请优先清除此部分威胁较高的敌军。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "医疗及重装职业干员的攻击力减半  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWDGn.png"
+            },
+            {
+              "index": "5",
+              "operation": "3-6",
+              "cn_name": "决定",
+              "description": "敌方出动了大量身着迷彩的远程单位。 请使用战场上的侦查塔对其进行反制。 <侦测器>开启后一段时间内周围敌军的隐匿效果失效",
+              "challenge": "无法使用侦测器  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWgqU.png"
+            },
+            {
+              "index": "6",
+              "operation": "3-7",
+              "cn_name": "轰鸣",
+              "description": "此处战场地形复杂，请使用障碍物诱导敌人至合适地点进行狙击。 <侦测器>开启后一段时间内周围敌军的隐匿效果失效 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "可使用障碍物数量减少2  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWWa4.png"
+            },
+            {
+              "index": "7",
+              "operation": "3-8",
+              "cn_name": "黄昏",
+              "description": "碎骨再次带着大军攻向我方，并且这次的气息更加危险…… <防御符文>部署于其上的我方干员获得防御力提升",
+              "challenge": "敌方单位的生命值提升至180%，攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWRZF.png"
+            },
+            {
+              "index": "8",
+              "operation": "S3-1",
+              "cn_name": "潜伏-1",
+              "description": "请注意敌方隐匿单位和术师的联合进攻。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWfIJ.png"
+            },
+            {
+              "index": "9",
+              "operation": "S3-2",
+              "cn_name": "潜伏-2",
+              "description": "敌方的主要进攻点虽然只有一处，仍建议在后方进行布防。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qW4i9.png"
+            },
+            {
+              "index": "10",
+              "operation": "S3-3",
+              "cn_name": "侦察-1",
+              "description": "合理利用草丛和侦查塔是本次作战成功的关键。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标 <侦测器>开启后一段时间内周围敌军的隐匿效果失效",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qW5GR.png"
+            },
+            {
+              "index": "11",
+              "operation": "S3-4",
+              "cn_name": "侦察-2",
+              "description": "本次战场敌人进攻路线较多，请确保有足够多的近战干员参与作战。 <草丛>部署于其上的干员不会成为敌方远程攻击的目标",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWIR1.png"
+            },
+            {
+              "index": "12",
+              "operation": "S3-5",
+              "cn_name": "侦察-3",
+              "description": "本次作战路线较为简单，是一场对硬实力的考验。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWoxx.png"
+            },
+            {
+              "index": "13",
+              "operation": "S3-6",
+              "cn_name": "集火-1",
+              "description": "本次作战需要集中火力，对抗蜂拥而至的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qW7M6.png"
+            },
+            {
+              "index": "14",
+              "operation": "S3-7",
+              "cn_name": "隐匿-1",
+              "description": "大量的隐匿单位包围了战场，请做好准备，以坚实的阵线和有远见的侦察应对他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWHsK.png"
+            },
+            {
+              "index": "15",
+              "operation": "TR-15",
+              "cn_name": "战略转移",
+              "description": "学习及时撤退单位以通过最终考验。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWbqO.png"
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "episode": "第四章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "4-1",
+              "cn_name": "免费拥抱",
+              "description": "已在切城确认了使用近战武器的异族士兵，请小心应对。",
+              "challenge": "敌方单位的生命值、攻击力、防御力都提升至110%  敌方远程单位攻击范围提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfSzt.png"
+            },
+            {
+              "index": "1",
+              "operation": "4-2",
+              "cn_name": "雨中漫步",
+              "description": "使用远程武器的敌方异族士兵已经加入战场。 建议使用物理攻击的干员进行应对。",
+              "challenge": "我方所有单位的防御力减半  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWXIH.png"
+            },
+            {
+              "index": "2",
+              "operation": "4-3",
+              "cn_name": "人工制冷",
+              "description": "在切城部分地面检测到了高能的源石辐射反应。 如果敌方单位受到其影响的话…… <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "敌方单位的生命值和防御力都提升至110%  攻击力提升至140%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWxJA.png"
+            },
+            {
+              "index": "3",
+              "operation": "4-4",
+              "cn_name": "不要恐慌",
+              "description": "敌方的部队从四方发起了总进攻！请立即布置干员进行防守。 <障碍物>部署以后可以阻挡敌人的行进路线 <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "敌方单位的移动速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWzRI.png"
+            },
+            {
+              "index": "4",
+              "operation": "4-5",
+              "cn_name": "官僚主义",
+              "description": "观察到敌方的近战法术单位，与其近战会相当危险，请务必小心。",
+              "challenge": "我方所有近战单位的生命值减半  敌方单位的生命值、攻击力、防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qWvid.png"
+            },
+            {
+              "index": "5",
+              "operation": "4-6",
+              "cn_name": "少见多怪",
+              "description": "已在战场发现了不明的源石感染生物，死亡时会对周围造成大量伤害。 另外请注意远离会喷出高温气体的热泵通道。 <热泵通道>每隔一段时间便会对其上的我军和敌军造成大量伤害",
+              "challenge": "可部署单位上限减少3  敌方单位的生命值提升至125%，攻击力和防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf9QP.png"
+            },
+            {
+              "index": "6",
+              "operation": "4-7",
+              "cn_name": "各取所需",
+              "description": "战场周围发现了大量源石感染生物！ 建议谨慎考虑清除其的时机。 <热泵通道>每隔一段时间便会对其上的我军和敌军造成大量伤害",
+              "challenge": "敌方单位的生命值、攻击力、防御力都升至110%  源石生物的死亡爆炸伤害额外提升80%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfCsf.png"
+            },
+            {
+              "index": "7",
+              "operation": "4-8",
+              "cn_name": "应激反应",
+              "description": "敌方的混合部队从整个东面扑来，请立即迎敌。",
+              "challenge": "我方所有单位的再部署时间加倍  敌方单位的生命值、攻击力、防御力都提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfPL8.png"
+            },
+            {
+              "index": "8",
+              "operation": "4-9",
+              "cn_name": "彻入骨髓",
+              "description": "已在战场上确认敌方的精英异族术师部队。 这批敌人似乎会使用特殊的能力，请务必小心应对。 <热泵通道>每隔一段时间便会对其上的我军和敌军造成大量伤害",
+              "challenge": "敌方单位的生命值和攻击力都提升至110%  防御力提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfFeS.png"
+            },
+            {
+              "index": "9",
+              "operation": "4-10",
+              "cn_name": "灯火将熄",
+              "description": "霜星及其精英部队已经完全包围了这片区域。 我们现在能做的唯有迎击，不让其跨过防线一步。",
+              "challenge": "敌方单位的生命值提升至125%，攻击力提升至115%，防御力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfkdg.png"
+            },
+            {
+              "index": "10",
+              "operation": "S4-1",
+              "cn_name": "晶簇-1",
+              "description": "合理利用战场中央的活性源石能够事半功倍。 <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfAoQ.png"
+            },
+            {
+              "index": "11",
+              "operation": "S4-2",
+              "cn_name": "晶簇-2",
+              "description": "敌人的进攻路线更多了，建议依旧以活性源石为中心建立防线。 <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfVij.png"
+            },
+            {
+              "index": "12",
+              "operation": "S4-3",
+              "cn_name": "晶簇-3",
+              "description": "异族大军兵分两路进攻，利用活性源石消耗敌方血量似乎也是一个不错的选择。 <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfZJs.png"
+            },
+            {
+              "index": "13",
+              "operation": "S4-4",
+              "cn_name": "多足-1",
+              "description": "请注意不要被上下方的源石虫冲破了阵型。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfeWn.png"
+            },
+            {
+              "index": "14",
+              "operation": "S4-5",
+              "cn_name": "多足-2",
+              "description": "本战场地形狭小，请仔细考虑干员的部署位置。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfmzq.png"
+            },
+            {
+              "index": "15",
+              "operation": "S4-6",
+              "cn_name": "多足-3",
+              "description": "战场地形变得更为狭窄，请考虑提升干员的硬实力应对难关。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfuQ0.png"
+            },
+            {
+              "index": "16",
+              "operation": "S4-7",
+              "cn_name": "狂怒-1",
+              "description": "请注意敌方源石虫和异族精英术师的配合进攻。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfKyV.png"
+            },
+            {
+              "index": "17",
+              "operation": "S4-8",
+              "cn_name": "狂怒-2",
+              "description": "请注意分散占位，建议使用远程干员在远处解决源石虫。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfMLT.png"
+            },
+            {
+              "index": "18",
+              "operation": "S4-9",
+              "cn_name": "狂怒-3",
+              "description": "战场中的近战干员位置变得稀少，考虑使用特种干员解决左方的棘手敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfleU.png"
+            },
+            {
+              "index": "19",
+              "operation": "S4-10",
+              "cn_name": "狂怒-3",
+              "description": "本次作战中出现大量精英敌人。请小心应对。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf1wF.png"
+            }
+          ]
+        },
+        {
+          "index": "5",
+          "episode": "第五章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "5-1",
+              "cn_name": "冤家易结",
+              "description": "龙门外的荒野地区出现了龙门地区的敌方单位，请特别注意行动迅速的破阵者和拥有较高防御的特战术师。",
+              "challenge": "我方所有近战单位的攻击力减半  敌方单位的生命值和攻击力都提升至105%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfYWR.png"
+            },
+            {
+              "index": "1",
+              "operation": "5-2",
+              "cn_name": "有口难言",
+              "description": "龙门城区出现了大量的整合运动部队，请防范从12点方向偷袭而来的破阵者。",
+              "challenge": "敌方单位的攻击速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfNS1.png"
+            },
+            {
+              "index": "2",
+              "operation": "5-3",
+              "cn_name": "义胆凡躯",
+              "description": "战场已被敌方的特战术师组长包围，在前期贸然接近的我方干员可能会被瞬间击溃，请小心制定作战计划。",
+              "challenge": "敌方单位的生命值提升至120%、攻击力提升至110%  敌方远程单位攻击范围提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfUQx.png"
+            },
+            {
+              "index": "3",
+              "operation": "5-4",
+              "cn_name": "没人在家",
+              "description": "大量敌方无人机从四方向袭来，需要特别注意敌方携带爆破弹头的新型无人机暴鸰。",
+              "challenge": "敌方单位的生命值和攻击力都提升至105%  移动速度提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfGFJ.png"
+            },
+            {
+              "index": "4",
+              "operation": "5-5",
+              "cn_name": "连绵战火",
+              "description": "敌方无人机暴鸰的加强版本加入了战场，其弹头的群体爆破威力可能会让我方阵线瞬间崩溃，考虑对其进行提前针对。",
+              "challenge": "我方所有单位的再部署时间加倍  敌方单位的生命值提升至125%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfJY9.png"
+            },
+            {
+              "index": "5",
+              "operation": "5-6",
+              "cn_name": "疑兵之计",
+              "description": "敌方的法术大师无人机行动灵活，且能在空中对我方进行法术打击。请利用我方新开发的无人机干扰器对其进行牵制。 <干扰装置>部署后能够使周围的敌方无人机无法攻击、速度大幅度减缓，且无法使用特殊能力",
+              "challenge": "干扰装置的部署费用加倍  敌方单位的攻击力提升至120%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfay6.png"
+            },
+            {
+              "index": "6",
+              "operation": "5-7",
+              "cn_name": "生死与共",
+              "description": "无人机寒霜能够大幅度降低其周围我方单位的攻击速度，请考虑尽快部署干员进行针对或部署干扰器消除其影响。 <干扰装置>部署后能够使周围的敌方无人机无法攻击、速度大幅度减缓，且无法使用特殊能力",
+              "challenge": "禁止使用狙击和术师干员 敌方单位数值不变",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf0eO.png"
+            },
+            {
+              "index": "7",
+              "operation": "5-8",
+              "cn_name": "了如指掌",
+              "description": "一群拥有自我回复能力的诡异敌方士兵到达了战场，需要尽快清除。请围绕敌方弩炮的位置进行战术布阵。 <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": "敌方单位的生命值提升至120%，防御力提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfdOK.png"
+            },
+            {
+              "index": "8",
+              "operation": "5-9",
+              "cn_name": "孽生恶物",
+              "description": "诡异的气氛正在逐渐浓厚……敌方的流浪汉也增加了自我回复的能力，请务必尽快进行消灭。 <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": "敌方单位的生命值提升至150%，攻击力和防御力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfBwD.png"
+            },
+            {
+              "index": "9",
+              "operation": "5-10",
+              "cn_name": "长夜终尽",
+              "description": "我们已深入敌方的阵地，已经没有退路。运用你的战术头脑，从梅菲斯特和浮士德的交叉火力中杀出一条血路！ <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": "敌方单位的生命值提升至150%，攻击力提升至110%  敌方领袖梅菲斯特的生命值提升至300%，防御力提升至250%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfDTe.png"
+            },
+            {
+              "index": "10",
+              "operation": "S5-1",
+              "cn_name": "盘踞-1",
+              "description": "敌方继续在派遣大量部队在进行突袭，请特别注意上方偷袭而来的幽灵。",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf2lt.png"
+            },
+            {
+              "index": "11",
+              "operation": "S5-2",
+              "cn_name": "盘踞-2",
+              "description": "战场环境变得复杂，需要考虑部署近战干员的位置来阻挡敌方蜂拥而来的破阵者。",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfR6P.png"
+            },
+            {
+              "index": "12",
+              "operation": "S5-3",
+              "cn_name": "恶寒-1",
+              "description": "无人机寒霜对我方的干扰能力极强且拥有较高护甲，考虑使用术师干员对其进行针对。",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf5Tg.png"
+            },
+            {
+              "index": "13",
+              "operation": "S5-4",
+              "cn_name": "恶寒-2",
+              "description": "法术大师和寒霜的混合部队更加难以对付了，请派遣更多的狙击和术师干员，并合理利用无人机干扰器！ <干扰装置>部署后能够使周围的敌方无人机无法攻击、速度大幅度减缓，且无法使用特殊能力",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfWOf.png"
+            },
+            {
+              "index": "14",
+              "operation": "S5-5",
+              "cn_name": "恐慌-1",
+              "description": "宿主士兵组长相当难缠，拥有更高的生命回复速度，请依旧考虑优先对其进行击杀。 <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfhm8.png"
+            },
+            {
+              "index": "15",
+              "operation": "S5-6",
+              "cn_name": "恐慌-2",
+              "description": "粉碎攻坚手是敌方的精英单位，拥有极高防御，并且能够晕眩我方近战单位。请利用其移速慢的弱点进行牵制。 <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfokQ.png"
+            },
+            {
+              "index": "16",
+              "operation": "S5-7",
+              "cn_name": "盘旋-1",
+              "description": "本次作战中出现大量无人机部队，请进行对空防御指挥。 <干扰装置>部署后能够使周围的敌方无人机无法攻击、速度大幅度减缓，且无法使用特殊能力",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf40S.png"
+            },
+            {
+              "index": "17",
+              "operation": "S5-8",
+              "cn_name": "盘旋-2",
+              "description": "本次作战中敌人将从多个方位发起攻击。大量精英术师敌人靠近中，请小心应对！",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfTYj.png"
+            },
+            {
+              "index": "18",
+              "operation": "S5-9",
+              "cn_name": "异状-1",
+              "description": "本次作战中出现了大量的宿主部队，一定要注意防守。",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf7fs.png"
+            },
+            {
+              "index": "19",
+              "operation": "H5-1",
+              "cn_name": "炼狱行动-1",
+              "description": "敌方的无人机军团发起全面攻势！狙击和术师单位的合理搭配在本次行动中必不可少。 <干扰装置>部署后能够使周围的敌方无人机无法攻击、速度大幅度减缓，且无法使用特殊能力",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfsFH.png"
+            },
+            {
+              "index": "20",
+              "operation": "H5-2",
+              "cn_name": "炼狱行动-2",
+              "description": "本次作战地形较为简单，但请务必小心敌方的各类强力术师单位。部署高法术抗性单位吸引其火力或利用落穴是一个不错的战术。",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfyYd.png"
+            },
+            {
+              "index": "21",
+              "operation": "H5-3",
+              "cn_name": "炼狱行动-3",
+              "description": "战场地形曲折复杂，且有毒性雾霾覆盖，对我方的远程单位相当不利。考虑派遣更多医疗干员进行治疗。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qf6fA.png"
+            },
+            {
+              "index": "22",
+              "operation": "H5-4",
+              "cn_name": "炼狱行动-4",
+              "description": "浮士德再度出现，并变得更加强大，全场的所有弩炮也得到大幅度加强。合理规划干员的位置和部署顺序，抵挡住浮士德猛烈的进攻！ <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": " ",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qfgSI.png"
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "episode": "第六章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "6-1",
+              "cn_name": "僵局",
+              "description": "龙门城区中出现了身着重型装备的感染者宿主，他们不仅能够承受大量伤害，还具备自我恢复能力，务必小心应对。",
+              "challenge": "可部署单位上限减少2  敌方单位生命值、攻击力都提升至120%，防御力提升至105%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qbUl4.png"
+            },
+            {
+              "index": "1",
+              "operation": "6-2",
+              "cn_name": "一些误会",
+              "description": "那是什么生物？！可怖的感染者出现在了龙门的战场上，他们的速度与力量都远远超过了普通宿主，不要大意！",
+              "challenge": "敌方单位生命值、攻击力都提升至110%  防御力提升至105%，攻击速度提升至170%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qbB01.png"
+            },
+            {
+              "index": "2",
+              "operation": "6-3",
+              "cn_name": "同时走失",
+              "description": "狂暴宿主的数量不断攀升，他们将会对我方阵线造成很大压力，不过他们的生命，似乎也在逐渐凋零......",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  敌方狂暴宿主士兵攻击力提升至181%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qba6J.png"
+            },
+            {
+              "index": "3",
+              "operation": "6-4",
+              "cn_name": "溃烂的疮疤",
+              "description": "使用投掷物攻击的狂暴宿主出现在了这个区域，请小心他们的远距离攻击手段。",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  敌方狂暴宿主投掷手的生命值提升至181%",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qb0mR.png"
+            },
+            {
+              "index": "4",
+              "operation": "6-5",
+              "cn_name": "解决谁？",
+              "description": "混编的狂暴宿主们大量出现，也许合理配置队伍可以阻拦他们的攻势......",
+              "challenge": "敌方狂暴单位不再自然损失生命 敌方单位数值不变",
+              "preview": "https://z3.ax1x.com/2021/03/24/6qbdX9.png"
+            },
+            {
+              "index": "5",
+              "operation": "6-7",
+              "cn_name": "断弦",
+              "description": "作为罗德岛的战地指挥官，你将指挥罗德岛干员们与整合运动的首领之一，狙击手浮士德作战。当心。 <弩炮台>会定期射出弩箭对我方单位造成物理伤害",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZhIP.png"
+            },
+            {
+              "index": "6",
+              "operation": "6-8",
+              "cn_name": "只是从天而降！",
+              "description": "传奇的感染者反乌萨斯游击部队“雪怪小队”，出现在了切尔诺伯格废弃的分城。他们的战斗方式不同于任何以往的整合运动成员，切勿掉以轻心。",
+              "challenge": "敌方单位生命值提升至120%  移动速度提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZ2qA.png"
+            },
+            {
+              "index": "7",
+              "operation": "6-9",
+              "cn_name": "换一个角度",
+              "description": "雪怪小队不仅在战场上配置了使用霜冻法术的术师，还释放了会在死亡后爆发体内寒气的源石虫，请一定注意。",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  敌方雪怪小队和霜牙对被【冻结】单位的攻击力再提升至166.7%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZfat.png"
+            },
+            {
+              "index": "8",
+              "operation": "6-10",
+              "cn_name": "解开铃铛",
+              "description": "雪怪小队的特殊感染者，“凿冰人”，将对被【冻结】的我方干员造成巨额伤害，请沉着面对。",
+              "challenge": "敌方单位生命值提升至110%  敌方雪怪小队凿冰人的生命值提升至150%，攻击速度提升至300%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZgrd.png"
+            },
+            {
+              "index": "9",
+              "operation": "6-11",
+              "cn_name": "“这种事”",
+              "description": "大量雪怪小队士兵向我方发起了进攻，艰巨的战斗正在前方等着我们。合理利用干员们的特性，努力战胜敌人吧。",
+              "challenge": "战场中7个位置无法部署单位(左红门下两列) 敌方数值不变",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZWVI.png"
+            },
+            {
+              "index": "10",
+              "operation": "6-12",
+              "cn_name": "冰原之雪",
+              "description": "战场上出现了雪怪小队布置的特殊源石设施，请做好应对的准备。 <源石冰晶>周期性地释放对我方单位施加【寒冷】的范围性寒流",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  敌方源石冰晶的技能冷却减少50%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZ5Pf.png"
+            },
+            {
+              "index": "11",
+              "operation": "6-14",
+              "cn_name": "冰原之霜",
+              "description": "雪怪小队操控的“虚幻”无人机，将对我方干员造成范围法术伤害并施加【寒冷】状态。请优先处理它们。 <源石冰晶>周期性地释放对我方单位施加【寒冷】的范围性寒流",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  敌方虚幻无人机的移动速度提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZIG8.png"
+            },
+            {
+              "index": "12",
+              "operation": "6-15",
+              "cn_name": "不错的回忆",
+              "description": "“虚幻”无人机和雪怪小队凿冰人都出现在了这片战场，这场战斗十分艰难，请有条理地应对异常状态和敌人的进攻。",
+              "challenge": "敌方单位的攻击力提升至110%  敌方虚幻无人机的射程减少至90%,但生命值、防御力都提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZoRS.png"
+            },
+            {
+              "index": "13",
+              "operation": "6-16",
+              "cn_name": "黑兔子,白兔子",
+              "description": "雪怪小队的指挥官，霜星，展现出了前所未有的可怕实力。我们面对的，正是整合运动最强的战士之一。小心应对她的种种力量，全力战胜她吧！ <源石冰晶>周期性地释放对我方单位施加【寒冷】的范围性寒流",
+              "challenge": "禁止使用医疗干员  敌方单位的生命值提升至115%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZbrj.png"
+            },
+            {
+              "index": "14",
+              "operation": "6-17",
+              "cn_name": "冬逝",
+              "description": "我们选择战斗到最后。她也是。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZTxg.png"
+            },
+            {
+              "index": "15",
+              "operation": "S6-1",
+              "cn_name": "凝结-1",
+              "description": "混杂了冰爆源石虫的雪怪小队部队发起了进攻，请小心这些异常的源石虫。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeCM4.png"
+            },
+            {
+              "index": "16",
+              "operation": "S6-2",
+              "cn_name": "凝结-2",
+              "description": "冰爆源石虫与破冰者的组合，处理不当，将会造成很大的损失。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZxiV.png"
+            },
+            {
+              "index": "17",
+              "operation": "S6-3",
+              "cn_name": "霜冻-1",
+              "description": "大量的冰爆源石虫与有编制的破冰者，将会对不够坚实的防线造成毁灭性的打击。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZzGT.png"
+            },
+            {
+              "index": "18",
+              "operation": "S6-4",
+              "cn_name": "霜冻-2",
+              "description": "恶劣的环境，特殊的源石设施，强大的凿冰人，这样的攻击，我们该如何应对？ <源石冰晶>周期性地释放对我方单位施加【寒冷】的范围性寒流",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OepzF.png"
+            },
+            {
+              "index": "19",
+              "operation": "H6-1",
+              "cn_name": "冰狱行动-1",
+              "description": "敌方精英部队和狂暴宿主一起发动了攻势，请合理运用中间的道路来对抗敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZqqs.png"
+            },
+            {
+              "index": "20",
+              "operation": "H6-2",
+              "cn_name": "冰狱行动-2",
+              "description": "狂暴宿主的两头夹击来势汹汹，此时更需要沉着冷静地应对。 <活性源石>部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZXaq.png"
+            },
+            {
+              "index": "21",
+              "operation": "H6-3",
+              "cn_name": "冰狱行动-3",
+              "description": "冰爆源石虫的位置会让我方的干员部署陷入极大麻烦，请认真思考如何处理这批难缠的生物。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZOZn.png"
+            },
+            {
+              "index": "22",
+              "operation": "H6-4",
+              "cn_name": "冰狱行动-4",
+              "description": "全盛状态的霜星回归战场，运用你的战术头脑，抵御这股寒霜风暴吧！ <源石冰晶>周期性地释放对我方单位施加【寒冷】的范围性寒流",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OZjI0.png"
+            },
+            {
+              "index": "23",
+              "operation": "TR-16",
+              "cn_name": "恶劣环境",
+              "description": "学习有关【寒冷】和【冻结】两种异常状态的知识。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeSRU.png"
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "episode": "第七章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "7-2",
+              "cn_name": "别离之夜",
+              "description": "尚有不少整合运动的残余武装力量，盘踞在龙门街头作殊死抵抗，请做好战斗准备。",
+              "challenge": "敌方单位攻击力提升至115%  宿主流浪者与宿主士兵组长生命值都提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe1eA.png"
+            },
+            {
+              "index": "1",
+              "operation": "7-3",
+              "cn_name": "变节之刃",
+              "description": "梅菲斯特的牧群已经不再受它们领袖的控制，但它们无尽的攻击欲正促使它们袭击罗德岛本舰。请尽快清除残余的狂暴宿主。",
+              "challenge": "敌方单位生命值提升至110%，防御力提升至120%  我方单位防御力减半",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeQLd.png"
+            },
+            {
+              "index": "2",
+              "operation": "7-4",
+              "cn_name": "并肩之约-1",
+              "description": "整合运动的先头侦察部队出现在了我们布置隐蔽设施的位置，我们得赶在他们将消息带回去前制服他们。小心，他们不是普通的整合运动。",
+              "challenge": "敌方单位生命值和攻击力都提升至110%  所有敌人移动速度提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeKQe.png"
+            },
+            {
+              "index": "3",
+              "operation": "7-5",
+              "cn_name": "并肩之约-2",
+              "description": "在核心城枢纽层的通道上，出现了正在巡逻的整合运动。千万不能掉以轻心，那身制服……属于曾经奋战在乌萨斯北原的感染者游击队。",
+              "challenge": "远程单位部署费用提升至2倍  敌方单位生命值提升至105%、攻击力提升至115%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OenzD.png"
+            },
+            {
+              "index": "4",
+              "operation": "7-6",
+              "cn_name": "遗忘之地",
+              "description": "我们在前往核心城中央区的路途上遭遇了游击队的传令兵，他们使用独特的方式交流，指挥着游击队的战士。我们也许能在与他们的战斗中得到启发……",
+              "challenge": "敌方单位生命值提升至170%、防御力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeMsH.png"
+            },
+            {
+              "index": "5",
+              "operation": "7-8",
+              "cn_name": "沉默者之怒-1",
+              "description": "我们在枢纽层发现了怪异的萨卡兹源石祭坛……祭坛会对周围的环境产生异样的影响，但我们同样可以利用祭坛来部署防线，对抗敌人。 <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害",
+              "challenge": "我方单位阻挡数-1 敌方单位数值不变",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe3dI.png"
+            },
+            {
+              "index": "6",
+              "operation": "7-9",
+              "cn_name": "沉默者之怒-2",
+              "description": "我们的敌人不再是普通的散兵游勇。现在是战术与战术间的对抗。合理制定你的作战方案，给敌人关键的一击。 <源石祭坛>周期性向四周释脉冲波，对我军与敌军造成伤害",
+              "challenge": "敌方单位生命值和攻击力都提升至110%  游击队传令兵生命值提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe8ot.png"
+            },
+            {
+              "index": "7",
+              "operation": "7-10",
+              "cn_name": "暗淡者之火",
+              "description": "萨卡兹战士出现在了战场，请注意，他们似乎与游击队并不属于同一编制。他们甚至还会被萨卡兹祭坛鼓舞……？！ <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害",
+              "challenge": "敌方单位生命值、攻击力、防御力都提升至110%  雇佣军萨卡兹战士攻击速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeJFP.png"
+            },
+            {
+              "index": "8",
+              "operation": "7-11",
+              "cn_name": "浸染-1",
+              "description": "萨卡兹术师出现在了战场，祭坛甚至能影响到他们的法术，不要恐慌，我们有办法对付他们。 <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害",
+              "challenge": "敌人移动速度-60%  敌方单位生命值和攻击力都提升至180%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeYJf.png"
+            },
+            {
+              "index": "9",
+              "operation": "7-12",
+              "cn_name": "浸染-2",
+              "description": "作为整合运动的精锐战士，萨卡兹雇佣军们展现出了强大的力量，只有战胜他们，我们才能继续前进。 <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "敌方单位生命值提升至120%  攻击力提升至110%、防御力提升至150% ",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OetW8.png"
+            },
+            {
+              "index": "10",
+              "operation": "7-13",
+              "cn_name": "感染者之盾-1",
+              "description": "号角已经吹响，面对乌萨斯传奇的感染者游击队，用他们擅长的战术击败他们自己！但那些身披重铠的游击队员，的确曾是乌萨斯军队里最可怖的战士……",
+              "challenge": "禁止部署狙击与近卫干员  敌方单位生命值和攻击力都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeUSS.png"
+            },
+            {
+              "index": "11",
+              "operation": "7-14",
+              "cn_name": "游击-1",
+              "description": "游击队使用的迫击炮对我们产生了巨大的威胁，这些被游击队从乌萨斯军械库带走的武器，正是战争令人胆寒的化身之一。",
+              "challenge": "敌方单位攻击力提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeaQg.png"
+            },
+            {
+              "index": "12",
+              "operation": "7-15",
+              "cn_name": "游击-2",
+              "description": "游击队的垂直打击部队经受过严酷的考验和残酷的战争，与乌萨斯战斗十数年，他们的意志已几近不可摧毁。我们的胜机，只有一瞬。",
+              "challenge": "敌方单位攻击力提升至120%  游击队盾卫生命值减少至33%，但防御力提升至1950，法术抗性提升至90",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OedyQ.png"
+            },
+            {
+              "index": "13",
+              "operation": "7-16",
+              "cn_name": "无匹",
+              "description": "有谁见证过这样的战斗？有谁能在这种战场幸存？一场简单的缠斗也令人胆战心惊。我们没有战胜他们的能力。我们必须逃过他们的眼睛。",
+              "challenge": "最多可携带干员数降至7  敌方单位生命值提升至120%、攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OewLj.png"
+            },
+            {
+              "index": "14",
+              "operation": "7-17",
+              "cn_name": "感染者之盾-2",
+              "description": "我们没法消灭他们，我们将拼尽全力不被他们消灭。必须达成战术目标。我们要瘫痪他们的中枢神经，让巨人的头脑暴露在我们面前。 <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害",
+              "challenge": "禁止部署近卫与术师干员  敌方单位生命值提升至105%、攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeBes.png"
+            },
+            {
+              "index": "15",
+              "operation": "7-18",
+              "cn_name": "爱国者之死",
+              "description": "感染者游击队“盾”的指挥官。萨卡兹勇士中古老至极的血脉。乌萨斯最壮毅的战争化身。整合运动的脊骨。叶莲娜之父。 <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害 <干扰地雷>爆炸时可使四周的所有敌人造成大量伤害并使其15秒内受到的伤害增加",
+              "challenge": "战场中的6个位置无法部署我方单位(三列高台上下六格)  敌方单位生命值提升至120%、攻击力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeDwn.png"
+            },
+            {
+              "index": "16",
+              "operation": "S7-1",
+              "cn_name": "埋伏-1",
+              "description": "合理运用神经性干扰地雷，处理难以被普通手段伤害的游击队战士。 <干扰地雷>爆炸时可使四周的所有敌人造成大量伤害并使其15秒内受到的伤害增加",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeRlF.png"
+            },
+            {
+              "index": "17",
+              "operation": "S7-2",
+              "cn_name": "埋伏-2",
+              "description": "运用干扰地雷，建立防线，扩大优势，达成战略目标。 <干扰地雷>爆炸时可使四周的所有敌人造成大量伤害并使其15秒内受到的伤害增加",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeWy4.png"
+            },
+            {
+              "index": "18",
+              "operation": "H7-1",
+              "cn_name": "星火行动-1",
+              "description": "游击战并不意味着不会有正面进攻的时刻，一场战役总会有它最标志的一场胜败。在这样的开阔地形中，这场战斗究竟对谁有利？ 本次作战中干员布置不受近远程限制 <障碍物>部署以后可以阻挡敌人的行进路线",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oeroq.png"
+            },
+            {
+              "index": "19",
+              "operation": "H7-2",
+              "cn_name": "星火行动-2",
+              "description": "旷日持久的作战消耗了我们的精力，但现在放弃，留给我们的就只有惨败。坚持住！敌人的进攻一定会露出破绽……",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeyF0.png"
+            },
+            {
+              "index": "20",
+              "operation": "H7-3",
+              "cn_name": "星火行动-3",
+              "description": "于恶劣环境中战斗，谁更适应环境，谁就能拥有更多胜机。只是这种牺牲，又有谁能承担得起呢？ <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害 <干扰地雷>爆炸时可使四周的所有敌人造成大量伤害并使其15秒内受到的伤害增加",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe6YV.png"
+            },
+            {
+              "index": "21",
+              "operation": "H7-4",
+              "cn_name": "星火行动-4",
+              "description": "如果你从未见识过他们过去的阵列，你就无法理解为何他们曾被战场上的所有生灵恐惧。兴许有人能向你描述，乌萨斯是用什么碾碎了文明本身…… <源石祭坛>周期性向四周释放脉冲波，对我军与敌军造成伤害",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe2SU.png"
+            },
+            {
+              "index": "22",
+              "operation": "TR-17",
+              "cn_name": "重点打击",
+              "description": "学习如何应对整合运动游击队的特殊指挥战术。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OefOJ.png"
+            }
+          ]
+        },
+        {
+          "index": "8",
+          "episode": "第八章",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "R8-1",
+              "cn_name": "昨日，谷壳将裂",
+              "description": "在遥远的冻原上，追查感染者、纠缠着偏远村庄的纠察队，穿着黑色甲虫般的制服。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%、战场中(2,6)、(2,9)、(5,9)3个位置{右下角三个高台}无法部署我方单位",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oevmd.png"
+            },
+            {
+              "index": "1",
+              "operation": "R8-2",
+              "cn_name": "无辜的血肉",
+              "description": "乌萨斯的冻原上，每一只活物都受到怀疑。他们可能是凶手，可能是暴徒，可能是间谍，也可能是无罪的人。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁。 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "我方单位阻挡数-1、敌方单位的攻击力、防御力、生命值都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Ompkt.png"
+            },
+            {
+              "index": "2",
+              "operation": "R8-3",
+              "cn_name": "麦秆，极易燃烧",
+              "description": "因目睹暴行而怒不可遏，则是义愤。而乌萨斯的裂兽被训练的很好，它们不因为目标情绪高涨而下不了口。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁。 <斗士塔露拉>被敌人击杀时扣除关卡生命值",
+              "challenge": "远程单位部署费用提升至2倍  敌方单位的攻击力、防御力、生命值都提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oex0A.png"
+            },
+            {
+              "index": "3",
+              "operation": "R8-4",
+              "cn_name": "火种，一触即灭",
+              "description": "有些时候，保护他人不是目的，而是过程。乌萨斯的弩手们私下里也认为，杀害他人不是目的，而是过程。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%  敌方单位的攻击速度提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OezTI.png"
+            },
+            {
+              "index": "4",
+              "operation": "R8-5",
+              "cn_name": "寒冷，来自知觉",
+              "description": "文字记载中西北冻原的最低温度，也不及有些人的词句来的彻骨。 <斗士塔露拉>被敌人击杀时扣除关卡生命值 <霜星的源石冰晶>周期性地释放对敌方单位施加【寒冷】的范围性寒流",
+              "challenge": "敌方单位的生命值提升至110%  乌萨斯突击者的攻击力、防御力提升至150%  其他敌方单位的攻击力、防御力提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OmCff.png"
+            },
+            {
+              "index": "5",
+              "operation": "R8-6",
+              "cn_name": "战场，蔓延不止",
+              "description": "最坚实的与最柔和的，分享着同一种强韧。 <斗士塔露拉>被敌人击杀时扣除关卡生命值 <爱国者的源石祭坛> 周期性向四周释放气体，对敌军造成大量伤害",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%  乌萨斯着铠术师的攻击范围提升至150%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Om9tP.png"
+            },
+            {
+              "index": "6",
+              "operation": "R8-7",
+              "cn_name": "牵引的炮火",
+              "description": "乌萨斯军伍中，炮兵的历史并不算太悠久，他们很乐意使用先进的技术武装自己，至于他们的敌人是谁，他们不太关心。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "敌方单位的攻击力、防御力提升至110%  帝国火炮先兆者的生命值提升至200%  其他敌方单位的生命值提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Omip8.png"
+            },
+            {
+              "index": "7",
+              "operation": "R8-8",
+              "cn_name": "人心，向背无常",
+              "description": "想要在传说前证明自己，就只能让自己接近完美。只有凡人才流血。只有高尚才易受中伤。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <斗士塔露拉>被敌人击杀时扣除关卡生命值",
+              "challenge": "敌方单位的攻击力、生命值提升至110%  我方单位的攻击力降低至65%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Omk6g.png"
+            },
+            {
+              "index": "8",
+              "operation": "R8-9",
+              "cn_name": "相逢，总是离别",
+              "description": "失去。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%  路障的生命值提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OYR5F.png"
+            },
+            {
+              "index": "9",
+              "operation": "R8-10",
+              "cn_name": "沉默的屠夫",
+              "description": "乌萨斯帝国的精锐曾在多次战争中损失殆尽，但帝国总能培养出新的精锐力量。一个帝国理当如此。 <障碍物>部署以后可以阻挡敌人的行进路线 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "可部署单位上限减少3  敌方单位的攻击力、防御力、生命值提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OYh8J.png"
+            },
+            {
+              "index": "10",
+              "operation": "R8-11",
+              "cn_name": "落雪，浸黑国土",
+              "description": "尚没有人能被他们称作是“敌人”。将死之人与无能之辈向来不在其列。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <斗士塔露拉>被敌人击杀时扣除关卡生命值",
+              "challenge": "敌方单位的攻击力、生命值提升至110%  帝国前锋精锐、帝国前锋百战精锐的攻击力、生命值额外提升至140%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OmF1S.png"
+            },
+            {
+              "index": "11",
+              "operation": "M8-6",
+              "cn_name": "再见，只为再见",
+              "description": "07:29:28 有些朋友愿意为你承担痛苦，而你也许应当向他们伸出援手。而有些则从来都不是朋友。",
+              "challenge": "敌方单位的攻击力、生命值提升至110%  狂暴宿主士兵、狂暴宿主组长、狂暴宿主掷骨手的攻击速度提升至130%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeLlD.png"
+            },
+            {
+              "index": "12",
+              "operation": "M8-7",
+              "cn_name": "恶言，报应不爽",
+              "description": "她还没死，但她已经见过太多死亡。",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%  萨卡兹宿主百夫长的吸血效果提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeO6e.png"
+            },
+            {
+              "index": "13",
+              "operation": "M8-8",
+              "cn_name": "苏醒，浮出梦乡",
+              "description": "有其首脑，有其源头，有其命运，有其消亡。牧群，悲剧，一切。有谁能真正选择自己的人生？",
+              "challenge": "敌方单位的攻击力、防御力、生命值都提升至110%  梅菲斯特，“歌者”的毒性粉尘伤害提升至200%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeXOH.png"
+            },
+            {
+              "index": "14",
+              "operation": "JT8-1",
+              "cn_name": "恨火，流向原野",
+              "description": "“我愿和你打个赌。”",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe4m9.png"
+            },
+            {
+              "index": "15",
+              "operation": "JT8-2",
+              "cn_name": "睁眼，便是日暮",
+              "description": "记忆与现实已经全部释放，她知道是时候了。 （部分剧情首次观看时无法跳过） <热泵通道>每隔一段时间便会对其上的我军和敌军造成大量伤害",
+              "challenge": "塔露拉立即进入狂暴状态  敌方单位的攻击力、生命值提升至110%",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeHfK.png"
+            },
+            {
+              "index": "16",
+              "operation": "JT8-3",
+              "cn_name": "昂首，足践烈焰",
+              "description": "06:26:33 用剑去撕开火，用现在去战胜过往，用自我去面对混沌乱象。愤怒，所以绝不妥协。愤怒，所以不会沉默。 <能量聚合体>向四周四方向发出火球，对一名我方单位造成法术伤害并施加【烈焚灼息】（每秒受到真实伤害且伤害递增，可被抵抗）",
+              "challenge": "敌方单位的攻击力、生命值提升至110%  能量聚合体造成的法术伤害提升400",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeqSO.png"
+            },
+            {
+              "index": "17",
+              "operation": "H8-1",
+              "cn_name": "狂夜行动-1",
+              "description": "生命可贵却脆弱。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe7Y6.png"
+            },
+            {
+              "index": "18",
+              "operation": "H8-2",
+              "cn_name": "狂夜行动-2",
+              "description": "恶火伤人且长久。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeIT1.png"
+            },
+            {
+              "index": "19",
+              "operation": "H8-3",
+              "cn_name": "狂夜行动-3",
+              "description": "歌声残破却痛苦。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6Oe5wR.png"
+            },
+            {
+              "index": "20",
+              "operation": "H8-4",
+              "cn_name": "狂夜行动-4",
+              "description": "神祇傲慢且恐怖。 <能量聚合体>向四周四方向发出火球，对一名我方单位造成法术伤害并施加【烈焚灼息】（每秒受到真实伤害且伤害递增，可被抵抗） <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OeTFx.png"
+            },
+            {
+              "index": "21",
+              "operation": "TR-18",
+              "cn_name": "疏散平民",
+              "description": "学习如何疏散冲突地带内的平民。 <道路障碍物>可以阻挡乌萨斯平民与斗士塔露拉前进，可被我方单位击毁。 <乌萨斯平民>被敌人击杀时扣除关卡生命值",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6OY2UU.png"
+            }
+          ]
+        },
+        {
+          "index": "9",
+          "episode": "第九章",
+          "childNodes": []
+        }
+      ]
+    },
+    {
+      "story": "危机合约",
+      "index": "2",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "训练场",
+          "childNodes": []
+        },
+        {
+          "index": "1",
+          "episode": "危机合约β",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "59区废墟",
+              "description": "切尔诺伯格分城区，因面积较小、缺乏战略意义而遭到废弃，现已被游荡的敌方单位占据，需阻止敌人穿越我方包围网。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HmwT.png",
+              "custom": [
+                {
+                  "name": "<活性源石>",
+                  "value": "部署于其上的我军和经过的敌军在五分钟内 每秒持续受到60真实伤害，攻击力提升50%，攻击速度增加50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "#0荒芜行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "破碎大道",
+              "description": "被战火摧残的街道，路面斑驳，断壁残垣，而造成这一切的罪魁祸首依旧驻扎在这片区域。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HMY4.png",
+              "custom": [
+                {
+                  "name": "<热泵通道>",
+                  "value": "每4~6秒造成一次2000真实伤害"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "#1黄铁行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "episode": "#2利刃行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            },
+            {
+              "index": 1,
+              "operation": "20/07/28",
+              "cn_name": "霜冻废墟",
+              "description": "在某场战役中被大面积冻结的废墟，依旧有少数敌人及失控的源石生物徘徊。偶尔能看见不合时节的雪花飞舞。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HVO0.png",
+              "custom": []
+            },
+            {
+              "index": 2,
+              "operation": "20/07/30",
+              "cn_name": "新街",
+              "description": "龙门最繁华的街道之一，如今只剩下仓促逃难所遗留的一地残骸。有部分敌人在此区域行动，并对附近的普通市民构成了威胁。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HkSs.png",
+              "custom": []
+            },
+            {
+              "index": 3,
+              "operation": "20/07/31",
+              "cn_name": "荒漠",
+              "description": "地处偏远的无名荒漠，贫瘠崎岖的地形为流窜至此的敌人提供了庇护，有必要在敌方进一步深入荒野前阻止他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HQfJ.png",
+              "custom": []
+            },
+            {
+              "index": 4,
+              "operation": "20/08/01",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "operation": "20/08/02",
+              "cn_name": "破碎大道",
+              "description": "被战火摧残的街道，路面斑驳，断壁残垣，而造成这一切的罪魁祸首依旧驻扎在这片区域。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HMY4.png",
+              "custom": []
+            },
+            {
+              "index": 6,
+              "operation": "20/08/03",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 7,
+              "operation": "常驻图下半",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            },
+            {
+              "index": 8,
+              "operation": "20/08/04",
+              "cn_name": "军械库东",
+              "description": "龙门近卫局军械库东部，围绕着军械的争夺至今还未结束，请帮助该地区恢复稳定。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HiWj.png",
+              "custom": []
+            },
+            {
+              "index": 9,
+              "operation": "20/08/05",
+              "cn_name": "荒漠",
+              "description": "地处偏远的无名荒漠，贫瘠崎岖的地形为流窜至此的敌人提供了庇护，有必要在敌方进一步深入荒野前阻止他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HQfJ.png",
+              "custom": []
+            },
+            {
+              "index": 10,
+              "operation": "20/08/06",
+              "cn_name": "新街",
+              "description": "龙门最繁华的街道之一，如今只剩下仓促逃难所遗留的一地残骸。有部分敌人在此区域行动，并对附近的普通市民构成了威胁。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HkSs.png",
+              "custom": []
+            },
+            {
+              "index": 11,
+              "operation": "20/08/07",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "operation": "20/08/08",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 13,
+              "operation": "20/08/09",
+              "cn_name": "破碎大道",
+              "description": "被战火摧残的街道，路面斑驳，断壁残垣，而造成这一切的罪魁祸首依旧驻扎在这片区域。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HMY4.png",
+              "custom": []
+            },
+            {
+              "index": 14,
+              "operation": "20/08/10",
+              "cn_name": "军械库东",
+              "description": "龙门近卫局军械库东部，围绕着军械的争夺至今还未结束，请帮助该地区恢复稳定。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HiWj.png",
+              "custom": []
+            }
+          ]
+        },
+        {
+          "index": "5",
+          "episode": "#3燃灰行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "风蚀高地",
+              "description": "远离移动城市路径的高地，终日被狂风侵蚀，据传有支敌对部队潜藏在这里，请探明情况并击退他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HCFg.png",
+              "custom": []
+            },
+            {
+              "index": "1",
+              "operation": "20/11/15",
+              "cn_name": "破碎大道",
+              "description": "被战火摧残的街道，路面斑驳，断壁残垣，而造成这一切的罪魁祸首依旧驻扎在这片区域。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HMY4.png",
+              "custom": []
+            },
+            {
+              "index": "2",
+              "operation": "20/11/17",
+              "cn_name": "6区废墟",
+              "description": "切尔诺伯格核心城区之一，在混乱的拉锯战中化为战场，如今这里被残存的整合运动所占据，想要恢复秩序，必须将他们驱逐。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HKkF.png",
+              "custom": [
+                {
+                  "name": "<活性源石>",
+                  "value": "部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "operation": "20/11/18",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 4,
+              "operation": "20/11/19",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            },
+            {
+              "index": 5,
+              "operation": "20/11/20",
+              "cn_name": "霜冻废墟",
+              "description": "在某场战役中被大面积冻结的废墟，依旧有少数敌人及失控的源石生物徘徊。偶尔能看见不合时节的雪花飞舞。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HVO0.png",
+              "custom": []
+            },
+            {
+              "index": 6,
+              "operation": "20/11/21",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "operation": "常驻图下半",
+              "cn_name": "风蚀高地",
+              "description": "远离移动城市路径的高地，终日被狂风侵蚀，据传有支敌对部队潜藏在这里，请探明情况并击退他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HCFg.png",
+              "custom": []
+            },
+            {
+              "index": 8,
+              "operation": "20/11/22",
+              "cn_name": "军械库东",
+              "description": "龙门近卫局军械库东部，围绕着军械的争夺至今还未结束，请帮助该地区恢复稳定。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HiWj.png",
+              "custom": []
+            },
+            {
+              "index": 9,
+              "operation": "20/11/23",
+              "cn_name": "破碎大道",
+              "description": "被战火摧残的街道，路面斑驳，断壁残垣，而造成这一切的罪魁祸首依旧驻扎在这片区域。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HMY4.png",
+              "custom": []
+            },
+            {
+              "index": 10,
+              "operation": "20/11/24",
+              "cn_name": "6区废墟",
+              "description": "切尔诺伯格核心城区之一，在混乱的拉锯战中化为战场，如今这里被残存的整合运动所占据，想要恢复秩序，必须将他们驱逐。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HKkF.png",
+              "custom": [
+                {
+                  "name": "<活性源石>",
+                  "value": "部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升"
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "operation": "20/11/25",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 12,
+              "operation": "20/11/26",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            },
+            {
+              "index": 13,
+              "operation": "20/11/27",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "operation": "20/11/28",
+              "cn_name": "军械库东",
+              "description": "龙门近卫局军械库东部，围绕着军械的争夺至今还未结束，请帮助该地区恢复稳定。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HiWj.png",
+              "custom": []
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "episode": "#4铅封行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "无序矿区",
+              "description": "远离城市的无主矿区，已经成为了无法者聚集的巢穴，请尽快击破他们，还整个地区以安宁。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HpTS.png",
+              "custom": [
+                {
+                  "name": "<碎石>",
+                  "value": "可以阻挡敌人的行进路线"
+                },
+                {
+                  "name": "特殊地形效果 <活性源石>",
+                  "value": "部署于其上的我军和经过的敌军在1000秒内 每秒持续受到150真实伤害，攻击力提升50%，攻击速度增加50"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "operation": "21/01/19",
+              "cn_name": "闭锁监狱",
+              "description": "一座安装了禁锢装置的哥伦比亚监狱发生大规模冲突，请协助狱警平息事态。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HSw8.png",
+              "custom": [
+                {
+                  "name": "<禁锢装置>",
+                  "value": "禁锢作用范围内已解放的敌人"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "operation": "21/01/21",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 3,
+              "operation": "21/01/22",
+              "cn_name": "军械库东",
+              "description": "龙门近卫局军械库东部，围绕着军械的争夺至今还未结束，请帮助该地区恢复稳定。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HiWj.png",
+              "custom": []
+            },
+            {
+              "index": 4,
+              "operation": "21/01/23",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "operation": "21/01/24",
+              "cn_name": "6区废墟",
+              "description": "切尔诺伯格核心城区之一，在混乱的拉锯战中化为战场，如今这里被残存的整合运动所占据，想要恢复秩序，必须将他们驱逐。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HKkF.png",
+              "custom": [
+                {
+                  "name": "<活性源石>",
+                  "value": "部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升"
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "operation": "21/01/25",
+              "cn_name": "风蚀高地",
+              "description": "远离移动城市路径的高地，终日被狂风侵蚀，据传有支敌对部队潜藏在这里，请探明情况并击退他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HCFg.png",
+              "custom": []
+            },
+            {
+              "index": 7,
+              "operation": "常驻图下半",
+              "cn_name": "无序矿区",
+              "description": "远离城市的无主矿区，已经成为了无法者聚集的巢穴，请尽快击破他们，还整个地区以安宁。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HpTS.png",
+              "custom": [
+                {
+                  "name": "<碎石>",
+                  "value": "可以阻挡敌人的行进路线"
+                },
+                {
+                  "name": "特殊地形效果 <活性源石>",
+                  "value": "部署于其上的我军和经过的敌军在1000秒内 每秒持续受到150真实伤害，攻击力提升50%，攻击速度增加50"
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "operation": "21/01/26",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            },
+            {
+              "index": 9,
+              "operation": "21/01/27",
+              "cn_name": "黄铁峡谷",
+              "description": "被黄沙覆盖的峡谷，在阳光映照下发出如同金属般的光泽。劫掠者时常潜藏在太阳照不到的地方，请小心行事。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HPYQ.png",
+              "custom": [
+                {
+                  "name": "<震撼装置>",
+                  "value": "消耗一定部署费用可以开启，伤害并晕眩周围的敌人，开启后所在位置变为可以通行。"
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "operation": "21/01/28",
+              "cn_name": "闭锁监狱",
+              "description": "一座安装了禁锢装置的哥伦比亚监狱发生大规模冲突，请协助狱警平息事态。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HSw8.png",
+              "custom": [
+                {
+                  "name": "<禁锢装置>",
+                  "value": "禁锢作用范围内已解放的敌人"
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "operation": "21/01/29",
+              "cn_name": "中转站",
+              "description": "龙门赖以生存的物流枢纽，作为重要的战略据点陷入多方的争夺，现在，我们要取回这里的掌控权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HAln.png",
+              "custom": []
+            },
+            {
+              "index": 12,
+              "operation": "21/01/30",
+              "cn_name": "风蚀高地",
+              "description": "远离移动城市路径的高地，终日被狂风侵蚀，据传有支敌对部队潜藏在这里，请探明情况并击退他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HCFg.png",
+              "custom": []
+            },
+            {
+              "index": 13,
+              "operation": "21/01/31",
+              "cn_name": "6区废墟",
+              "description": "切尔诺伯格核心城区之一，在混乱的拉锯战中化为战场，如今这里被残存的整合运动所占据，想要恢复秩序，必须将他们驱逐。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HKkF.png",
+              "custom": [
+                {
+                  "name": "<活性源石>",
+                  "value": "部署于其上的我军和经过的敌军持续受到伤害，但攻击力和攻速大幅度提升"
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "operation": "21/02/01",
+              "cn_name": "荒废工厂",
+              "description": "切尔诺伯格境内的废弃工厂，正被整合运动占据。对方已布下伏兵，清剿时请务必活用周边环境。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/07/g1HnTU.png",
+              "custom": []
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "episode": "#5光谱行动",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "常驻图上半",
+              "cn_name": "待定0",
+              "description": "待定",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/01/gV56nP.png",
+              "custom": []
+            },
+            {
+              "index": 1,
+              "operation": "21/05/15",
+              "cn_name": "日替测试",
+              "description": "日替测试",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xELm4.png",
+              "custom": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "story": "剿灭作战",
+      "index": "3",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "-",
+          "childNodes": [
+            {
+              "index": 0,
+              "operation": "乌萨斯",
+              "cn_name": "切尔诺伯格",
+              "description": "剿灭切尔诺伯格城的大量整合运动破坏分子。小心在该区域巡逻的整合运动干部。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJWMn.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "operation": "炎国",
+              "cn_name": "龙门外环",
+              "description": "剿灭潜伏在龙门外环的整合运动危险分子，保证龙门的安全不会受到任何威胁。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJg2j.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "operation": "炎国",
+              "cn_name": "龙门市区",
+              "description": "剿灭攻入龙门市区的整合运动武装分子，夺回地区主动权。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJ2xs.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "operation": "卡西米尔",
+              "cn_name": "大骑士领郊外",
+              "description": "卡西米尔商业联合会筹划了这场大型竞技表演赛。作为防守方，罗德岛需要活用赞助无人机以应对各大骑士团的精锐。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJbRJ.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "operation": "乌萨斯",
+              "cn_name": "北原冰封废城",
+              "description": "成建制的整合运动游击队潜藏在乌萨斯冰原上的废弃移动城市。准备好防寒措施，只有这样，才有胜利的希望。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJHG4.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "operation": "乌萨斯",
+              "cn_name": "废弃矿区",
+              "description": "成建制的整合运动游击队潜藏在乌萨斯冰原上的废弃移动城市。准备好防寒措施，只有这样，才有胜利的希望。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJ7iF.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "operation": "汐斯塔",
+              "cn_name": "潮没海滨",
+              "description": "汐斯塔海滩上毫不起眼的一小块海滩，此时正被西西里人和暴徒占据。请熟练运用汐斯塔市提供的指挥终端，尽快驱逐他们。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geikD0.png",
+              "custom": [
+                {
+                  "name": "<特殊条件>",
+                  "value": "部署费用不会自然回复"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "story": "悖论模拟",
+      "index": "4",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "先锋",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "红豆",
+              "cn_name": "热情",
+              "description": "对红豆来说，无论做什么，热情都是一件十分重要的事。 这一点体现在战斗中，就是她在进攻时偶尔会如同一首摇滚歌曲来到高潮一般忽然爆发出远超平时的实力。 如何运用好她这种起伏不定的状况会是让红豆最大限度发挥其实力的关键，而方法有很多。 其中一种是——让她更快一点，提高她爆发的频率。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HyOU.png"
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "episode": "近卫",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "布洛卡",
+              "cn_name": "坚守",
+              "description": "一直以来，在和另外两人一起行动时，布洛卡往往是那个殿后的人。 他的体格和武器让他擅长做这些事，他也愿意做这些事。 这并不是因为他真的喜欢这些，而是因为他信任贾维和奥斯塔。 而现在，他也逐渐愿意在任务中担任类似的职责。在敌人较多的场合，安心地将阵地交给他来防守吧。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HUoj.png"
+            },
+            {
+              "index": "1",
+              "operation": "玫兰莎",
+              "cn_name": "伤痛坚守",
+              "description": "如何在大量敌人的冲击下独守难关，是教官们出给手下学员的一道考题，而第一个被点名的干员正是最擅长正面作战的玫兰莎。 一对一的正面对决非常适合玫兰莎发挥自身的实力，但险恶的作战环境将会成为她行动的阻力。在医疗部成员的支援下，仔细计算体力的消耗，找准爆发时机，是本次模拟作战获胜的关键。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HsyT.png"
+            },
+            {
+              "index": "2",
+              "operation": "因陀罗",
+              "cn_name": "乘风追击",
+              "description": "在适合的战斗环境中，因陀罗的情绪会更加高涨，她的双拳将快得令敌人无法招架。 安排队友，将敌人逼至因陀罗跟前，让她来一场堂堂正正的对决！哪怕受伤，她也不会停下！继续攻击！更迅猛地攻击！在这般精神力量下，她的伤口甚至出现了愈合的迹象！这就是真正的斗士——因陀罗！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HGy8.png"
+            },
+            {
+              "index": "3",
+              "operation": "铸铁",
+              "cn_name": "不息",
+              "description": "作为久经战阵的佣兵，铸铁十分擅长在持久战中应对敌人与他们试图施加给她的负面状态。 随着作战逐渐白热化，铸铁的优异体质与锻炼成果会尽数显现。敌人会发现，无论如何突破，无论如何影响，面前的丰蹄依旧奋战如初。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6Huod.png"
+            },
+            {
+              "index": 4,
+              "operation": "暴行",
+              "cn_name": "哈！一线贯通！",
+              "description": "险路求生，绝境反击。在崎岖的山路、低洼山谷之中，干员暴行将施展自己独特的源石技艺，于逆境中也能够因敌取胜。 此次作战受制于地形影响，能够给予干员暴行的支援将十分有限。务必谨慎制定方案，选定时机，定能以少胜多。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geie5F.png",
+              "custom": [
+                {
+                  "name": "解锁条件",
+                  "value": "干员暴行提升至精英阶段2等级1"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "operation": "山",
+              "cn_name": "不动如山",
+              "description": "不动如山这来自炎国的四字短语仿佛是为山量身订造的一般，当山站在战场上，他就像一座永远无法逾越的高峰一样令敌人望而生畏。 敌人越多，他的价值愈将凸显，所以，将他布置在敌人的必经之处吧，他不会让你失望的。 不动如山，不动如山。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geiZUU.png",
+              "custom": [
+                {
+                  "name": "解锁条件",
+                  "value": "干员山提升至精英阶段2等级1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "狙击",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "克洛丝",
+              "cn_name": "模拟场景1122K",
+              "description": "本次模拟旨在测试决策者的指挥能力、整个队伍的默契度以及狙击干员的抗压能力。 其中，狙击干员是此次模拟的重点测试对象。 模拟队伍经过刻意选配，人员很充足，但极度缺乏远程输出手段。 重点区域被分配给了克洛丝干员，作为小队唯一的狙击干员，她的冷静与射击技术将决定该模拟的结果走向。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HrlV.png"
+            },
+            {
+              "index": "1",
+              "operation": "白雪",
+              "cn_name": "控制距离",
+              "description": "白雪的武器和战斗方式十分古怪。 虽然她能攻击直线上的所有敌人，但是她的攻击中最具杀伤力的部分无疑是当飞镖来到最远处时停留并旋转的那段时间。 因此，要让她的战斗手段能够获得最大收益，需要了解她的射程，并且计算好敌人出现的位置。 幸好，博士精于此道。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6H0Wq.png"
+            },
+            {
+              "index": "2",
+              "operation": "普罗旺斯",
+              "cn_name": "别让自己冻僵",
+              "description": "普罗旺斯熟知大多数野外环境与生存法则，本次模拟在恶劣环境的基础上，还为她安排了新的挑战。 观察出现在眼前的那些敌人。判断动手的时机与场地，优先消灭主要威胁，而将那些可能进一步影响自身行动的敌人交给值得信任的队友。 普罗旺斯深知，不论遭遇怎样环境恶劣的战场，只有足够机敏才能够生存。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6H3SP.png"
+            },
+            {
+              "index": "3",
+              "operation": "守林人",
+              "cn_name": "最佳视野",
+              "description": "在战场上，守林人总是能找到合适的位置隐蔽自己，并利用视野优势，在敌人靠近之前排除威胁。 如果配合得当，优秀的射手会在团队作战中发挥出更强的力量。本次模拟作战将着重锻炼她的协作能力。当有队友在恰当的时机阻挡下敌人前进的脚步，守林人将可以一个人狙击一支小队。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HjfI.png"
+            },
+            {
+              "index": "4",
+              "operation": "黑",
+              "cn_name": "火力网",
+              "description": "作为久经沙场的佣兵，黑熟知有关战场的许多东西，这样的她能够给其他狙击干员一些精确的指示，以让他们进一步发挥自身的实力。 不仅如此，清楚远程武器缺点的她还锻炼出了寻找敌人弱点的眼力，她的攻击总是能找到敌人防御中最薄弱的部分。 让她去面对那个最难啃的家伙吧，她不会让你失望的。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HdFs.png"
+            },
+            {
+              "index": "5",
+              "operation": "能天使",
+              "cn_name": "拉特兰风格",
+              "description": "能天使擅长以一对多的混战，铳械在她的手上就像玩具一样听话轻巧。并且幸运的是，在能天使想要爆发秀一波操作时，总有些人能和她配合得特别好。 一个认真起来的拉特兰人的射击速度到底能有多快？测试的结果绝对令人大吃一惊。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HDS0.png"
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "重装",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "雷蛇",
+              "cn_name": "攻守兼备",
+              "description": "能够运用独有的强力电击源石技艺的雷蛇，加之稳重的性格和可靠的守备能力，在作战中将防守和攻击的转换运用到极致。 与偏向进攻的队友配合时，雷蛇会为队友制造出良好的进攻环境，帮助队友更加从容地发挥全部实力。 承担进攻责任时，雷蛇将释放出毁灭性电击。然而，这份力量也伴随着体力透支的隐患。请务必配置灵活的战术。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6Hteg.png"
+            },
+            {
+              "index": "1",
+              "operation": "黑角",
+              "cn_name": "最速防线",
+              "description": "在实战中，黑角凭借着丰富的战斗经验，总能很快做好准备，帮助指挥官第一时间展开阵线。 哪怕敌人的攻势过于猛烈，黑角也不会慌乱，因为他清楚得很，如果他先于队友倒下，那么他也会先于队友站起来。无论是最前线还是最后方，他，都会坚守。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HOkd.png"
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "episode": "医疗",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "华法琳",
+              "cn_name": "战力增强剂",
+              "description": "华法琳医生认为，帮助作战干员快速终结敌人，也是减少己方损伤的一种方式。 对血液的深刻理解，令她拥有了丰富而特别的医疗技巧。当然，作为身经百战的元老，华法琳并不觉得自己有必要参加任何模拟作战练习。在她眼中，自己之所以出现在这里，是为了训练其他年轻干员，让他们更好地适应她“不同寻常”的战场治疗手段而已。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6Hb0e.png"
+            },
+            {
+              "index": "1",
+              "operation": "调香师",
+              "cn_name": "花香四溢",
+              "description": "调香师在战场上播散熏香时，受益的并非只有被香粉撒到的干员。每一次播撒，都会有粉剂随着香味飘遍整个战场，为每一位罗德岛干员带来些许疗愈。 虽说效果无法与一次直接的医疗援助相比，但正是这种微小、稳定、持续的治疗支持，不经意间拯救了许多干员的生命。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HNwQ.png"
+            },
+            {
+              "index": 2,
+              "operation": "夜莺",
+              "cn_name": "牢不可破的幻影",
+              "description": "在战场上，夜莺小姐不仅仅是一位出色的医师，她还能在敌人的源石技艺攻击下，为周围干员提供强有力的庇佑，并在必要时刻制造幻影来吸引火力。 让干员们站在夜莺小姐身边吧。不要恐慌，不必畏惧。相信她，然后，试着再走近一点。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geinC4.png",
+              "custom": [
+                {
+                  "name": "解锁条件",
+                  "value": "干员夜莺提升至精英阶段2等级1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "5",
+          "episode": "辅助",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": " 梅尔",
+              "cn_name": "爆炸美学",
+              "description": "鲁特拉工作室最为成功的作品，“咪波”，在战场上所向披靡。不仅能够有效减少人手不足的问题，还可以在遭遇敌人大部队时，通过引爆咪波携带的爆炸单元，快速清扫大片区域。在爆炸结束后，“咪波”会自动返回，接受梅尔的简单维护，为下一次部署做准备。 炸一次不够吗？那就再来一次。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HlWt.png"
+            },
+            {
+              "index": "1",
+              "operation": "安洁莉娜",
+              "cn_name": "超越重力",
+              "description": "作为 “最受特种干员欢迎的辅助干员排行榜”前三名，安洁莉娜偶尔得知有这个榜单存在，惊讶之余，心底更是暗暗高兴。 随着默契提升，特种干员能够在安洁莉娜的法术准备期处理敌人，而她会抓住时机，利用技能大范围扫除威胁，并且依靠自己改变重力的法术特性，帮助队友更轻松地使敌人位移。 之后的训练，她会加倍努力！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6H8Qf.png"
+            },
+            {
+              "index": 2,
+              "operation": "地灵",
+              "cn_name": "三人的阵线",
+              "description": "虽然地灵一再强调自己并没有足够的法术天分，但她却能够将自己的学识与源石技艺理论相结合，并在最合适的地方发动使地面流沙化的源石技艺，让敌人难以移动。 博士，请你和强大的赏金猎人斯卡蒂一起帮助她击退这些令人头疼的敌人吧。 花太久时间的话，也会被她算入加班时间内的！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/05/02/geiVET.png",
+              "custom": [
+                {
+                  "name": "解锁条件",
+                  "value": "干员地灵提升至精英阶段2等级1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "episode": "术师",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "12F",
+              "cn_name": "生还者",
+              "description": "12F是位经验丰富的基础术师干员，在保证存活的同时，能够使用源石技艺对成群的敌方单位造成伤害。 在有利地形与干员配合下，12F可以尽力发挥自己的优势，为队友创造机会。 突发而至的火力打击总会影响到术师干员的发挥，但12F有自己的应对方式，而这些小技巧，也是他总能得以幸存的秘方。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HcmF.png"
+            },
+            {
+              "index": "1",
+              "operation": "刻俄柏",
+              "cn_name": "大坏人的诀窍",
+              "description": "今天小刻和火神大姐还有一个拿铁盒子的姐姐一起打坏人！ 大姐说了，今天小刻是主角，耶！ 虽然小刻想直接冲上去敲他们，但大姐说离远点，用很重的枪丢他们比较好。 暂时就听大姐的吧。 好，大概要做什么，小刻已经全明白了！接下来就等坏人登场了！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HJOS.png"
+            },
+            {
+              "index": "2",
+              "operation": "艾雅法拉",
+              "cn_name": "一个人的包围圈",
+              "description": "越是了解艾雅法拉，就越是清楚，她小小的身体里蕴藏着火山般的巨大能量。 如果能有选择，她希望将自己的源石技艺全部投入到学术研究中去，可现实往往令人无法选择。 在战场上，她的法术是最可靠的决战力量。只需要记住，让队友在最好的时机将敌人引入她的爆发范围，后面的交给她就好。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6Hgw4.png"
+            },
+            {
+              "index": "3",
+              "operation": "远山",
+              "cn_name": "预卜先知",
+              "description": "行动开始的时候，远山会告诉你，她已知晓敌方的部署，会适时激发水晶球击退整个区域的敌人，当然，之后的反噬也在计算之中，其他的队友只要帮忙阻挡敌人就可以了。 只有她自己知道，有些困难是无法通过占卜越过的，她此时所能依靠的，只有自身的源石技艺、战场上习得的经验、还有队友间默契的配合。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6Ho6K.png"
+            },
+            {
+              "index": "4",
+              "operation": "炎熔",
+              "cn_name": "不过是几只小虫子！",
+              "description": "对付聚集的虫群于炎熔来说完全是小菜一碟，她宣称这次的练习自己一人就足以应付。 作为训练的一环，稳定而长时间地输出法术将会帮助炎熔稳固她对源石技艺的掌握，而那些混在普通虫群里会爆炸的家伙，则是对干员在战场上是否有足够洞察能力和警惕心的小小考验。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HMFA.png"
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "episode": "特种",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "暗索",
+              "cn_name": "哎呀，人呢？",
+              "description": "我们的小队在一些危险任务中，很可能遭遇一些凶暴而危险的敌人，如何在不惊动对方的情况下解决对方，是本次模拟的重点。 暗索本想翘掉这次训练，但新型的辅助仪器试用起来实在是太愉快了，这种机会可不常有，要好好体验才行。 钩住他们，统统钩住！千万要小心，别惊醒无防备的敌人，不然整个小队都要倒霉！",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HQJI.png"
+            },
+            {
+              "index": "1",
+              "operation": "傀影",
+              "cn_name": "控局",
+              "description": "敌人蜂拥而至，先锋队伍的防线正受到冲击！ 优秀的刺客随时可能出现在战场上的任何角落，一击必中，绝不停留。 不用捕捉他的身影，只需知道他将利用地形与自己的能力，无声息地解决那些令人困扰的强敌，缓解团队的压力。 对于傀影来说，要习惯与队友配合并选取恰当出手的时机，尚还需要一些练习。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HwYn.png"
+            },
+            {
+              "index": "2",
+              "operation": "伊桑",
+              "cn_name": "制敌伏兵",
+              "description": "对于伊桑来说，在冲突中避免面对面的战斗是一门值得深究的学问。如果能够奇袭制敌，为何要冲在第一线？ 选择一个好位置，找准一个好时机，在敌人背后突然闪现，大喊一声“惊喜啊！混蛋！”，然后看着对方在惊慌失措中被友军击倒，实在是充满乐趣。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/04/14/c6HHmD.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "story": "多维合作",
+      "index": "5",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "罗德岛防御协议"
+        }
+      ]
+    },
+    {
+      "story": "物资筹备",
+      "index": "6",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "战术演习（作战记录）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "LS-1",
+              "cn_name": "遭遇战演习",
+              "description": "迎击敌方的突袭部队。 本次行动不自动回复部署费用，每击杀一名敌军便可额外回复部署费用",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XY9iD.png"
+            },
+            {
+              "index": "1",
+              "operation": "LS-2",
+              "cn_name": "游击战演习",
+              "description": "迎击敌方的突袭部队。 本次行动不自动回复部署费用，每击杀一名敌军便可额外回复部署费用",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYCJe.png"
+            },
+            {
+              "index": "2",
+              "operation": "LS-3",
+              "cn_name": "阵地战演习",
+              "description": "迎击敌方的突袭部队。 本次行动不自动回复部署费用，每击杀一名敌军便可额外回复部署费用",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJzdK.png"
+            },
+            {
+              "index": "3",
+              "operation": "LS-4",
+              "cn_name": "特种战演习",
+              "description": "迎击敌方的突袭部队。 本次行动不自动回复部署费用，每击杀一名敌军便可额外回复部署费用",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYSIO.png"
+            },
+            {
+              "index": "4",
+              "operation": "LS-5",
+              "cn_name": "歼灭战演习",
+              "description": "迎击敌方的突袭部队。 本次行动不自动回复部署费用，每击杀一名敌军便可额外回复部署费用",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XJxZ6.png"
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "episode": "货物运送（龙门币）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "CE-1",
+              "cn_name": "私人家具押运",
+              "description": "以灵活的作战方式迎击敌人。 本次行动中部署费用回复缓慢，且干员布置不受近远程限制",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYKJg.png"
+            },
+            {
+              "index": "1",
+              "operation": "CE-2",
+              "cn_name": "工业设备押运",
+              "description": "以灵活的作战方式迎击敌人。 本次行动中部署费用回复缓慢，且干员布置不受近远程限制",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYedf.png"
+            },
+            {
+              "index": "2",
+              "operation": "CE-3",
+              "cn_name": "珍贵原料押运",
+              "description": "以灵活的作战方式迎击敌人。 本次行动中部署费用回复缓慢，且干员布置不受近远程限制",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYuFS.png"
+            },
+            {
+              "index": "3",
+              "operation": "CE-4",
+              "cn_name": "国际重犯押运",
+              "description": "以灵活的作战方式迎击敌人。 本次行动中部署费用回复缓慢，且干员布置不受近远程限制",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYmo8.png"
+            },
+            {
+              "index": "4",
+              "operation": "CE-5",
+              "cn_name": "机密情报押运",
+              "description": "以灵活的作战方式迎击敌人。 本次行动中部署费用回复缓慢，且干员布置不受近远程限制",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYZeP.png"
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "粉碎防御（采购凭证）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "AP-1",
+              "cn_name": "源石开采保全",
+              "description": "在恶劣的作战环境下迎击敌人。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYJe0.png"
+            },
+            {
+              "index": "1",
+              "operation": "AP-2",
+              "cn_name": "源石运输保全",
+              "description": "在恶劣的作战环境下迎击敌人。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYtoT.png"
+            },
+            {
+              "index": "2",
+              "operation": "AP-3",
+              "cn_name": "精炼器材保全",
+              "description": "在恶劣的作战环境下迎击敌人。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYYwV.png"
+            },
+            {
+              "index": "3",
+              "operation": "AP-4",
+              "cn_name": "矿材仓库保全",
+              "description": "在恶劣的作战环境下迎击敌人。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XY3yn.png"
+            },
+            {
+              "index": "4",
+              "operation": "AP-5",
+              "cn_name": "精炼工厂保全",
+              "description": "在恶劣的作战环境下迎击敌人。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XY8Lq.png"
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "物资保障（碳）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "SK-1",
+              "cn_name": "废墟清剿",
+              "description": "迎击以高防御力为主的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYRYD.png"
+            },
+            {
+              "index": "1",
+              "operation": "SK-2",
+              "cn_name": "窝点清剿",
+              "description": "迎击以高防御力为主的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XY4ld.png"
+            },
+            {
+              "index": "2",
+              "operation": "SK-3",
+              "cn_name": "哨所清剿",
+              "description": "迎击以高防御力为主的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYhSH.png"
+            },
+            {
+              "index": "3",
+              "operation": "SK-4",
+              "cn_name": "据地清剿",
+              "description": "迎击以高防御力为主的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XYWfe.png"
+            },
+            {
+              "index": "4",
+              "operation": "SK-5",
+              "cn_name": "要塞清剿",
+              "description": "迎击以高防御力为主的敌人。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/25/6XY2FO.png"
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "episode": "空中威胁（技巧概要）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "CA-1",
+              "cn_name": "疗养用地净空",
+              "description": "迎击敌方的空军部队。 本次行动无法使用近战位干员",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xi02D.png"
+            },
+            {
+              "index": "1",
+              "operation": "CA-2",
+              "cn_name": "勘探基点净空",
+              "description": "迎击敌方的空军部队。 本次行动无法使用近战位干员",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xiNUx.png"
+            },
+            {
+              "index": "2",
+              "operation": "CA-3",
+              "cn_name": "巡逻路线净空",
+              "description": "迎击敌方的空军部队。 本次行动无法使用近战位干员",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xitV1.png"
+            },
+            {
+              "index": "3",
+              "operation": "CA-4",
+              "cn_name": "任务区域净空",
+              "description": "迎击敌方的空军部队。 本次行动无法使用近战位干员",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xiJbR.png"
+            },
+            {
+              "index": "4",
+              "operation": "CA-5",
+              "cn_name": "战略要道净空",
+              "description": "迎击敌方的空军部队。 本次行动无法使用近战位干员",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xiGr9.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "story": "芯片搜索",
+      "index": "7",
+      "childNodes": [
+        {
+          "index": "0",
+          "episode": "固若金汤（盾奶）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "PR-A-1",
+              "cn_name": "防守",
+              "description": "获取重装和医疗干员的精英化材料。 如果能熟练运用重装和医疗职业的话应该会在这场战斗中更加有利。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xihRS.png"
+            },
+            {
+              "index": "1",
+              "operation": "PR-A-2",
+              "cn_name": "据守",
+              "description": "获取重装和医疗干员的高级精英化材料。 如果能熟练运用重装和医疗职业的话应该会在这场战斗中更加有利。 <毒性雾霾>我方单位会持续失去生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xifG8.png"
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "episode": "摧枯拉朽（术狙）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "PR-B-1",
+              "cn_name": "干涉",
+              "description": "获取狙击和术师干员的精英化材料。 如果能熟练运用狙击和术师职业的话应该会在这场战斗中更加有利。 <防空符文>置于其中的干员会略微减慢攻速，但大幅度提升对空攻击力",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xiOiV.png"
+            },
+            {
+              "index": "1",
+              "operation": "PR-B-2",
+              "cn_name": "打击",
+              "description": "获取狙击和术师干员的高级精英化材料。 如果能熟练运用狙击和术师职业的话应该会在这场战斗中更加有利。 <防空符文>置于其中的干员会略微减慢攻速，但大幅度提升对空攻击力",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xiqI0.png"
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "episode": "势不可挡（辅锋）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "PR-C-1",
+              "cn_name": "急行",
+              "description": "获取先锋和辅助干员的精英化材料。 如果能熟练运用先锋和辅助职业的话应该会在这场战斗中更加有利。 <医疗符文>部署在其上的干员会持续恢复生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xFpL9.png"
+            },
+            {
+              "index": "1",
+              "operation": "PR-C-2",
+              "cn_name": "冲锋",
+              "description": "获取先锋和辅助干员的高级精英化材料。 如果能熟练运用先锋和辅助职业的话应该会在这场战斗中更加有利。 <医疗符文>部署在其上的干员会持续恢复生命",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xFSsJ.png"
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "episode": "身先士卒（近特）",
+          "childNodes": [
+            {
+              "index": "0",
+              "operation": "PR-D-1",
+              "cn_name": "突破",
+              "description": "获取近卫和特种干员的精英化材料。 如果能熟练运用近卫和特种职业的话应该会在这场战斗中更加有利。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xFPd1.png"
+            },
+            {
+              "index": "1",
+              "operation": "PR-D-2",
+              "cn_name": "猛攻",
+              "description": "获取近卫和特种干员的高级精英化材料。 如果能熟练运用近卫和特种职业的话应该会在这场战斗中更加有利。",
+              "challenge": "",
+              "preview": "https://z3.ax1x.com/2021/03/26/6xFCZR.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

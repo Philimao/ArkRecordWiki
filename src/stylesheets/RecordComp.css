@@ -1,0 +1,26 @@
+.btn-opacity {
+  opacity: 0.5;
+}
+
+.btn-opacity:hover {
+  opacity: 0.8;
+}
+
+.btn-opacity-black {
+  opacity: 0.25;
+}
+
+.btn-opacity-black:hover {
+  opacity: 0.5;
+}
+
+.svg-btn {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.svg-btn-invert {
+  filter: invert(0.3);
+}

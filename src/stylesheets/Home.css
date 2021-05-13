@@ -1,0 +1,34 @@
+#link_bilibili_btn {
+  background-color: #dc7598;
+  color: white;
+}
+
+#link_bilibili_btn:hover {
+  opacity: 0.65;
+}
+
+#user_dropdown a{
+  display: flex;
+  background-color: #484b53;
+  height: 50px;
+  color: white;
+  text-decoration: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+#user_dropdown a:hover {
+  background-color: #e6c251;
+  opacity: 1;
+}
+
+#logout_btn:hover {
+  cursor: pointer;
+  background-color: #803333! important;
+}
+
+@media (min-width: 768px)  {
+  #user_dropdown a{
+    opacity: 0.65;
+  }
+}
