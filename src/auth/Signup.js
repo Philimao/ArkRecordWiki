@@ -3,12 +3,14 @@ import { Link, useHistory } from "react-router-dom";
 import FloatingInputBox from "../shared/FloatingInputBox";
 import { hashCode } from "../utils";
 import { toast } from "react-toastify";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
   const [toggle_visibility, setToggleVisibility] = useState("password");
+  const [showVerify, setShowVerify] = useState(false);
   let history = useHistory();
 
   function handlePasswordConfirm(evt) {
@@ -52,6 +54,11 @@ export default function Signup() {
         } else {
           toast.info("注册成功！请检查邮箱");
           history.push("/auth/verify");
+          setTimeout(() => {
+            if (window.location.path !== "/auth/verify") {
+              setShowVerify(true);
+            }
+          }, 5000);
         }
       })
       .catch((err) => {
@@ -99,11 +106,35 @@ export default function Signup() {
           显示密码
         </label>
       </div>
-      <button className="mb-3 btn btn-primary text-center">注册</button>
-      <div className="mb-2 d-flex justify-content-end">
-        <Link className="text-end d-block" to="/auth/login">
-          返回登录页
+      {showVerify ? (
+        <Link className="mb-3 btn btn-primary" to="/auth/verify">
+          如果网页没有自动跳转，请点击此处
         </Link>
+      ) : (
+        <button className="mb-3 btn btn-primary text-center">注册</button>
+      )}
+      <div className="mb-2">
+        <div className="mb-2 text-end">
+          <Link className="text-end" to="/auth/login">
+            返回登录页
+          </Link>
+        </div>
+        <div className="d-flex justify-content-end">
+          <OverlayTrigger
+            placement="auto"
+            overlay={
+              <Tooltip id="security-tooltip">
+                <div className="text-start p-2">
+                  我们的网站使用SHA256与bcrypt进行双端哈希加密并加盐存储，全程无明文传输。
+                  <br />
+                  即使被拖库依然能保证您的密码安全。
+                </div>
+              </Tooltip>
+            }
+          >
+            <span>关于数据安全</span>
+          </OverlayTrigger>
+        </div>
       </div>
     </form>
   );

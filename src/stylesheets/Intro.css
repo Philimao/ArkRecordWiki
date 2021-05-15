@@ -1,0 +1,18 @@
+.intro-lg {
+    max-width: 90vw;
+    width: 90vw;
+}
+
+.introjs-skipbutton {
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .introjs-tooltip {
+        min-width: 350px;
+    }
+
+    .intro-lg {
+        width: 500px;
+    }
+}

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import propTypes from "prop-types";
 import { nanoid } from "nanoid";
 import { toast } from "react-toastify";
+import { getCookie } from "../utils";
 
 /**
  * @param props.index
@@ -68,7 +69,7 @@ export default function AccordionItem(props) {
       // desktop
       if (window.matchMedia("(min-width: 768px)").matches) {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
+      } else if (getCookie("visitorIntro")) {
         const contentTop =
           document.querySelector("#content").getBoundingClientRect().top +
           window.scrollY;

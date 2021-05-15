@@ -24,64 +24,50 @@ export default function QueryRecords({
   const container = useRef();
 
   useEffect(() => {
-    if (
-      user &&
-      (user.role === "admin" || user.role === "su") &&
-      !query.favorite
-    ) {
-      fetch("/record/query-records", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query: query ? query : {}, limit: limit }),
-      }).then((resRaw) => {
-        if (!resRaw.ok) {
-          toast.warning("获取纪录失败");
+    (async function () {
+      let resRaw;
+      if (!user) {
+        resRaw = await fetch("/record/query-records", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: query }),
+        });
+      } else if (user && user.role === "user") {
+        if (query.favorite) {
+          resRaw = await fetch("/record/favorite-records");
         } else {
-          resRaw.json().then((res) => {
-            setRecords(res);
-            loadingFlag.current = false;
+          resRaw = await fetch("/record/user-query-records", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query: query }),
           });
         }
-      });
-    } else {
-      if (query && query.favorite) {
-        fetch("/record/favorite-records", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(query),
-        }).then((resRaw) => {
-          if (!resRaw.ok) {
-            toast.warning("获取纪录失败");
-          } else {
-            resRaw.json().then((res) => {
-              setRecords(res);
-              loadingFlag.current = false;
-            });
-          }
-        });
-      } else if (query && query.submitter) {
-        fetch("/record/submitted-records", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(query),
-        }).then((resRaw) => {
-          if (!resRaw.ok) {
-            toast.warning("获取纪录失败");
-          } else {
-            resRaw.json().then((res) => {
-              setRecords(res);
-              loadingFlag.current = false;
-            });
-          }
+      } else {
+        if (query.favorite) {
+          resRaw = await fetch("/record/favorite-records");
+        } else {
+          resRaw = await fetch("/record/admin-query-records", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query: query, limit: limit }),
+          });
+        }
+      }
+      if (!resRaw.ok) {
+        toast.warning("获取纪录失败");
+      } else {
+        resRaw.json().then((res) => {
+          setRecords(res);
+          loadingFlag.current = false;
         });
       }
-    }
+    })();
   }, [limit, query, user]);
 
   useEffect(() => {
@@ -193,6 +179,9 @@ export default function QueryRecords({
 
   return (
     <div ref={container}>
+      <div className="fw-light mb-3">
+        {"检索到条目数量：" + filteredRecords.length}
+      </div>
       <div style={{ minHeight: "calc(100vh - 28rem)" }}>
         <RecordGroup
           user={user}

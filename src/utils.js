@@ -9,4 +9,9 @@ async function hashCode(string) {
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-export { hashCode };
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+  return match ? match[2] : undefined;
+}
+
+export { hashCode, getCookie };

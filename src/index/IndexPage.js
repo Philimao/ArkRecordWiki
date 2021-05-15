@@ -64,10 +64,11 @@ export default function IndexPage({
         </button>
         <button
           className="btn position-fixed bottom-0 end-0 d-md-none me-4 mb-2"
-          data-bs-toggle="modal"
-          data-bs-target="#about_modal"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
         >
-          网站说明
+          回到顶部
         </button>
       </div>
     );

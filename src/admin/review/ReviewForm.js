@@ -110,12 +110,15 @@ export default function Review({
 
   useEffect(() => {
     if (pendingArray && pendingArray.length !== 0) {
+      let flag = true;
       for (let object of menu.childNodes) {
         if (object.story === story) {
           setStoryObject(object);
+          flag = false;
           break;
         }
       }
+      if (flag) setStoryObject(menu.childNodes[0]);
     } else {
       setStoryObject(menu.childNodes[0]);
     }
@@ -123,12 +126,15 @@ export default function Review({
 
   useEffect(() => {
     if (storyObject && episode) {
+      let flag = true;
       for (let object of storyObject.childNodes) {
         if (object.episode === episode) {
           setEpisodeObject(object);
+          flag = false;
           break;
         }
       }
+      if (flag) setEpisodeObject(storyObject.childNodes[0]);
     } else {
       setEpisodeObject(storyObject.childNodes[0]);
     }
@@ -143,10 +149,11 @@ export default function Review({
   }, [episodeObject]);
 
   useEffect(() => {
-    for (let object of operationNodes) {
-      if (object.operation === operation) {
-        setCnName(object.cn_name);
-        break;
+    if (operationNodes) {
+      for (let object of operationNodes) {
+        if (object.operation === operation) {
+          setCnName(object.cn_name);
+        }
       }
     }
   }, [operation, operationNodes]);
@@ -223,7 +230,8 @@ export default function Review({
     }
   }
 
-  async function handleDelete() {
+  async function handleDelete(evt) {
+    if (evt) evt.preventDefault();
     if (window.confirm("确认是否删除该纪录？")) {
       const resRaw = await fetch("/record/delete-pending", {
         method: "DELETE",
@@ -246,6 +254,48 @@ export default function Review({
         prevRecord();
         setReviewMsg("");
       }
+    }
+  }
+
+  async function handleArchive(evt) {
+    evt.preventDefault();
+    const data = {
+      _id: _id,
+      story: story,
+      episode: episode,
+      submitter: submitter,
+      raider: raider,
+      operation: operation,
+      cn_name: cnName,
+      operationType: operationType,
+      team: team,
+      url: url,
+      group: group,
+      remark0: remark0,
+      remark1: remark1,
+      level: level,
+      backOP: backOP,
+      OPSkin: OPSkin,
+    };
+    const resRaw = await fetch("/record/archive-pending", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const res = await resRaw.text();
+    if (!resRaw.ok) {
+      toast.warning("提交失败\n" + res);
+    } else {
+      toast.info(res);
+      setPendingArray((prev) => {
+        const newArray = JSON.parse(JSON.stringify(prev));
+        newArray.splice(index, 1);
+        return newArray;
+      });
+      prevRecord();
+      setReviewMsg("");
     }
   }
 
@@ -283,7 +333,7 @@ export default function Review({
         onChange={(evt) => setRaider(evt.target.value)}
         required={true}
         id="review_raider"
-        label="攻略者"
+        label="发布账号"
         disabled={!pendingArray[0]}
       />
       <div className="form-floating mb-3">
@@ -337,6 +387,13 @@ export default function Review({
         </select>
         <label htmlFor="submit_operation">关卡名称</label>
       </div>
+      <FloatingInputBox
+        id="review_user_op"
+        value={operation + " " + cnName}
+        onChange={() => {}}
+        label="确保与上方一致再提交"
+        disabled={true}
+      />
       <div className="form-floating mb-3">
         <select
           className="form-select"
@@ -509,13 +566,27 @@ export default function Review({
             提供反馈并通过
           </button>
           <button
-            className="btn btn-danger me-auto"
+            className="btn btn-danger me-2"
+            onClick={handleDelete}
+            disabled={!pendingArray[0]}
+          >
+            删除
+          </button>
+          <button
+            className="btn btn-danger me-2"
             onClick={(evt) => evt.preventDefault()}
             data-bs-toggle="modal"
             data-bs-target="#reject_message_modal"
             disabled={!pendingArray[0]}
           >
-            删除
+            提供反馈并删除
+          </button>
+          <button
+            className="btn btn-success me-auto"
+            onClick={handleArchive}
+            disabled={!pendingArray[0]}
+          >
+            归档
           </button>
         </div>
         <button

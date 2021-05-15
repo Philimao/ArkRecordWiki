@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function DefaultIndexContent() {
+  const favicon = "../../favicon/favicon.jpg";
+
   return (
     <div id="default-content">
       <div
@@ -21,7 +23,7 @@ export default function DefaultIndexContent() {
               <h2 className="text-white mb-4">明日方舟少人Wiki是？</h2>
               <p className="text-white">
                 &#9830;
-                是一个热爱明日方舟少人极限玩法的玩家社群所建立的收集明日方舟优秀作战记录的网站
+                是一个热爱明日方舟少人玩法的玩家社群所建立的收集明日方舟优秀作战记录的网站
               </p>
               <p className="text-white">
                 &#9830; 我们依托B站视频，收录各关卡各活动的少人记录
@@ -35,11 +37,7 @@ export default function DefaultIndexContent() {
               </p>
             </div>
             <div className="col-4 p-3">
-              <img
-                className=" ratio ratio-1x1"
-                src="../../favicon/favicon.jpg"
-                alt="favicon"
-              />
+              <img className=" ratio ratio-1x1" src={favicon} alt="favicon" />
             </div>
           </div>
         </div>
@@ -57,37 +55,119 @@ export default function DefaultIndexContent() {
       <div className="m-5 pb-5 dark-div">
         <div>
           <p className="text-white">
-            数据来源： <a href="http://prts.wiki/id/1">PRTS</a>、
-            <a href="https://www.bilibili.com/">
+            数据来源：{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://prts.wiki/id/1"
+            >
+              PRTS
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.bilibili.com/"
+            >
               哔哩哔哩(゜-゜)つロ干杯~-bilibili
             </a>
           </p>
+          <p className="text-white">策划发起： Mathillda</p>
           <p className="text-white">
-            策划发起：{" "}
-            <a href="https://space.bilibili.com/25615953">卓荦zoro</a>
-            、Mathillda(已退坑)
+            技术支持：{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/759562"
+            >
+              philimao
+            </a>
           </p>
           <p className="text-white">
-            技术支持： <a href="https://space.bilibili.com/759562">philimao</a>
-            、<a href="https://space.bilibili.com/2643413">Matsu-ka</a>
+            美术设计：{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/2645146"
+            >
+              银纸吹雪
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/2643413"
+            >
+              Matsuka__
+            </a>
           </p>
           <p className="text-white">
-            美术设计： <a href="https://space.bilibili.com/2645146">银纸吹雪</a>
+            体验设计：{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/437167862"
+            >
+              缇叶_terpenes
+            </a>
           </p>
           <p className="text-white">
             审核管理：{" "}
-            <a href="https://space.bilibili.com/15771645">Function_____</a>、
-            <a href="https://space.bilibili.com/291120953">Ari-Ver</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/15771645"
+            >
+              Function_____
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/291120953"
+            >
+              Ari-Ver
+            </a>
           </p>
           <p className="text-white">
-            制表模范： <a href="https://space.bilibili.com/4129184">Enki安奇</a>
-            、<a href="https://space.bilibili.com/437167862">Terpenes</a>、
-            <a href="https://space.bilibili.com/473250091">快乐神猫</a>、
-            <a href="https://space.bilibili.com/647733916">mirrorMK</a>
+            制表模范：{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/4129184"
+            >
+              Enki安奇
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/473250091"
+            >
+              -神猫-
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/647733916"
+            >
+              mirrorMK
+            </a>
+            、
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://space.bilibili.com/35978761"
+            >
+              斡风
+            </a>
           </p>
           <p className="text-white">
             梦的开始：{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white"
               href="https://docs.qq.com/doc/DQ0ZpT1pkRkt4YW9r"
             >

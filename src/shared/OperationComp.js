@@ -58,10 +58,10 @@ export default function OperationComp({
   }
 
   return (
-    <div className="mb-3">
+    <div className="operation-comp mb-3">
       <div className="d-lg-flex">
         <h3 className="fw-bold me-auto mb-2 text-nowrap">{full_operation}</h3>
-        <div className="mb-2">
+        <div className="mb-2 operation-buttons">
           {user && (user.role === "admin" || user.role === "su") ? (
             <button
               className="btn btn-primary me-2"
@@ -74,6 +74,7 @@ export default function OperationComp({
           ) : null}
           {user ? (
             <button
+              id="quickSubmitButton"
               className="btn btn-primary me-2"
               data-bs-toggle="modal"
               data-bs-target="#quick_submit"

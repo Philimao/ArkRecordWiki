@@ -25,6 +25,7 @@ export default function Menu(props) {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#currentEpisodeContent"
+              id="btnCurrentEpisode"
             >
               当前活动
             </button>
@@ -76,6 +77,7 @@ export default function Menu(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed story"
+              id="contact_button"
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#contact_form_modal"
@@ -84,22 +86,22 @@ export default function Menu(props) {
             </button>
           </h2>
         </div>
-        <div className="d-none d-md-block" id="sprite_container">
-          <div
-            id="sprite"
-            style={{
-              backgroundImage: `url(${sprite_url.current})`,
-              backgroundSize: "auto 350px",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
-          <div
-            id="about_modal_btn"
-            data-bs-toggle="modal"
-            data-bs-target="#about_modal"
-          />
-        </div>
+      </div>
+      <div className="d-none d-md-block" id="sprite_container">
+        <div
+          id="sprite"
+          style={{
+            backgroundImage: `url(${sprite_url.current})`,
+            backgroundSize: "auto 350px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div
+          id="about_modal_btn"
+          data-bs-toggle="modal"
+          data-bs-target="#about_modal"
+        />
       </div>
     </div>
   );

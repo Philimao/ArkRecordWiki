@@ -7,11 +7,16 @@ export default function RecordsByOperator({ user, setUser, operator }) {
   };
 
   return (
-    <div>
-      <h3 className="mb-2">
+    <div className="mb-5">
+      <h3 className="mb-3">
         以下为干员<strong>{operator.name1}</strong>的搜索结果:
       </h3>
-      <QueryRecords user={user} setUser={setUser} query={query} />
+      <QueryRecords
+        user={user}
+        setUser={setUser}
+        query={query}
+        cardStyle="showOperation"
+      />
     </div>
   );
 }

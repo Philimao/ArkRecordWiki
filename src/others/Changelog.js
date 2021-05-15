@@ -10,9 +10,44 @@ export default function Changelog() {
           <h4 className="fw-bold mb-5">变更日志</h4>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.8.0</div>
-              <div className="col-8">2021.05.12</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.9.1</div>
+              <div className="col-12 col-sm-8">2021.05.15</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增页面与修复：</div>
+              <ul>
+                <li>进行文本校对与修正</li>
+                <li>补全了常见问题页面</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.9.0</div>
+              <div className="col-12 col-sm-8">2021.05.14</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增功能与修复：</div>
+              <ul>
+                <li>新增新用户指引，方便用户对整体使用的了解</li>
+                <li>修复了更新章节、更新关卡时部分节点丢失的问题</li>
+                <li>
+                  实现了新版系统消息通知，在审核通过或拒绝时都可以附加管理员留言
+                </li>
+                <li>更新了投稿指引与收录原则</li>
+                <li>链接Bilibili页新增图文指导</li>
+                <li>实现了流量统计</li>
+                <li>新增了归档功能，用于收录暂不显示的投稿</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.8.0</div>
+              <div className="col-12 col-sm-8">2021.05.12</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -35,9 +70,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.7.0</div>
-              <div className="col-8">2021.05.11</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.7.0</div>
+              <div className="col-12 col-sm-8">2021.05.11</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -53,9 +88,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.6.0</div>
-              <div className="col-8">2021.05.10</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.6.0</div>
+              <div className="col-12 col-sm-8">2021.05.10</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -69,9 +104,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.5.0</div>
-              <div className="col-8">2021.05.09</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.5.0</div>
+              <div className="col-12 col-sm-8">2021.05.09</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -84,9 +119,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.4.0</div>
-              <div className="col-8">2021.05.07</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.4.0</div>
+              <div className="col-12 col-sm-8">2021.05.07</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -100,9 +135,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.3.1</div>
-              <div className="col-8">2021.05.03</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.3.1</div>
+              <div className="col-12 col-sm-8">2021.05.03</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能与修复：</div>
@@ -115,9 +150,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.3.0</div>
-              <div className="col-8">2021.05.03</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.3.0</div>
+              <div className="col-12 col-sm-8">2021.05.03</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -130,9 +165,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.2.1</div>
-              <div className="col-8">2021.05.03</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.2.1</div>
+              <div className="col-12 col-sm-8">2021.05.03</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">修复问题：</div>
@@ -148,9 +183,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.2.0</div>
-              <div className="col-8">2021.05.01</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.2.0</div>
+              <div className="col-12 col-sm-8">2021.05.01</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -169,9 +204,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.1.0</div>
-              <div className="col-8">2021.04.30</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.1.0</div>
+              <div className="col-12 col-sm-8">2021.04.30</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">新增功能：</div>
@@ -187,9 +222,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v2.0.0</div>
-              <div className="col-8">2021.04.17</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.0.0</div>
+              <div className="col-12 col-sm-8">2021.04.17</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">将项目迁移到React，方便开发与维护</div>
@@ -207,9 +242,9 @@ export default function Changelog() {
           </div>
 
           <div className="row">
-            <div className="col-4 px-0 row">
-              <div className="col-4">v1.0.0</div>
-              <div className="col-8">2021.03.31</div>
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v1.0.0</div>
+              <div className="col-12 col-sm-8">2021.03.31</div>
             </div>
             <div className="col" style={{ marginBottom: "1rem" }}>
               <div className="mb-1">

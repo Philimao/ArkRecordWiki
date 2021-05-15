@@ -63,6 +63,7 @@ export default function SearchForm({
           ))}
         </datalist>
         <button
+          id="search_type"
           className="btn btn-outline-secondary dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
@@ -76,6 +77,7 @@ export default function SearchForm({
         >
           {types.map((item, index) => (
             <li
+              role="button"
               className="dropdown-item"
               key={item}
               onClick={() => {

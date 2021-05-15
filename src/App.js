@@ -12,12 +12,21 @@ import Footer from "./shared/Footer";
 import HomePage from "./home/HomePage";
 import AdminPage from "./admin/AdminPage";
 import { ToastContainer } from "react-toastify";
+import { getCookie } from "./utils";
 
 import "./stylesheets/Main.css";
 import "react-toastify/dist/ReactToastify.css";
 import Changelog from "./others/Changelog";
-import AboutModal from "./index/AboutModal";
 import SubmitPage from "./submit/SubmitPage";
+
+import "intro.js/introjs.css";
+import "./stylesheets/Intro.css";
+import VisitorIntro from "./intro/VisitorIntro";
+import UserIntro from "./intro/UserIntro";
+import SubmitGuideSimple from "./index/SubmitGuideSimple";
+import SubmitGuideDetailed from "./index/SubmitGuideDetailed";
+import AboutModal from "./others/AboutModal";
+import FAQComp from "./others/FAQComp";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -33,6 +42,9 @@ export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [searchType, setSearchType] = useState("关卡");
   const content = useRef();
+
+  const [visitorIntroEnabled, setVisitorIntroEnabled] = useState(false);
+  const [userIntroEnabled, setUserIntroEnabled] = useState(false);
 
   function fetchMenu() {
     fetch("/menu/root")
@@ -94,6 +106,15 @@ export default function App() {
       updateMenu(false);
     }
   }, [isMenuModified]);
+
+  useEffect(() => {
+    if (!menu) return;
+    if (!getCookie("visitorIntro")) {
+      setVisitorIntroEnabled(true);
+    } else if (user && !getCookie("userIntro")) {
+      setUserIntroEnabled(true);
+    }
+  }, [menu, user]);
 
   function searchOperation() {
     collapseMenu();
@@ -230,6 +251,9 @@ export default function App() {
             <Route path="/changelog">
               <Changelog />
             </Route>
+            <Route path="/FAQ">
+              <FAQComp />
+            </Route>
             <Route path="/">
               <IndexPage
                 user={user}
@@ -246,7 +270,24 @@ export default function App() {
             </Route>
           </Switch>
         </div>
-        <Footer />
+        <Footer
+          user={user}
+          setVisitor={setVisitorIntroEnabled}
+          setUser={setUserIntroEnabled}
+        />
+        <SubmitGuideSimple />
+        <SubmitGuideDetailed />
+        <VisitorIntro
+          enabled={visitorIntroEnabled}
+          setEnable={setVisitorIntroEnabled}
+          setNext={setUserIntroEnabled}
+          collapseMenu={collapseMenu}
+        />
+        <UserIntro
+          user={user}
+          enabled={userIntroEnabled}
+          setEnable={setUserIntroEnabled}
+        />
         <AboutModal />
         <ToastContainer autoClose={3000} />
       </div>

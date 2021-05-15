@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import FloatingInputBox from "../shared/FloatingInputBox";
 import { toast } from "react-toastify";
-import Modal from "../shared/Modal";
 import specialOpen from "./SpecialOpen";
 
 export default function SubmitForm({
@@ -196,16 +195,28 @@ export default function SubmitForm({
       <form id="record_submit_form" onSubmit={handleSubmit}>
         <div className="d-flex mb-2">
           <h4 className="mb-0 me-auto align-self-center">提交纪录</h4>
-          <button
-            className="btn fw-light text-success"
-            data-bs-toggle="modal"
-            data-bs-target="#submission_instruction"
-            onClick={(evt) => {
-              evt.preventDefault();
-            }}
-          >
-            投稿指引
-          </button>
+          <div id="submit_guide_buttons">
+            <button
+              className="btn btn-outline-primary me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#submit_simple_guide"
+              onClick={(evt) => {
+                evt.preventDefault();
+              }}
+            >
+              投稿指引
+            </button>
+            <button
+              className="btn btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#submit_detailed_guide"
+              onClick={(evt) => {
+                evt.preventDefault();
+              }}
+            >
+              收录原则
+            </button>
+          </div>
         </div>
         {specialOpen() ? (
           <div className="mb-3">光谱行动日替免审核投稿开放中</div>
@@ -268,7 +279,7 @@ export default function SubmitForm({
           onChange={(evt) => setRaider(evt.target.value)}
           required={true}
           id="submit_raider"
-          label="攻略者（例：草牛homo）"
+          label="发布账号"
         />
         <div className="form-floating mb-3">
           <select
@@ -415,39 +426,6 @@ export default function SubmitForm({
           提交
         </button>
       </form>
-      <Modal
-        id="submission_instruction"
-        header="投稿指引（临时）"
-        Content={SubmissionInstruction}
-      />
-    </div>
-  );
-}
-
-function SubmissionInstruction() {
-  return (
-    <div>
-      <div className="mb-2">
-        本指引为临时版，主要为了提醒关卡名称录入规则的改变。
-      </div>
-      <div className="mb-2">
-        由于接到反馈自动补全功能在旧版浏览器上无法使用，现改为三段式下拉菜单选择对应关卡。
-      </div>
-      <div className="mb-2">
-        由于制表人精力有限，如果遇到关卡没有录入的问题可以通过主页左侧“联系我们”的联络表提交申请，我们将会尽快完成该部分的关卡目录录入。
-      </div>
-      <br />
-      <div>
-        关于视频链接格式，目前支持Bilibili和Youtube两个网站的视频投稿。Youtube视频请提交完整链接，Bilibili视频支持BV号自动补全（例：BV12345）。
-      </div>
-      <div>
-        此外，目前已经支持分p录入视频，请直接复制地址栏地址，或手动以"BV12345?p=2"的格式录入分p信息，审核通过后将会显示正确的视频预览与跳转链接。
-      </div>
-      <div>
-        相同BV，相同分p内的多个纪录目前只有管理员能够进行录入，有需要请通过联络表提交视频链接与相关信息，符合要求的我们会尽快录入。
-      </div>
-      <br />
-      <div>本指引今后将会更新为正式版，并提供其他包括收录标准等信息。</div>
     </div>
   );
 }

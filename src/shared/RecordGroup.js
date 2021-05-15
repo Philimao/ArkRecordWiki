@@ -131,13 +131,8 @@ export default function RecordGroup({
   if (!group || group.length === 0) return null;
 
   return (
-    <div>
-      <div
-        className={
-          "position-relative p-1" +
-          (sortable ? " border border-5 border-danger" : "")
-        }
-      >
+    <div className={sortable ? " border border-5 border-danger" : ""}>
+      <div className={"position-relative p-1"}>
         {header ? (
           <div>
             <div className="text-end mb-1 text-secondary">{header}</div>

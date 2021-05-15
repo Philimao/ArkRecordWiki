@@ -1,0 +1,15 @@
+.faq > ol > li {
+    margin-bottom: 1rem;
+}
+
+.faq > ol > ul {
+    margin-bottom: 2rem;
+}
+
+.faq > ol > ul > li {
+    margin-bottom: 0.5rem;
+}
+
+.faq > ol > ul > ol > li {
+    margin-bottom: 0.3rem;
+}

@@ -13,14 +13,17 @@ export default function ContactForm() {
     return (
       <form className="p-3" id="contact_form" ref={form}>
         <div className="mb-3">
-          联络表系统试运行中，希望得到快速反馈请联系卓荦zoro，QQ: 1243965887。
+          欢迎使用联络表。您可以通过联络表联系网站管理员，我们在收到消息后会尽快通过邮件的方式联络您。
+          <br />
+          <br />
+          遇到网站无法使用的问题，请先确定您是否使用的是现代浏览器。如果更换浏览器不能解决问题，请将引起问题的操作和页面情况、错误消息等提供在下方的正文内容中，网站管理员会尽快与您联络。
         </div>
         <InputBox
           value={contactUser}
           onChange={(evt) => setContactUser(evt.target.value)}
           label="您的称呼"
           id="contact_user"
-          placeholder="草牛homo"
+          placeholder="可以使用B站昵称"
           required={true}
           feedback="请输入联系人"
         />

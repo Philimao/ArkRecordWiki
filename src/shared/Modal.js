@@ -8,6 +8,7 @@ import propTypes from "prop-types";
  * @param props.handleSubmit
  * @param props.handleDelete
  * @param props.handleClose
+ * @param props.customButton
  * @returns {JSX.Element}
  */
 export default function Modal(props) {
@@ -73,6 +74,7 @@ export default function Modal(props) {
                 删除
               </button>
             )}
+            {props.customButton ? props.customButton() : null}
           </div>
         </div>
       </div>
@@ -87,4 +89,5 @@ Modal.propTypes = {
   handleSubmit: propTypes.func,
   handleDelete: propTypes.func,
   handleClose: propTypes.func,
+  customButton: propTypes.elementType,
 };

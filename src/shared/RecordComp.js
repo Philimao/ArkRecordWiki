@@ -226,7 +226,8 @@ export default function RecordComp(props) {
       <div
         ref={container}
         className={
-          "col-12 mb-3 px-2" + (!props.sortable ? " not-draggable" : "")
+          "record-comp col-12 mb-3 px-2" +
+          (!props.sortable ? " not-draggable" : "")
         }
       >
         <div className="card">
@@ -334,7 +335,7 @@ export default function RecordComp(props) {
             >
               {props.record.remark1}
             </div>
-            <div className="mt-auto" style={{ zIndex: "1000" }}>
+            <div className="mt-auto record-buttons" style={{ zIndex: "1000" }}>
               <button
                 ref={delButton}
                 className="btn m-2"
@@ -354,7 +355,7 @@ export default function RecordComp(props) {
               </a>
               {props.user ? (
                 <button
-                  className="btn m-2"
+                  className="btn m-2 btn-favorite"
                   style={btnStyle}
                   onClick={handleFavorite}
                 >
@@ -373,7 +374,7 @@ export default function RecordComp(props) {
     <div
       ref={container}
       className={
-        "col-12 mb-3 px-2" +
+        "record-comp col-12 mb-3 px-2" +
         (isFullScreen || isVideoVisible ? "" : " col-md-6") +
         (!props.sortable ? " not-draggable" : "")
       }
@@ -419,8 +420,8 @@ export default function RecordComp(props) {
           style={{ minHeight: "140px" }}
         >
           <div className="mb-2 ms-2 fs-6">{props.record.raider}</div>
-          {cardStyle === "detail" || cardStyle === "showOperation" ? (
-            <div className="mb-2 ms-2 fs-6">
+          {cardStyle === "detailed" || cardStyle === "showOperation" ? (
+            <div className="mb-2 ms-2 fs-6 fw-light">
               {Array.isArray(props.record.team)
                 ? props.record.team.join("+")
                 : props.record.team}
@@ -440,7 +441,7 @@ export default function RecordComp(props) {
               <div className="mb-1">{"视频地址：" + props.record.url}</div>
             </div>
           ) : null}
-          <div className="mt-auto">
+          <div className="mt-auto record-buttons">
             <button
               ref={delButton}
               className="btn btn-primary m-2"
@@ -460,7 +461,7 @@ export default function RecordComp(props) {
             {props.user ? (
               <button
                 className={
-                  "btn m-2" +
+                  "btn-favorite btn m-2" +
                   (isFavorite ? " btn-outline-danger" : " btn-danger")
                 }
                 onClick={handleFavorite}

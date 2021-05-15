@@ -161,7 +161,7 @@ export default function Nav({
                 <Link
                   className="nav-item nav-link change-links"
                   to={user ? "/home/profile" : "/auth"}
-                  id="login_page"
+                  id="profile_photo"
                   onClick={collapseNav}
                 >
                   <img
