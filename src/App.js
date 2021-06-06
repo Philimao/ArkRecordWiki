@@ -27,6 +27,7 @@ import SubmitGuideSimple from "./index/SubmitGuideSimple";
 import SubmitGuideDetailed from "./index/SubmitGuideDetailed";
 import AboutModal from "./others/AboutModal";
 import FAQComp from "./others/FAQComp";
+import Announcement from "./intro/Announcement";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -39,12 +40,14 @@ export default function App() {
   const [operator, setOperator] = useState();
   const [operatorArray, setOperatorArray] = useState();
   const [operation, setOperation] = useState();
+  const [categories, setCategories] = useState();
   const [searchValue, setSearchValue] = useState("");
   const [searchType, setSearchType] = useState("关卡");
   const content = useRef();
 
   const [visitorIntroEnabled, setVisitorIntroEnabled] = useState(false);
   const [userIntroEnabled, setUserIntroEnabled] = useState(false);
+  const [announcementEnabled, setAnnouncementEnabled] = useState(false);
 
   function fetchMenu() {
     fetch("/menu/root")
@@ -79,6 +82,16 @@ export default function App() {
     });
   }
 
+  function fetchCategories() {
+    fetch("/api/categories").then((resRaw) => {
+      if (resRaw.ok) {
+        resRaw.json().then((res) => {
+          setCategories(res);
+        });
+      }
+    });
+  }
+
   useEffect(() => {
     fetch("/authentication/get-user")
       .then((resRaw) => {
@@ -94,6 +107,9 @@ export default function App() {
       })
       .then(() => {
         fetchOperator();
+      })
+      .then(() => {
+        fetchCategories();
       })
       .catch((err) => {
         console.log(err);
@@ -113,6 +129,8 @@ export default function App() {
       setVisitorIntroEnabled(true);
     } else if (user && !getCookie("userIntro")) {
       setUserIntroEnabled(true);
+    } else if (!user && !getCookie("emailA")) {
+      // setAnnouncementEnabled(true);
     }
   }, [menu, user]);
 
@@ -190,6 +208,7 @@ export default function App() {
   }
 
   function collapseMenu() {
+    // console.log(activeButton.current);
     if (activeButton.current[0]) {
       activeButton.current[0].click();
     }
@@ -229,6 +248,7 @@ export default function App() {
                   menu={menu}
                   updateMenu={updateMenu}
                   operators={operators}
+                  categories={categories}
                 />
               ) : (
                 <Redirect to="/" />
@@ -236,7 +256,12 @@ export default function App() {
             </Route>
             <Route path="/submit">
               {user ? (
-                <SubmitPage user={user} menu={menu} operators={operators} />
+                <SubmitPage
+                  user={user}
+                  menu={menu}
+                  operators={operators}
+                  categories={categories}
+                />
               ) : (
                 <Redirect to="/" />
               )}
@@ -264,6 +289,7 @@ export default function App() {
                 collapseMenu={collapseMenu}
                 operator={operator}
                 operators={operators}
+                categories={categories}
                 operation={operation}
                 setOperation={setOperation}
               />
@@ -287,6 +313,11 @@ export default function App() {
           user={user}
           enabled={userIntroEnabled}
           setEnable={setUserIntroEnabled}
+        />
+        <Announcement
+          user={user}
+          enabled={announcementEnabled}
+          setEnable={setAnnouncementEnabled}
         />
         <AboutModal />
         <ToastContainer autoClose={3000} />

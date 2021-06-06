@@ -15,7 +15,7 @@ export default function Footer({ setVisitor }) {
         <div className="row" id="footer">
           {/*CHANGELOG*/}
           <div className="col-12 col-md-6 px-4">
-            此页面最后编辑于2021年5月14日。
+            此页面最后编辑于2021年6月5日。
             <br />
             <br />
             本网站由《明日方舟》游戏爱好者搭建，游戏视频链接由管理员与用户共同上传，如果您不希望自己的视频被收录，请联系网站管理员删除。{" "}

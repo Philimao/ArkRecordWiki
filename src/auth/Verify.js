@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export default function Verify() {
+export default function Verify({ serverCode }) {
   const [code, setCode] = useState("");
   let history = useHistory();
 
@@ -32,7 +32,14 @@ export default function Verify() {
   return (
     <form className="form" id="verify_form" onSubmit={handleSubmit}>
       <h1 className="text-center mb-4">验证</h1>
-      <div>已经向您的邮箱发送了验证码</div>
+      {serverCode ? (
+        <div className="mb-3">
+          由于注册人数过多邮箱每日发送量达到上限，因此请直接输入以下验证码：
+          <strong>{serverCode}</strong>。此验证码有效期为10分钟。
+        </div>
+      ) : (
+        <div className="mb-3">已经向您的邮箱发送了验证码</div>
+      )}
       <div className="form-floating my-3">
         <input
           type="text"

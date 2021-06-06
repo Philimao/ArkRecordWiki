@@ -19,6 +19,8 @@ export default function RecordComp(props) {
     cardStyle = props.cardStyle;
   } else if (props.record.story === "危机合约") {
     cardStyle = "cc";
+  } else {
+    cardStyle = "";
   }
 
   const report = window.location.origin + "/images/icon/report.svg";
@@ -58,33 +60,29 @@ export default function RecordComp(props) {
     }
   }
 
-  function toggleVideoVisibility() {
-    setVideoVisibility(!isVideoVisible);
-  }
-
-  async function updateRecord() {
-    if (!props.updateList) return;
-    try {
-      const resRaw = await fetch("/record/update-record", {
+  function restoreRecord(record) {
+    if (window.confirm("是否恢复该归档纪录")) {
+      fetch("/record/restore-record", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          _id: props.record._id,
-        }),
+        body: JSON.stringify({ _id: record._id }),
+      }).then((resRaw) => {
+        if (!resRaw.ok) {
+          resRaw.text().then((res) => {
+            toast.warning("恢复失败\n" + res);
+          });
+        } else {
+          toast.info("纪录已发回审核页");
+          props.updateList();
+        }
       });
-      if (!resRaw.ok) {
-        resRaw.text().then((res) => {
-          toast.warning("编辑失败\n" + res);
-        });
-      } else {
-        toast.info("纪录已发送回审核页");
-        props.updateList();
-      }
-    } catch (err) {
-      console.log(err);
     }
+  }
+
+  function toggleVideoVisibility() {
+    setVideoVisibility(!isVideoVisible);
   }
 
   function renderVideo() {
@@ -142,7 +140,7 @@ export default function RecordComp(props) {
 
   const cardHeader = () => {
     let header = "";
-    if (cardStyle === "detailed" || cardStyle === "showOperation") {
+    if (cardStyle.includes("detailed") || cardStyle.includes("showOperation")) {
       header += props.record.operation + " " + props.record.cn_name;
     } else {
       if (Array.isArray(props.record.team)) {
@@ -187,7 +185,27 @@ export default function RecordComp(props) {
     }
   }
 
-  if (cardStyle === "cc") {
+  async function handleValidate() {
+    const resRaw = await fetch("/record/validate-record", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        record_id: props.record._id,
+      }),
+    });
+    if (!resRaw.ok) {
+      resRaw.text().then((res) => {
+        toast.warning("操作失败\n" + res);
+      });
+    } else {
+      toast.info("纪录已验证通过");
+      props.updateList();
+    }
+  }
+
+  if (cardStyle.includes("cc")) {
     let index = 0;
     for (let i = 0; i < cc_color_theme.length; i++) {
       if (props.record.episode === cc_color_theme[i].name) {
@@ -230,14 +248,14 @@ export default function RecordComp(props) {
           (!props.sortable ? " not-draggable" : "")
         }
       >
-        <div className="card">
+        <div className="card overflow-hidden">
           <div
             className="card-header d-flex align-self-center"
             style={{
               width: "100%",
               background: `linear-gradient(to right, ${color1}, ${color2})`,
               color: "white",
-              zIndex: "1000",
+              zIndex: "500",
             }}
           >
             <h5 className="me-auto align-self-center mb-0">{cardHeader()}</h5>
@@ -257,7 +275,9 @@ export default function RecordComp(props) {
               <div>
                 <button
                   className="btn p-0 mx-1 fs-5 btn-opacity svg-btn"
-                  onClick={updateRecord}
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_edit"
+                  onClick={() => props.setRecord(props.record)}
                   title="编辑纪录"
                   style={{
                     backgroundImage: `url(${edit})`,
@@ -275,19 +295,19 @@ export default function RecordComp(props) {
             ) : null}
           </div>
           <div
-            className="card-body d-flex flex-column"
+            className="card-body d-flex flex-column position-relative"
             style={{ minHeight: "160px" }}
           >
             {background_url ? (
-              <div
+              <img
                 className="position-absolute end-0 bottom-0"
+                src={background_url}
+                alt="background"
                 style={{
-                  height: "200px",
-                  width: "200px",
-                  opacity: "0.7",
-                  backgroundImage: `url(${background_url})`,
-                  backgroundSize: "contain",
+                  transformOrigin: "bottom right",
+                  transform: "scale(0.29)",
                 }}
+                draggable="false"
               />
             ) : null}
             <div
@@ -318,9 +338,22 @@ export default function RecordComp(props) {
             >
               {props.record.level ? props.record.level : ""}
             </div>
+            {background_url ? (
+              <div
+                className="position-absolute"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  left: "0",
+                  top: "0",
+                  backgroundImage:
+                    "linear-gradient(to left, transparent, #FDFDFE, #FDFDFE)",
+                }}
+              />
+            ) : null}
             <div
               className="mb-2 ms-2"
-              style={{ fontSize: "1rem", zIndex: "1000" }}
+              style={{ fontSize: "1rem", zIndex: "500" }}
             >
               {props.record.raider}
             </div>
@@ -329,13 +362,13 @@ export default function RecordComp(props) {
               style={{
                 fontSize: "0.8rem",
                 whiteSpace: "pre-wrap",
-                zIndex: "1000",
+                zIndex: "500",
                 maxWidth: "65%",
               }}
             >
               {props.record.remark1}
             </div>
-            <div className="mt-auto record-buttons" style={{ zIndex: "1000" }}>
+            <div className="mt-auto record-buttons" style={{ zIndex: "500" }}>
               <button
                 ref={delButton}
                 className="btn m-2"
@@ -398,7 +431,15 @@ export default function RecordComp(props) {
             <div>
               <button
                 className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
-                onClick={updateRecord}
+                data-bs-toggle="modal"
+                data-bs-target="#quick_edit"
+                onClick={() => {
+                  if (cardStyle.includes("archive")) {
+                    restoreRecord(props.record);
+                  } else {
+                    props.setRecord(props.record);
+                  }
+                }}
                 title="编辑纪录"
                 style={{
                   backgroundImage: `url(${edit})`,
@@ -420,17 +461,17 @@ export default function RecordComp(props) {
           style={{ minHeight: "140px" }}
         >
           <div className="mb-2 ms-2 fs-6">{props.record.raider}</div>
-          {cardStyle === "detailed" || cardStyle === "showOperation" ? (
+          {!cardStyle.includes("detailed") ? null : (
             <div className="mb-2 ms-2 fs-6 fw-light">
               {Array.isArray(props.record.team)
                 ? props.record.team.join("+")
                 : props.record.team}
             </div>
-          ) : null}
+          )}
           <div className="ms-2 text-secondary" style={{ fontSize: "0.8rem" }}>
             {props.record.remark1}
           </div>
-          {admin && cardStyle === "detailed" ? (
+          {admin && cardStyle.includes("detailed") ? (
             <div className="mb-2 ms-2 text-secondary">
               <hr />
               <div className="mb-1">{"提交者：" + props.record.submitter}</div>
@@ -439,6 +480,21 @@ export default function RecordComp(props) {
               </div>
               <div className="mb-1">{"分组名称：" + props.record.group}</div>
               <div className="mb-1">{"视频地址：" + props.record.url}</div>
+              {props.record.date_created ? (
+                <div className="mb-1">
+                  {"提交日期：" +
+                    new Date(props.record.date_created).toString()}
+                </div>
+              ) : null}
+              {props.record.last_modified ? (
+                <div className="mb-1">
+                  {"最后修改：" +
+                    new Date(props.record.last_modified).toString()}
+                </div>
+              ) : null}
+              {props.record.reviewer ? (
+                <div className="mb-1">{"负责人：" + props.record.reviewer}</div>
+              ) : null}
             </div>
           ) : null}
           <div className="mt-auto record-buttons">
@@ -458,7 +514,7 @@ export default function RecordComp(props) {
             >
               跳转原址
             </a>
-            {props.user ? (
+            {props.user && !cardStyle.includes("validate") ? (
               <button
                 className={
                   "btn-favorite btn m-2" +
@@ -467,6 +523,11 @@ export default function RecordComp(props) {
                 onClick={handleFavorite}
               >
                 {isFavorite ? "取消收藏" : "收藏纪录"}
+              </button>
+            ) : null}
+            {props.user && admin && cardStyle.includes("validate") ? (
+              <button className="btn btn-danger m-2" onClick={handleValidate}>
+                验证通过
               </button>
             ) : null}
           </div>
@@ -486,4 +547,5 @@ RecordComp.propTypes = {
   showOperation: propTypes.bool,
   cardStyle: propTypes.string,
   sortable: propTypes.bool,
+  setRecord: propTypes.func,
 };

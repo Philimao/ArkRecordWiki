@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
 import ContactForm from "./ContactForm";
 import DefaultIndexContent from "./content/DefaultIndexContent";
-import DisplayRecords from "./content/DisplayRecords";
+import RecordsByOperation from "./content/RecordsByOperation";
 import "../stylesheets/Index.css";
 import LoadingComp from "../shared/LoadingComp";
 import { useHistory } from "react-router-dom";
@@ -17,12 +17,14 @@ export default function IndexPage({
   collapseMenu,
   operator,
   operators,
+  categories,
   operation,
   setOperation,
 }) {
   const [records, setRecords] = useState();
   const [story, setStory] = useState();
   const [episode, setEpisode] = useState();
+  const [news, setNews] = useState(true);
 
   let history = useHistory();
 
@@ -52,6 +54,14 @@ export default function IndexPage({
     }
   }, [menu, operation]);
 
+  useEffect(() => {
+    if (operator || (operation && records)) {
+      setNews(false);
+    } else {
+      setNews(true);
+    }
+  }, [operation, operator, records]);
+
   function MobileButtons() {
     return (
       <div>
@@ -59,6 +69,7 @@ export default function IndexPage({
           className="btn position-fixed bottom-0 end-0 d-md-none me-4 mb-5"
           id="fold_menu_btn"
           onClick={collapseMenu}
+          style={{ zIndex: "1000" }}
         >
           折叠目录
         </button>
@@ -67,6 +78,7 @@ export default function IndexPage({
           onClick={() => {
             window.scrollTo({ top: 0 });
           }}
+          style={{ zIndex: "1000" }}
         >
           回到顶部
         </button>
@@ -77,7 +89,7 @@ export default function IndexPage({
   function renderContent() {
     if (records && operation) {
       return (
-        <DisplayRecords
+        <RecordsByOperation
           story={story}
           episode={episode}
           operation={operation}
@@ -87,11 +99,19 @@ export default function IndexPage({
           records={records}
           menuButtons={menuButtons}
           operators={operators}
+          categories={categories}
         />
       );
     } else if (operator) {
       return (
-        <RecordsByOperator user={user} setUser={setUser} operator={operator} />
+        <RecordsByOperator
+          user={user}
+          setUser={setUser}
+          operator={operator}
+          menu={menu}
+          operators={operators}
+          categories={categories}
+        />
       );
     } else {
       return <DefaultIndexContent />;
@@ -109,6 +129,7 @@ export default function IndexPage({
         setOperation={setOperation}
         activeButton={activeButton}
         menuButtons={menuButtons}
+        news={news}
       />
       <div className="ms-md-4 mt-5 mt-md-0" id="content">
         {renderContent()}

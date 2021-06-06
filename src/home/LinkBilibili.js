@@ -62,7 +62,7 @@ export default function LinkBilibili() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="http://api.bilibili.com/x/space/myinfo"
+          href="https://api.bilibili.com/x/space/myinfo"
           className="btn btn-outline-secondary"
         >
           获取基本信息

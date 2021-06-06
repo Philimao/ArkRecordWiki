@@ -1,18 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import FloatingInputBox from "../../shared/FloatingInputBox";
 import { toast } from "react-toastify";
-import Modal from "../../shared/Modal";
-import { nanoid } from "nanoid";
 
-export default function Review({
+export default function ReviewForm({
   menu,
-  pendingArray,
-  setPendingArray,
-  index,
-  setIndex,
   operators,
+  categories,
+  record,
+  setRecord,
 }) {
-  const [_id, setId] = useState();
   const [submitter, setSubmitter] = useState("");
   const [raider, setRaider] = useState("");
   const [story, setStory] = useState("");
@@ -21,6 +17,8 @@ export default function Review({
   const [cnName, setCnName] = useState("");
   const [operationType, setOperationType] = useState("");
   const [team, setTeam] = useState("");
+  const [category, setCategory] = useState([]);
+  const [editCategory, setEditCategory] = useState(false);
   const [url, setURL] = useState("");
   const [group, setGroup] = useState("");
   const [remark0, setRemark0] = useState("");
@@ -30,8 +28,6 @@ export default function Review({
   const [backOP, setBackOP] = useState("");
   const [OPSkin, setOPSkin] = useState("e1");
 
-  const [reviewMsg, setReviewMsg] = useState("");
-
   const card_feedback = useRef();
 
   const [storyObject, setStoryObject] = useState(menu.childNodes[0]);
@@ -39,6 +35,134 @@ export default function Review({
   const [operationNodes, setOperationNodes] = useState(
     episodeObject.childNodes
   );
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.submitter = submitter;
+      return prev;
+    });
+  }, [setRecord, submitter]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.raider = raider;
+      return prev;
+    });
+  }, [setRecord, raider]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.story = story;
+      return prev;
+    });
+  }, [setRecord, story]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.episode = episode;
+      return prev;
+    });
+  }, [setRecord, episode]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.operation = operation;
+      return prev;
+    });
+  }, [setRecord, operation]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.cn_name = cnName;
+      return prev;
+    });
+  }, [setRecord, cnName]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.operationType = operationType;
+      return prev;
+    });
+  }, [setRecord, operationType]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.team = team;
+      return prev;
+    });
+  }, [setRecord, team]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.category = category;
+      return prev;
+    });
+  }, [setRecord, category]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.url = url;
+      return prev;
+    });
+  }, [setRecord, url]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.group = group;
+      return prev;
+    });
+  }, [setRecord, group]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.remark0 = remark0;
+      return prev;
+    });
+  }, [setRecord, remark0]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.remark1 = remark1;
+      return prev;
+    });
+  }, [setRecord, remark1]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.level = level;
+      return prev;
+    });
+  }, [setRecord, level]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.backOP = backOP;
+      return prev;
+    });
+  }, [setRecord, backOP]);
+
+  useEffect(() => {
+    setRecord((prev) => {
+      if (!prev) return;
+      prev.OPSkin = OPSkin;
+      return prev;
+    });
+  }, [setRecord, OPSkin]);
 
   function resetForm() {
     setSubmitter("");
@@ -49,6 +173,7 @@ export default function Review({
     setCnName("");
     setOperationType("");
     setTeam("");
+    setCategory([]);
     setURL("");
     setGroup("");
     setRemark0("");
@@ -56,60 +181,62 @@ export default function Review({
     setLevel("");
     setBackOP("");
     setOPSkin("");
-    setReviewMsg("");
   }
 
   useEffect(() => {
-    if (!pendingArray || !pendingArray[0] || !pendingArray[index])
-      return resetForm();
-    setId(pendingArray[index]._id);
-    setSubmitter(pendingArray[index].submitter);
-    setRaider(pendingArray[index].raider);
-    setStory(pendingArray[index].story);
-    setEpisode(pendingArray[index].episode);
-    setOperation(pendingArray[index].operation);
-    setCnName(pendingArray[index].cn_name);
-    setOperationType(pendingArray[index].operationType);
-    setURL(pendingArray[index].url);
-    if (Array.isArray(pendingArray[index].team)) {
-      setTeam(pendingArray[index].team.join("+"));
+    if (!record) return resetForm();
+    setSubmitter(record.submitter);
+    setRaider(record.raider);
+    setStory(record.story);
+    setEpisode(record.episode);
+    setOperation(record.operation);
+    setCnName(record.cn_name);
+    setOperationType(record.operationType);
+    setURL(record.url);
+    if (Array.isArray(record.team)) {
+      setTeam(record.team.join("+"));
     } else {
-      setTeam(pendingArray[index].team);
+      setTeam(record.team);
     }
-    if (!pendingArray[index].group || pendingArray[index].group === "") {
+    if (!record.category) {
+      setCategory(["常规队"]);
+    } else {
+      setCategory(record.category);
+    }
+    if (!record.group || record.group === "") {
       setGroup("");
     } else {
-      setGroup(pendingArray[index].group);
+      setGroup(record.group);
     }
-    if (!pendingArray[index].remark0) {
+    if (!record.remark0) {
       setRemark0("");
     } else {
-      setRemark0(pendingArray[index].remark0);
+      setRemark0(record.remark0);
     }
-    if (!pendingArray[index].remark1) {
+    if (!record.remark1) {
       setRemark1("");
     } else {
-      setRemark1(pendingArray[index].remark1);
+      setRemark1(record.remark1);
     }
-    if (!pendingArray[index].level) {
+    if (!record.level) {
       setLevel("");
     } else {
-      setLevel(pendingArray[index].level);
+      setLevel(record.level);
     }
-    if (!pendingArray[index].backOP) {
+    if (!record.backOP) {
       setBackOP("");
     } else {
-      setBackOP(pendingArray[index].backOP);
+      setBackOP(record.backOP);
     }
-    if (!pendingArray[index].OPSkin) {
+    if (!record.OPSkin) {
       setOPSkin("");
     } else {
-      setOPSkin(pendingArray[index].OPSkin);
+      setOPSkin(record.OPSkin);
     }
-  }, [pendingArray, index]);
+  }, [record]);
 
   useEffect(() => {
-    if (pendingArray && pendingArray.length !== 0) {
+    if (record) {
       let flag = true;
       for (let object of menu.childNodes) {
         if (object.story === story) {
@@ -122,7 +249,7 @@ export default function Review({
     } else {
       setStoryObject(menu.childNodes[0]);
     }
-  }, [menu, pendingArray, story]);
+  }, [record, menu, story]);
 
   useEffect(() => {
     if (storyObject && episode) {
@@ -158,167 +285,8 @@ export default function Review({
     }
   }, [operation, operationNodes]);
 
-  function prevRecord(evt) {
-    if (evt) evt.preventDefault();
-    if (pendingArray.length === 0) {
-      setIndex(0);
-      resetForm();
-      return;
-    }
-    if (index >= 1) {
-      setIndex(index - 1);
-    }
-  }
-
-  function nextRecord(evt) {
-    evt.preventDefault();
-    if (pendingArray.length === 0) {
-      setIndex(0);
-      resetForm();
-      return;
-    }
-    if (index < pendingArray.length - 1) {
-      setIndex(index + 1);
-    }
-  }
-
-  async function handleSubmit(evt) {
-    if (evt) {
-      evt.preventDefault();
-      if (!evt.target.checkValidity()) {
-        return evt.target.classList.add("was-validated");
-      }
-    }
-    const data = {
-      _id: _id,
-      story: story,
-      episode: episode,
-      submitter: submitter,
-      raider: raider,
-      operation: operation,
-      cn_name: cnName,
-      operationType: operationType,
-      team: team,
-      url: url,
-      group: group,
-      remark0: remark0,
-      remark1: remark1,
-      level: level,
-      backOP: backOP,
-      OPSkin: OPSkin,
-      msg: reviewMsg,
-    };
-    const resRaw = await fetch("/record/accept-pending", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    const res = await resRaw.text();
-    if (!resRaw.ok) {
-      toast.warning("提交失败\n" + res);
-    } else {
-      toast.info(res);
-      setPendingArray((prev) => {
-        const newArray = JSON.parse(JSON.stringify(prev));
-        newArray.splice(index, 1);
-        return newArray;
-      });
-      prevRecord();
-      setReviewMsg("");
-    }
-  }
-
-  async function handleDelete(evt) {
-    if (evt) evt.preventDefault();
-    if (window.confirm("确认是否删除该纪录？")) {
-      const resRaw = await fetch("/record/delete-pending", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ _id: _id, msg: reviewMsg }),
-      });
-      if (!resRaw.ok) {
-        resRaw.text().then((res) => {
-          toast.warning("删除失败\n" + res);
-        });
-      } else {
-        toast.info("删除成功");
-        setPendingArray((prev) => {
-          const newArray = JSON.parse(JSON.stringify(prev));
-          newArray.splice(index, 1);
-          return newArray;
-        });
-        prevRecord();
-        setReviewMsg("");
-      }
-    }
-  }
-
-  async function handleArchive(evt) {
-    evt.preventDefault();
-    const data = {
-      _id: _id,
-      story: story,
-      episode: episode,
-      submitter: submitter,
-      raider: raider,
-      operation: operation,
-      cn_name: cnName,
-      operationType: operationType,
-      team: team,
-      url: url,
-      group: group,
-      remark0: remark0,
-      remark1: remark1,
-      level: level,
-      backOP: backOP,
-      OPSkin: OPSkin,
-    };
-    const resRaw = await fetch("/record/archive-pending", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    const res = await resRaw.text();
-    if (!resRaw.ok) {
-      toast.warning("提交失败\n" + res);
-    } else {
-      toast.info(res);
-      setPendingArray((prev) => {
-        const newArray = JSON.parse(JSON.stringify(prev));
-        newArray.splice(index, 1);
-        return newArray;
-      });
-      prevRecord();
-      setReviewMsg("");
-    }
-  }
-
-  function reviewMessage() {
-    const id = nanoid();
-    return (
-      <div className="px-2">
-        <label className="form-label" htmlFor={id}>
-          给用户的留言将会被展示在审核通过/不通过的系统消息中（可选）：
-        </label>
-        <textarea
-          value={reviewMsg}
-          onChange={(evt) => setReviewMsg(evt.target.value)}
-          className="form-control"
-          id={id}
-          rows="10"
-        />
-      </div>
-    );
-  }
-
   return (
-    <form id="record_submit_form" onSubmit={handleSubmit}>
+    <form id="record_review_form">
       <h4 className="mb-3">审核纪录</h4>
       <FloatingInputBox
         value={submitter}
@@ -326,7 +294,7 @@ export default function Review({
         required={true}
         id="review_submitter"
         label="提交者"
-        disabled={!pendingArray[0]}
+        disabled={!record}
       />
       <FloatingInputBox
         value={raider}
@@ -334,7 +302,7 @@ export default function Review({
         required={true}
         id="review_raider"
         label="发布账号"
-        disabled={!pendingArray[0]}
+        disabled={!record}
       />
       <div className="form-floating mb-3">
         <select
@@ -342,7 +310,7 @@ export default function Review({
           id="review_story"
           value={story}
           onChange={(evt) => setStory(evt.target.value)}
-          disabled={!pendingArray[0]}
+          disabled={!record}
           required
         >
           {menu.childNodes.map((story, index) => (
@@ -359,7 +327,7 @@ export default function Review({
           id="review_episode"
           value={episode}
           onChange={(evt) => setEpisode(evt.target.value)}
-          disabled={!pendingArray[0]}
+          disabled={!record}
           required
         >
           {storyObject.childNodes.map((episode, index) => (
@@ -373,10 +341,10 @@ export default function Review({
       <div className="form-floating mb-3">
         <select
           className="form-select"
-          id="submit_operation"
+          id="review_operation"
           value={operation}
           onChange={(evt) => setOperation(evt.target.value)}
-          disabled={!pendingArray[0]}
+          disabled={!record}
           required
         >
           {operationNodes.map((operation, index) => (
@@ -400,7 +368,7 @@ export default function Review({
           id="review_operationType"
           value={operationType}
           onChange={(evt) => setOperationType(evt.target.value)}
-          disabled={!pendingArray[0]}
+          disabled={!record}
           required
         >
           <option value="normal">普通</option>
@@ -414,8 +382,58 @@ export default function Review({
         required={true}
         id="review_team"
         label="队伍组成"
-        disabled={!pendingArray[0]}
+        disabled={!record}
       />
+      <div className="d-flex">
+        <div className="flex-grow-1 me-3">
+          <FloatingInputBox
+            value={category.join("，")}
+            onChange={() => {}}
+            required={true}
+            id="review_category"
+            label="流派分类"
+          />
+        </div>
+        <button
+          className="btn btn-primary mb-3 d-flex flex-column justify-content-center"
+          onClick={(evt) => {
+            evt.preventDefault();
+            setEditCategory((prev) => !prev);
+          }}
+        >
+          {editCategory ? (
+            <i className="bi bi-chevron-double-down" />
+          ) : (
+            <i className="bi bi-chevron-double-up" />
+          )}
+        </button>
+      </div>
+      {editCategory ? (
+        <div className="mb-3 row mx-0">
+          {categories.map((item) => (
+            <div className="form-check col-6" key={item}>
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id={item}
+                onChange={() => {
+                  const tmp = Array.from(category);
+                  if (category.includes(item)) {
+                    tmp.splice(tmp.indexOf(item), 1);
+                  } else {
+                    tmp.push(item);
+                  }
+                  setCategory(tmp);
+                }}
+                defaultChecked={category.includes(item)}
+              />
+              <label htmlFor={item} className="form-check-label">
+                {item}
+              </label>
+            </div>
+          ))}
+        </div>
+      ) : null}
       <div className="d-flex">
         <div className="flex-grow-1 me-3">
           <FloatingInputBox
@@ -424,7 +442,7 @@ export default function Review({
             required={true}
             id="review_url"
             label="B站视频链接"
-            disabled={!pendingArray[0]}
+            disabled={!record}
           />
         </div>
         <a
@@ -445,7 +463,7 @@ export default function Review({
           value={group}
           onChange={(evt) => setGroup(evt.target.value)}
           placeholder="group"
-          disabled={!pendingArray[0]}
+          disabled={!record}
         />
         <label htmlFor="review_group">纪录分组</label>
         <datalist id="review_group_datalist">
@@ -453,17 +471,30 @@ export default function Review({
           <option value="开荒记录（不使用关卡实装后才上线的干员）" />
         </datalist>
       </div>
-      <div className="form-floating mb-3">
-        <textarea
-          className="form-control"
-          placeholder="remark"
-          id="review_remark"
-          value={remark0}
-          onChange={(evt) => setRemark0(evt.target.value)}
-          style={{ minHeight: "8rem" }}
-          disabled={!pendingArray[0]}
-        />
-        <label htmlFor="review_remark">提交者备注（不会显示在网页上）</label>
+      <div className="d-flex">
+        <div className="flex-grow-1 form-floating me-3 mb-3">
+          <textarea
+            className="form-control"
+            placeholder="remark"
+            id="review_remark"
+            value={remark0}
+            onChange={(evt) => setRemark0(evt.target.value)}
+            style={{ minHeight: "8rem" }}
+            disabled={true}
+          />
+          <label htmlFor="review_remark">
+            提交者备注（不会显示在网页上，点击按钮复制）
+          </label>
+        </div>
+        <button
+          className="btn btn-primary mb-3 d-flex flex-column justify-content-center"
+          onClick={(evt) => {
+            evt.preventDefault();
+            setRemark1(remark0);
+          }}
+        >
+          <i className="bi bi-scissors" />
+        </button>
       </div>
       <div className="form-floating mb-3">
         <textarea
@@ -473,7 +504,7 @@ export default function Review({
           value={remark1}
           onChange={(evt) => setRemark1(evt.target.value)}
           style={{ minHeight: "8rem" }}
-          disabled={!pendingArray[0]}
+          disabled={!record}
         />
         <label htmlFor="review_remark1">纪录备注（通关时间等说明文字）</label>
       </div>
@@ -547,75 +578,6 @@ export default function Review({
           </div>
         </div>
       ) : null}
-      <div className="mb-3 d-sm-flex">
-        <div className="me-auto mb-2 mb-sm-0">
-          <button
-            type="submit"
-            className="btn btn-primary me-2"
-            disabled={!pendingArray[0]}
-          >
-            通过
-          </button>
-          <button
-            className="btn btn-primary me-2"
-            onClick={(evt) => evt.preventDefault()}
-            data-bs-toggle="modal"
-            data-bs-target="#approve_message_modal"
-            disabled={!pendingArray[0]}
-          >
-            提供反馈并通过
-          </button>
-          <button
-            className="btn btn-danger me-2"
-            onClick={handleDelete}
-            disabled={!pendingArray[0]}
-          >
-            删除
-          </button>
-          <button
-            className="btn btn-danger me-2"
-            onClick={(evt) => evt.preventDefault()}
-            data-bs-toggle="modal"
-            data-bs-target="#reject_message_modal"
-            disabled={!pendingArray[0]}
-          >
-            提供反馈并删除
-          </button>
-          <button
-            className="btn btn-success me-auto"
-            onClick={handleArchive}
-            disabled={!pendingArray[0]}
-          >
-            归档
-          </button>
-        </div>
-        <button
-          className="btn btn-primary me-2"
-          onClick={prevRecord}
-          disabled={!pendingArray[0]}
-        >
-          上一个
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={nextRecord}
-          disabled={!pendingArray[0]}
-        >
-          下一个
-        </button>
-      </div>
-      <Modal
-        id="approve_message_modal"
-        handleSubmit={handleSubmit}
-        Content={reviewMessage}
-        header="通过纪录-审核反馈"
-      />
-      <Modal
-        id="reject_message_modal"
-        handleDelete={handleDelete}
-        Content={reviewMessage}
-        header="删除纪录-审核反馈"
-      />
     </form>
   );
 }

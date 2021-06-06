@@ -1,24 +1,13 @@
 import React, { useRef, useState } from "react";
 import QueryRecords from "../../shared/QueryRecords";
 import FloatingInputBox from "../../shared/FloatingInputBox";
-import Modal from "../../shared/Modal";
-import Review from "../review/Review";
 
-export default function AllRecordsPage({ user, setUser, operators, menu }) {
+export default function AllRecordsPage({ user, setUser, menu, categories }) {
   const [query, setQuery] = useState({});
   const [limit, setLimit] = useState(60);
   const [searchValue, setSearchValue] = useState("");
 
   const recentBtn = useRef();
-  const [refresh, setRefresh] = useState(false);
-
-  function quickReview() {
-    return <Review operators={operators} refresh={refresh} menu={menu} />;
-  }
-
-  function handleModalClose() {
-    recentBtn.current.click();
-  }
 
   if (!user || !setUser) return null;
   return (
@@ -58,6 +47,16 @@ export default function AllRecordsPage({ user, setUser, operators, menu }) {
         <button
           className="btn btn-primary me-2 mb-2"
           onClick={() => {
+            setQuery({ archive: true });
+            setLimit(undefined);
+            setSearchValue("");
+          }}
+        >
+          归档记录
+        </button>
+        <button
+          className="btn btn-primary me-2 mb-2"
+          onClick={() => {
             if (window.confirm("加载所有纪录将会降低性能，是否确定？")) {
               setQuery({});
               setLimit(undefined);
@@ -66,14 +65,6 @@ export default function AllRecordsPage({ user, setUser, operators, menu }) {
           }}
         >
           全部纪录
-        </button>
-        <button
-          className="btn btn-primary me-2 mb-2"
-          data-bs-toggle="modal"
-          data-bs-target="#quick_review"
-          onClick={() => setRefresh((prev) => !prev)}
-        >
-          快速编辑
         </button>
       </div>
       <FloatingInputBox
@@ -88,13 +79,9 @@ export default function AllRecordsPage({ user, setUser, operators, menu }) {
         query={query}
         limit={limit}
         filter={searchValue}
-        cardStyle="detailed"
-      />
-      <Modal
-        id="quick_review"
-        header="快速编辑"
-        Content={quickReview}
-        handleClose={handleModalClose}
+        menu={menu}
+        categories={categories}
+        cardStyle={"detailed" + (query.archive ? " archive" : "")}
       />
     </div>
   );

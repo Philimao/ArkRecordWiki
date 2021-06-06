@@ -11,6 +11,103 @@ export default function Changelog() {
 
           <div className="row">
             <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.11.2</div>
+              <div className="col-12 col-sm-8">2021.06.05</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">修复问题：</div>
+              <ul>
+                <li>修复了突袭关卡无法快速编辑的问题</li>
+                <li>改进了BV号查重的逻辑</li>
+                <li>将流派页改进为可多选</li>
+                <li>增加了客服的联系方式</li>
+                <li>修复了系统消息过期不会自动删除的问题</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.11.1</div>
+              <div className="col-12 col-sm-8">2021.05.31</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增功能：</div>
+              <ul>
+                <li>调整了新闻对齐</li>
+                <li>新增了纪录详细显示的时间戳</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.11.0</div>
+              <div className="col-12 col-sm-8">2021.05.28</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增功能：</div>
+              <ul>
+                <li>初步实现了流派分类分页功能</li>
+                <li>在新闻中允许加入多张图片</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.10.1</div>
+              <div className="col-12 col-sm-8">2021.05.23</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">改进功能：</div>
+              <ul>
+                <li>修复了合约角标字体加载问题</li>
+                <li>改进了头像获取功能，改为运行时懒汉式获取头像</li>
+                <li>新增复制用户留言至管理员留言功能</li>
+                <li>实现了管理员站内信功能</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.10.0</div>
+              <div className="col-12 col-sm-8">2021.05.17</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增页面与修复：</div>
+              <ul>
+                <li>更新计数器逻辑</li>
+                <li>压缩了头像文件体积</li>
+                <li>实现了管理员站内信功能</li>
+                <li>实现了管理员站内直接邮件回复功能</li>
+                <li>改进了搜索提交者的查询逻辑（改名后不会丢失）</li>
+                <li>新增对免审核纪录的复核功能</li>
+                <li>改进了卡背显示效果</li>
+                <li>修复了每日战报遮挡UI的问题</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.9.2</div>
+              <div className="col-12 col-sm-8">2021.05.16</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增页面与修复：</div>
+              <ul>
+                <li>修复了邮箱发送上限的问题</li>
+                <li>新增临时公告功能</li>
+                <li>新增最新战报功能</li>
+                <li>修复了计数器功能逻辑异常的问题</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
               <div className="col-12 col-sm-4 mb-3 fw-bold">v2.9.1</div>
               <div className="col-12 col-sm-8">2021.05.15</div>
             </div>

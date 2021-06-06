@@ -7,6 +7,7 @@ export default function SubmitForm({
   user,
   menu,
   operators,
+  categories,
   pStory,
   pEpisode,
   pOperation,
@@ -25,6 +26,8 @@ export default function SubmitForm({
   const [operationType, setOperationType] = useState("normal");
   const [team, setTeam] = useState("");
   const [url, setURL] = useState("");
+  const [category, setCategory] = useState([categories[0]]);
+  const [editCategory, setEditCategory] = useState(false);
   const [group, setGroup] = useState("");
   const [remark0, setRemark0] = useState("");
   const [remark1, setRemark1] = useState("");
@@ -113,11 +116,32 @@ export default function SubmitForm({
     } else if (newURL.indexOf("BV") === 0) {
       newURL = "https://www.bilibili.com/video/" + newURL;
     }
+    if (newURL.includes("BV") && newURL.includes("?")) {
+      const newURLArray = newURL.split("?");
+      newURL = newURLArray[0];
+      const queryArray = newURLArray[1].split("&");
+      if (queryArray.length !== 0) {
+        for (let query of queryArray) {
+          if (query.includes("p=")) {
+            newURL = newURL + "?" + query;
+          }
+        }
+      }
+    }
     newURL = newURL.trim();
 
     if (!user.username) {
       return toast.warning("用户身份丢失，请刷新网页重新提交");
     }
+
+    if (category.length === 0) {
+      category.push("常规队");
+    }
+    category.sort((a, b) => {
+      const indexA = categories.indexOf(a);
+      const indexB = categories.indexOf(b);
+      return indexA - indexB;
+    });
 
     const data = {
       submitter: user.username,
@@ -128,6 +152,7 @@ export default function SubmitForm({
       cn_name: cnName,
       operationType: operationType,
       team: team,
+      category: category,
       group: group,
       url: newURL,
       level: level,
@@ -301,6 +326,56 @@ export default function SubmitForm({
           id="submit_team"
           label="队伍组成（例：银灰3+史尔特尔3，使用+分隔）"
         />
+        <div className="d-flex">
+          <div className="flex-grow-1 me-3">
+            <FloatingInputBox
+              value={category.join("，")}
+              onChange={() => {}}
+              required={true}
+              id="submit_category"
+              label="流派分类"
+            />
+          </div>
+          <button
+            className="btn btn-primary mb-3 d-flex flex-column justify-content-center"
+            onClick={(evt) => {
+              evt.preventDefault();
+              setEditCategory((prev) => !prev);
+            }}
+          >
+            {editCategory ? (
+              <i className="bi bi-chevron-double-down" />
+            ) : (
+              <i className="bi bi-chevron-double-up" />
+            )}
+          </button>
+        </div>
+        {editCategory ? (
+          <div className="mb-3 row mx-0">
+            {categories.map((item) => (
+              <div className="form-check col-6" key={item}>
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id={item}
+                  onChange={() => {
+                    const tmp = Array.from(category);
+                    if (category.includes(item)) {
+                      tmp.splice(tmp.indexOf(item), 1);
+                    } else {
+                      tmp.push(item);
+                    }
+                    setCategory(tmp);
+                  }}
+                  defaultChecked={category.includes(item)}
+                />
+                <label htmlFor={item} className="form-check-label">
+                  {item}
+                </label>
+              </div>
+            ))}
+          </div>
+        ) : null}
         <FloatingInputBox
           value={url}
           onChange={(evt) => setURL(evt.target.value)}

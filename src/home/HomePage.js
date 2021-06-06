@@ -7,7 +7,7 @@ import SystemMessage from "./SystemMessage";
 import FavoritePage from "./FavoritePage";
 import QueryRecords from "../shared/QueryRecords";
 
-export default function HomePage({ user, setUser }) {
+export default function HomePage({ user, setUser, menu }) {
   return (
     <div className="container align-items-start d-md-flex">
       <div className="nav flex-column nav-pills me-0 me-md-3 mb-3 mb-md-0">
@@ -37,6 +37,7 @@ export default function HomePage({ user, setUser }) {
             <QueryRecords
               user={user}
               setUser={setUser}
+              menu={menu}
               query={{ submitter: user.username }}
               cardStyle="showOperation"
             />

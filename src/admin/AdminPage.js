@@ -1,6 +1,6 @@
 import React from "react";
 import Episode from "./episode/Episode";
-import Review from "./review/Review";
+import ReviewPage from "./review/ReviewPage";
 import "../stylesheets/Admin.css";
 import {
   BrowserRouter as Router,
@@ -14,6 +14,10 @@ import GroupManagement from "./group/GroupManagement";
 import OperatorComp from "./operator/OperatorComp";
 import AllRecordsPage from "./all-records/AllRecordsPage";
 import ContactMessage from "./contact/ContactMessage";
+import PendingUser from "./verify/PendingUser";
+import SetContentPage from "./set-content/SetContentPage";
+import ReviewFreePage from "./review-free/ReviewFreePage";
+import CategoryManagement from "./category/CategoryManagement";
 
 export default function AdminPage({
   user,
@@ -21,6 +25,7 @@ export default function AdminPage({
   menu,
   updateMenu,
   operators,
+  categories,
 }) {
   return (
     <Router basename="/admin">
@@ -36,6 +41,9 @@ export default function AdminPage({
           <NavLink to="/contact" className="nav-link mb-1 text-center">
             用户反馈
           </NavLink>
+          <NavLink to="/review-free" className="nav-link mb-1 text-center">
+            免审核复核
+          </NavLink>
           <NavLink to="/episode" className="nav-link mb-1 text-center">
             章节活动
           </NavLink>
@@ -48,8 +56,17 @@ export default function AdminPage({
           <NavLink to="/all-records" className="nav-link mb-1 text-center">
             所有纪录
           </NavLink>
+          <NavLink to="/category" className="nav-link mb-1 text-center">
+            流派管理
+          </NavLink>
           <NavLink to="/group" className="nav-link mb-1 text-center">
             分组管理
+          </NavLink>
+          <NavLink to="/set-content" className="nav-link mb-1 text-center">
+            设置资源
+          </NavLink>
+          <NavLink to="/pending-user" className="nav-link mb-1 text-center">
+            待验证用户
           </NavLink>
           <NavLink to="/menu" className="nav-link mb-1 text-center">
             显示目录
@@ -59,10 +76,23 @@ export default function AdminPage({
         <div className="tab-content border-start border-end">
           <Switch>
             <Route path="/review">
-              <Review operators={operators} menu={menu} />
+              <ReviewPage
+                operators={operators}
+                menu={menu}
+                categories={categories}
+              />
             </Route>
             <Route path="/contact">
               <ContactMessage user={user} />
+            </Route>
+            <Route path="/review-free">
+              <ReviewFreePage
+                user={user}
+                setUser={setUser}
+                menu={menu}
+                operators={operators}
+                categories={categories}
+              />
             </Route>
             <Route path="/episode">
               <Episode user={user} menu={menu} updateMenu={updateMenu} />
@@ -77,12 +107,22 @@ export default function AdminPage({
               <AllRecordsPage
                 user={user}
                 setUser={setUser}
-                operators={operators}
                 menu={menu}
+                operators={operators}
+                categories={categories}
               />
+            </Route>
+            <Route path="/category">
+              <CategoryManagement user={user} />
             </Route>
             <Route path="/group">
               <GroupManagement user={user} />
+            </Route>
+            <Route path="/pending-user">
+              <PendingUser user={user} />
+            </Route>
+            <Route path="/set-content">
+              <SetContentPage />
             </Route>
             <Route path="/menu">
               <PlainMenu menu={menu} />

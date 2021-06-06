@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "../stylesheets/Auth.css";
 import Login from "./Login.js";
@@ -8,14 +8,16 @@ import NewPassword from "./NewPassword.js";
 import Verify from "./Verify";
 
 export default function Auth() {
+  const [code, setCode] = useState();
+
   return (
     <Router>
       <Switch>
         <Route path="/auth/signup">
-          <Signup />
+          <Signup setCode={setCode} />
         </Route>
         <Route path="/auth/verify">
-          <Verify />
+          <Verify serverCode={code} />
         </Route>
         <Route path="/auth/reset">
           <Reset />

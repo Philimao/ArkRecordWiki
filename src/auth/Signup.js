@@ -5,7 +5,7 @@ import { hashCode } from "../utils";
 import { toast } from "react-toastify";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-export default function Signup() {
+export default function Signup({ setCode }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
@@ -35,6 +35,7 @@ export default function Signup() {
     setPassword("");
     setPasswordConfirm("");
     const hash = await hashCode(password);
+    toast.info("正在发送邮件，请稍后");
     fetch("/mail/signup", {
       method: "POST",
       headers: {
@@ -52,6 +53,11 @@ export default function Signup() {
             toast.warning(res);
           });
         } else {
+          if (resRaw.status !== 204) {
+            resRaw.text().then((code) => {
+              setCode(code);
+            });
+          }
           toast.info("注册成功！请检查邮箱");
           history.push("/auth/verify");
           setTimeout(() => {

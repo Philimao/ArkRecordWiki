@@ -50,7 +50,8 @@ export default function SubmitGuideSimple() {
               “刻刀全技能都可通关”
             </li>
             <li className="mb-2">
-              队伍中各干员之间使用<b>+号分隔</b>，如 泥岩2+瑕光1
+              队伍中各干员之间使用<b>+号分隔</b>，如
+              泥岩2+瑕光1。此处请用半角加号，（一般键盘上的加号都是半角，在使用中文输入法时可能需要注意）
             </li>
             <li className="mb-2">
               关卡开局前<b>已在场上的干员</b>

@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
-import RecordGroup from "./RecordGroup";
+import RecordsByGroup from "../index/content/RecordsByGroup";
 import { toast } from "react-toastify";
 import LoadingComp from "./LoadingComp";
+import QuickEditModal from "./QuickEditModal";
 
 export default function QueryRecords({
   user,
@@ -10,6 +11,9 @@ export default function QueryRecords({
   query,
   limit,
   filter,
+  menu,
+  operators,
+  categories,
   cardStyle,
 }) {
   const [records, setRecords] = useState();
@@ -22,6 +26,8 @@ export default function QueryRecords({
     : 10;
   const loadingFlag = useRef(true);
   const container = useRef();
+
+  const [record, setRecord] = useState();
 
   useEffect(() => {
     (async function () {
@@ -36,7 +42,13 @@ export default function QueryRecords({
         });
       } else if (user && user.role === "user") {
         if (query.favorite) {
-          resRaw = await fetch("/record/favorite-records");
+          resRaw = await fetch("/record/favorite-records", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ favorite: query.favorite }),
+          });
         } else {
           resRaw = await fetch("/record/user-query-records", {
             method: "POST",
@@ -48,7 +60,13 @@ export default function QueryRecords({
         }
       } else {
         if (query.favorite) {
-          resRaw = await fetch("/record/favorite-records");
+          resRaw = await fetch("/record/favorite-records", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ favorite: query.favorite }),
+          });
         } else {
           resRaw = await fetch("/record/admin-query-records", {
             method: "POST",
@@ -183,20 +201,32 @@ export default function QueryRecords({
         {"检索到条目数量：" + filteredRecords.length}
       </div>
       <div style={{ minHeight: "calc(100vh - 28rem)" }}>
-        <RecordGroup
-          user={user}
-          setUser={setUser}
+        <RecordsByGroup
           group={filteredRecords.filter((record, index) => {
             return (
               (page - 1) * recordsPerPage - 1 < index &&
               index < page * recordsPerPage
             );
           })}
-          showOperation={true}
+          user={user}
+          setUser={setUser}
+          menu={menu}
+          operators={operators}
+          categories={categories}
           cardStyle={cardStyle ? cardStyle : ""}
+          setRecord={setRecord}
+          showOperation={true}
         />
       </div>
       <MyPage />
+      <QuickEditModal
+        user={user}
+        menu={menu}
+        operators={operators}
+        categories={categories}
+        record={record}
+        setRecord={setRecord}
+      />
     </div>
   );
 }

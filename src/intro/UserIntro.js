@@ -111,7 +111,7 @@ export default function UserIntro({ user, enabled, setEnable }) {
       onExit={() => {
         document.cookie =
           "userIntro=true; path=/; expires=" +
-          new Date(Date.now() + 365 * 864000).toUTCString();
+          new Date(Date.now() + 365 * 86400000).toUTCString();
         setEnable(false);
       }}
       onChange={onChange}

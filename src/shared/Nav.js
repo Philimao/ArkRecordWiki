@@ -85,6 +85,8 @@ export default function Nav({
     }
   }
 
+  const favicon = "../favicon/favicon-32x32.png";
+
   return (
     <nav
       ref={navbar}
@@ -98,7 +100,7 @@ export default function Nav({
       <div className="container-fluid d-flex">
         <Link className="navbar-brand" to="/" onClick={() => resetPage()}>
           <img
-            src="../favicon/favicon-32x32.png"
+            src={favicon}
             alt="favicon"
             width="32"
             height="32"
@@ -169,7 +171,7 @@ export default function Nav({
                     src={
                       user
                         ? user.profile_photo
-                        : "../images/default-profile-photo.jpg"
+                        : "../images/profile-photo/default-profile-photo.jpg"
                     }
                     alt="profile"
                     width="32px"

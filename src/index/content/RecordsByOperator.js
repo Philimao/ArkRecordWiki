@@ -1,7 +1,14 @@
 import React from "react";
 import QueryRecords from "../../shared/QueryRecords";
 
-export default function RecordsByOperator({ user, setUser, operator }) {
+export default function RecordsByOperator({
+  user,
+  setUser,
+  operator,
+  menu,
+  operators,
+  categories,
+}) {
   const query = {
     team: { $regex: operator.name1 + ".*" },
   };
@@ -16,6 +23,9 @@ export default function RecordsByOperator({ user, setUser, operator }) {
         setUser={setUser}
         query={query}
         cardStyle="showOperation"
+        menu={menu}
+        operators={operators}
+        categories={categories}
       />
     </div>
   );

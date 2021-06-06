@@ -83,6 +83,21 @@ export default function SystemMessage() {
                 </div>
               </div>
             );
+          } else if (message.type === "admin-message") {
+            card = (
+              <div className="card text-white bg-warning mb-3">
+                <div className="card-header d-flex">
+                  <div>{message.header}</div>
+                  <button
+                    className="btn btn-close ms-auto"
+                    onClick={() => deleteMessage(message, index)}
+                  />
+                </div>
+                <div className="card-body" style={{ minHeight: "150px" }}>
+                  <AdminMessageBody body={message.body} />
+                </div>
+              </div>
+            );
           } else {
             card = null;
           }
@@ -128,6 +143,29 @@ function MessageBody({ body }) {
         {"消息将在" +
           Math.floor((body.expiration - Date.now()) / 86400000) +
           "天后过期"}
+      </div>
+    </div>
+  );
+}
+
+function AdminMessageBody({ body }) {
+  return (
+    <div className="p-3">
+      <div className="mb-2">
+        {"关卡名称： " + body.operation + " " + body.cn_name}
+      </div>
+      <div className="flex-grow-1">
+        <div className="mb-2">
+          {"队伍组成： " +
+            (Array.isArray(body.team) ? body.team.join("+") : body.team)}
+        </div>
+        <div className="mb-2">
+          视频链接： <a href={body.url}>视频地址</a>
+        </div>
+        <div className="mb-2">
+          <div>管理员回复：</div>
+          <div style={{ whiteSpace: "pre-wrap" }}>{body.msg}</div>
+        </div>
       </div>
     </div>
   );

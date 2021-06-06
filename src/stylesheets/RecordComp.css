@@ -23,4 +23,5 @@
 
 .svg-btn-invert {
   filter: invert(0.3);
+  color: rgb(253, 253, 254);
 }
