@@ -2,11 +2,11 @@ import RecordComp from "../../shared/RecordComp";
 import React, { useEffect, useRef, useState } from "react";
 import { ReactSortable } from "react-sortablejs";
 import { toast } from "react-toastify";
-import Modal from "../../shared/Modal";
 import { nanoid } from "nanoid";
 
 export default function RecordsByGroup({
   group,
+  category,
   header,
   user,
   setUser,
@@ -14,39 +14,36 @@ export default function RecordsByGroup({
   operators,
   cardStyle,
   setRecord,
+  setReportRecord,
+  setRefresh,
 }) {
   const [sortable, setSortable] = useState(false);
   const [list, setList] = useState([]);
-  const sort = "images/icon/sort.svg";
-
-  const [reportRecord, setReportRecord] = useState();
-  const [reportValue, setReportValue] = useState("");
+  const sort = "/images/icon/sort.svg";
 
   const keyArray = useRef([]);
 
   const admin = user && (user.role === "admin" || user.role === "su");
   const showSortIcon =
-    window.location.pathname === "/" &&
+    window.location.pathname.includes("operation") &&
     window.matchMedia("(min-width: 768px)").matches &&
     admin;
 
   useEffect(() => {
-    if (group && group.length !== 0) {
+    if (group && group.length !== 0 && category) {
       group.sort((r1, r2) => {
-        if (r1.index === r2.index) {
-          return 0;
-        } else if (
-          r1.index < r2.index ||
-          r1.index === undefined ||
-          r2.index === undefined
-        ) {
-          return -1;
-        } else {
-          return 1;
+        if (r1.index !== undefined && r2.index !== undefined) {
+          if (
+            r1.index[category] !== undefined &&
+            r2.index[category] !== undefined
+          ) {
+            return r1.index[category] - r2.index[category];
+          }
         }
+        return 0;
       });
     }
-  }, [group]);
+  }, [category, group]);
 
   useEffect(() => {
     if (group && group.length !== 0) {
@@ -62,12 +59,45 @@ export default function RecordsByGroup({
     }
   }, [group]);
 
+  function handleSortByStar() {
+    const newList = JSON.parse(JSON.stringify(list));
+    newList.sort((a, b) => {
+      const teamA = a.name.team;
+      const teamB = b.name.team;
+      let starA = 0,
+        starB = 0;
+      for (let opA of teamA) {
+        for (let op of operators) {
+          if (opA.slice(0, opA.length - 1) === op.name1 || opA === op.name1) {
+            starA += op.star;
+            break;
+          }
+        }
+      }
+      for (let opB of teamB) {
+        for (let op of operators) {
+          if (opB.slice(0, opB.length - 1) === op.name1 || opB === op.name1) {
+            starB += op.star;
+            break;
+          }
+        }
+      }
+      return starA - starB;
+    });
+    setList(newList);
+  }
+
   async function handleSubmitSort() {
     if (!list) return toast.warning("找不到纪录！");
     setSortable(false);
     toast.info("排序中，请稍等");
     const newList = list.map((item, index) => {
-      item.name.index = index;
+      if (item.name.index) {
+        item.name.index[category] = index;
+      } else {
+        item.name.index = {};
+        item.name.index[category] = index;
+      }
       return item.name;
     });
     const resRaw = await fetch("/record/sort-record", {
@@ -81,53 +111,8 @@ export default function RecordsByGroup({
       });
     } else {
       toast.info("排序结果已保存");
+      setRefresh((prev) => !prev);
     }
-  }
-
-  async function handleReportSubmit() {
-    if (reportValue.length === 0) return toast.warning("请填写具体问题！");
-    setReportValue("");
-    const resRaw = await fetch("/record/report-record", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        type: "report-record",
-        username: user.username,
-        record: reportRecord,
-        msg: reportValue,
-        date_created: new Date(),
-      }),
-    });
-    if (!resRaw.ok) {
-      resRaw.text().then((res) => {
-        toast.warning("提交失败\n" + res);
-      });
-    } else {
-      toast.info("我们已收到您的反馈，将会尽快处理！请关闭页面");
-    }
-  }
-
-  function reportContent() {
-    if (!reportRecord) return null;
-    return (
-      <form className="px-2">
-        <div className="mb-3">
-          <div className="mb-1">{"攻略者： " + reportRecord.raider}</div>
-          <div>{"队伍组成： " + reportRecord.team}</div>
-        </div>
-        <label className="form-label" htmlFor="report_content">
-          请填写具体问题
-        </label>
-        <textarea
-          value={reportValue}
-          onChange={(evt) => setReportValue(evt.target.value)}
-          className="form-control"
-          name="report_content"
-          id="report_content"
-          rows="10"
-        />
-      </form>
-    );
   }
 
   if (!group || group.length === 0) return null;
@@ -174,12 +159,9 @@ export default function RecordsByGroup({
                 operators={operators}
                 cardStyle={cardStyle ? cardStyle : ""}
                 sortable={false}
-                updateList={() => {
-                  setList(list.filter((item) => item.id !== index));
-                }}
-                modalId={(header ? header : "") + "report_record"}
-                setReportRecord={setReportRecord}
                 setRecord={setRecord}
+                setReportRecord={setReportRecord}
+                setRefresh={setRefresh}
               />
             ))}
           </div>
@@ -198,18 +180,13 @@ export default function RecordsByGroup({
       </div>
       {sortable ? (
         <div className="d-flex justify-content-end">
+          <button className="btn btn-secondary me-3" onClick={handleSortByStar}>
+            星级排序
+          </button>
           <button className="btn btn-secondary" onClick={handleSubmitSort}>
             保存修改
           </button>
         </div>
-      ) : null}
-      {user ? (
-        <Modal
-          id={(header ? header : "") + "report_record"}
-          header="这个纪录有问题"
-          Content={reportContent}
-          handleSubmit={handleReportSubmit}
-        />
       ) : null}
     </div>
   );

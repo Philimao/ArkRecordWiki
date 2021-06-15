@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { nanoid } from "nanoid";
 import Modal from "../../shared/Modal";
 import InputBox from "../../shared/InputBox";
 
@@ -8,12 +7,7 @@ export default function ContactMessage({ user }) {
   const [messages, setMessages] = useState();
   const [message, setMessage] = useState();
   const [updateContact, refreshPage] = useState(false);
-  const keyArray = useRef([]);
-  if (messages && messages.length > 0 && keyArray.current.length === 0) {
-    keyArray.current = Array(messages.length)
-      .fill(0)
-      .map(() => nanoid());
-  }
+  const [oldMessages, setOldMessages] = useState([]);
 
   const [replyHeader, setReplyHeader] = useState("对您反馈问题的回复");
   const [replyBody, setReplyBody] = useState("");
@@ -78,6 +72,7 @@ export default function ContactMessage({ user }) {
     }
     let resRaw;
     const data = {
+      message_id: message._id,
       username: message.username,
       email: message.email,
       header: replyHeader,
@@ -113,7 +108,6 @@ export default function ContactMessage({ user }) {
 
   function ReplyContent() {
     if (!message) return null;
-    console.log(message);
     return (
       <div>
         <div className="mb-1 form-label">收件人：</div>
@@ -149,63 +143,78 @@ export default function ContactMessage({ user }) {
     );
   }
 
-  function contactCard(message, index) {
+  function contactCard(message) {
     return (
-      <div className="col-12 col-sm-6 px-1 pb-3" key={keyArray.current[index]}>
+      <div className="col-12 col-sm-6 px-1 pb-3" key={message._id}>
         <div className="card text-dark bg-light mb-3">
-          <div className="card-header">
-            <button
-              className="btn p-0"
-              onClick={() => {
-                navigator.clipboard.writeText(message.email).then(() => {
-                  toast.info("邮箱地址已复制到剪贴板");
-                });
-              }}
-            >
-              {message.username + "（点击用户名复制邮箱地址）"}
-            </button>
-          </div>
+          <div className="card-header">{message.username}</div>
           <div
-            className="card-body position-relative"
+            className="card-body position-relative d-flex flex-column"
             style={{ minHeight: "300px" }}
           >
-            <div className="mb-3">{"邮箱地址： " + message.email}</div>
+            <div className="mb-3">{"邮箱地址：" + message.email}</div>
             <div className="mb-1">联络内容：</div>
             <div className="mb-3" style={{ whiteSpace: "pre-wrap" }}>
               {message.msg}
             </div>
-            <div className="position-absolute end-0 bottom-0 translate-middle-y pe-3">
-              <button
-                className="btn btn-outline-primary me-2"
-                data-bs-toggle="modal"
-                data-bs-target="#reply_modal"
-                onClick={() => setMessage(message)}
-              >
-                邮件回复
-              </button>
-              {user.role === "su" ? (
-                <button
-                  className="btn btn-outline-danger"
-                  onClick={() => handleSolve(message)}
-                >
-                  确认解决
-                </button>
-              ) : null}
-            </div>
+            {message.date_created ? (
+              <div className="mb-3">
+                {"创建时间：" + new Date(message.date_created).toString()}
+              </div>
+            ) : null}
+            {message.date_deleted ? (
+              <div className="mb-3">
+                {"处理时间：" + new Date(message.date_deleted).toString()}
+              </div>
+            ) : null}
+            {message.handler ? (
+              <div>
+                <div className="mb-3">{"处理人：" + message.handler}</div>
+                {message.reply_msg ? (
+                  <div className="mb-3">
+                    <div className="mb-1">回复内容：</div>
+                    <div style={{ whiteSpace: "pre-wrap" }}>
+                      {message.reply_msg}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <div className="flex-grow-1 d-flex flex-column">
+                <div className="flex-grow-1" />
+                <div className="d-flex justify-content-end">
+                  <button
+                    className="btn btn-outline-primary me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reply_modal"
+                    onClick={() => setMessage(message)}
+                  >
+                    邮件回复
+                  </button>
+                  <button
+                    className="btn btn-outline-danger"
+                    onClick={() => handleSolve(message)}
+                  >
+                    确认解决
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
     );
   }
 
-  function reportRecordCard(message, index) {
+  function reportRecordCard(message) {
     return (
-      <div className="col-12 col-sm-6 px-1 pb-3" key={keyArray.current[index]}>
+      <div className="col-12 col-sm-6 px-1 pb-3" key={message._id}>
         <div className="card text-dark bg-light mb-3">
-          <div className="card-header">
-            <div className="btn p-0">{message.username}</div>
-          </div>
-          <div className="card-body" style={{ minHeight: "300px" }}>
+          <div className="card-header">{message.username}</div>
+          <div
+            className="card-body d-flex flex-column"
+            style={{ minHeight: "300px" }}
+          >
             <div className="mb-3">
               <div className="mb-1">
                 {"关卡： " +
@@ -213,35 +222,67 @@ export default function ContactMessage({ user }) {
                   " " +
                   message.record.cn_name}
               </div>
-              <div className="mb-1">{"攻略者： " + message.record.raider}</div>
-              <div>{"队伍组成： " + message.record.team}</div>
+              <div className="mb-1">{"攻略者：" + message.record.raider}</div>
+              <div className="mb-1">
+                {"队伍组成：" + message.record.team.join("+")}
+              </div>
+              <div className="mb-1">
+                {"所属流派：" + message.record.category.join("，")}
+              </div>
             </div>
             <div className="mb-1">联络内容：</div>
             <div className="mb-3" style={{ whiteSpace: "pre-wrap" }}>
               {message.msg}
             </div>
-            <div className="position-absolute end-0 bottom-0 translate-middle-y pe-3">
-              <button
-                className="btn btn-outline-primary me-2"
-                onClick={() => handleUpdate(message)}
-              >
-                发往审核
-              </button>
-              <button
-                className="btn btn-outline-primary me-2"
-                data-bs-toggle="modal"
-                data-bs-target="#reply_modal"
-                onClick={() => setMessage(message)}
-              >
-                站内回复
-              </button>
-              <button
-                className="btn btn-outline-danger"
-                onClick={() => handleSolve(message)}
-              >
-                确认解决
-              </button>
-            </div>
+            {message.date_created ? (
+              <div className="mb-3">
+                {"创建时间：" + new Date(message.date_created).toString()}
+              </div>
+            ) : null}
+            {message.date_deleted ? (
+              <div className="mb-3">
+                {"处理时间：" + new Date(message.date_deleted).toString()}
+              </div>
+            ) : null}
+            {message.handler ? (
+              <div>
+                <div className="mb-3">{"处理人：" + message.handler}</div>
+                {message.reply_msg ? (
+                  <div className="mb-3">
+                    <div className="mb-1">回复内容：</div>
+                    <div style={{ whiteSpace: "pre-wrap" }}>
+                      {message.reply_msg}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <div className="flex-grow-1 d-flex flex-column">
+                <div className="flex-grow-1" />
+                <div className="d-flex justify-content-end">
+                  <button
+                    className="btn btn-outline-primary me-2"
+                    onClick={() => handleUpdate(message)}
+                  >
+                    发往审核
+                  </button>
+                  <button
+                    className="btn btn-outline-primary me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reply_modal"
+                    onClick={() => setMessage(message)}
+                  >
+                    站内回复
+                  </button>
+                  <button
+                    className="btn btn-outline-danger"
+                    onClick={() => handleSolve(message)}
+                  >
+                    确认解决
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -257,12 +298,48 @@ export default function ContactMessage({ user }) {
           .filter((message) => message.type === "report-record")
           .map((message, index) => reportRecordCard(message, index))}
       </div>
-      <h4 className="text-center mb-3">用户联络</h4>
+      {user.role === "su" ? (
+        <div>
+          <h4 className="text-center mb-3">用户联络</h4>
+          <div className="row mb-4">
+            {messages
+              .filter((message) => message.type === "contact")
+              .map((message, index) => contactCard(message, index))}
+          </div>
+        </div>
+      ) : null}
+      <h4 className="text-center mb-3">历史记录</h4>
       <div className="row mb-4">
-        {messages
-          .filter((message) => message.type === "contact")
-          .map((message, index) => contactCard(message, index))}
+        {oldMessages.map((message, index) => {
+          if (message.type === "report-record") {
+            return reportRecordCard(message, index);
+          } else {
+            return contactCard(message, index);
+          }
+        })}
       </div>
+      <button
+        className="btn btn-primary"
+        onClick={async () => {
+          const resRaw = await fetch("/admin/old-messages", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              skip: oldMessages.length,
+            }),
+          });
+          if (!resRaw.ok) {
+            toast.warning("加载失败！");
+          } else {
+            const res = await resRaw.json();
+            setOldMessages((prev) => prev.concat(res));
+          }
+        }}
+      >
+        加载消息
+      </button>
       <Modal
         id="reply_modal"
         header="向联络人回信"

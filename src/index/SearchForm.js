@@ -1,15 +1,9 @@
 import React, { useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { nanoid } from "nanoid";
+import { toast } from "react-toastify";
 
-export default function SearchForm({
-  menuArray,
-  operatorArray,
-  handleSearch,
-  searchValue,
-  setSearchValue,
-  searchType,
-  setSearchType,
-}) {
+export default function SearchForm({ menuArray, operatorArray }) {
   const types = ["关卡", "干员"];
   const [optionList, setOptionList] = useState([]);
   const ph = ["活动名或关卡名...", "干员名称（试运行中）"];
@@ -19,6 +13,9 @@ export default function SearchForm({
       .fill(0)
       .map(() => nanoid())
   );
+  const history = useHistory();
+  const [searchValue, setSearchValue] = useState("");
+  const [searchType, setSearchType] = useState(types[0]);
 
   function handleChange(evt) {
     setSearchValue(evt.target.value);
@@ -45,7 +42,27 @@ export default function SearchForm({
    * No re-render if option list is not changed
    */
   return (
-    <form className="d-flex" id="search_form" onSubmit={handleSearch}>
+    <form
+      className="d-flex"
+      id="search_form"
+      onSubmit={(evt) => {
+        evt.preventDefault();
+        if (searchType === "干员" && operatorArray.includes(searchValue)) {
+          return history.push("/operator/" + searchValue);
+        }
+        if (searchType === "关卡" && optionList.length !== 0) {
+          setSearchValue(optionList[0]);
+          return history.push(
+            "/operation/" +
+              optionList[0]
+                .replace(" ", "+")
+                .replace("/", "_")
+                .replace("/", "_")
+          );
+        }
+        toast.info("无匹配结果");
+      }}
+    >
       <div className="input-group me-2 bg-white rounded-3">
         <input
           list="buttons"

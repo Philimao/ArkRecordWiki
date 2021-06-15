@@ -10,7 +10,7 @@ export default function PendingRecord({ record, index, setIndex }) {
       >
         <div
           className="col-3 align-self-center p-2 text-center"
-          style={{ backgroundColor: "rgba(0,0,0,0.3)", height: "100%" }}
+          style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
         >
           {record.operation + " " + record.cn_name}
         </div>
@@ -20,7 +20,7 @@ export default function PendingRecord({ record, index, setIndex }) {
           </div>
           <div className="col-4 align-self-center">{record.raider}</div>
           <div className="col-6 align-self-center">
-            {Array.isArray(record.team) ? record.team.join("+") : record.team}
+            {record.category.join("，")}
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function PendingRecord({ record, index, setIndex }) {
           </div>
           <div className="col-4 align-self-center">{record.raider}</div>
           <div className="col-6 align-self-center">
-            {Array.isArray(record.team) ? record.team.join("+") : record.team}
+            {record.category.join("，")}
           </div>
         </div>
       </div>

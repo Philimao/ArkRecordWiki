@@ -15,7 +15,7 @@ import OperatorComp from "./operator/OperatorComp";
 import AllRecordsPage from "./all-records/AllRecordsPage";
 import ContactMessage from "./contact/ContactMessage";
 import PendingUser from "./verify/PendingUser";
-import SetContentPage from "./set-content/SetContentPage";
+import SetNewsPage from "./set-news/SetNewsPage";
 import ReviewFreePage from "./review-free/ReviewFreePage";
 import CategoryManagement from "./category/CategoryManagement";
 
@@ -50,6 +50,9 @@ export default function AdminPage({
           <NavLink to="/operation" className="nav-link mb-1 text-center">
             关卡管理
           </NavLink>
+          <NavLink to="/set-content" className="nav-link mb-1 text-center">
+            公告管理
+          </NavLink>
           <NavLink to="/operator" className="nav-link mb-1 text-center">
             干员列表
           </NavLink>
@@ -61,9 +64,6 @@ export default function AdminPage({
           </NavLink>
           <NavLink to="/group" className="nav-link mb-1 text-center">
             分组管理
-          </NavLink>
-          <NavLink to="/set-content" className="nav-link mb-1 text-center">
-            设置资源
           </NavLink>
           <NavLink to="/pending-user" className="nav-link mb-1 text-center">
             待验证用户
@@ -122,7 +122,7 @@ export default function AdminPage({
               <PendingUser user={user} />
             </Route>
             <Route path="/set-content">
-              <SetContentPage />
+              <SetNewsPage />
             </Route>
             <Route path="/menu">
               <PlainMenu menu={menu} />

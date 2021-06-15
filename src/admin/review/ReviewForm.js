@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import FloatingInputBox from "../../shared/FloatingInputBox";
 import { toast } from "react-toastify";
+import Modal from "../../shared/Modal";
+import QueryRecords from "../../shared/QueryRecords";
 
 export default function ReviewForm({
   menu,
@@ -8,6 +10,7 @@ export default function ReviewForm({
   categories,
   record,
   setRecord,
+  groupArray,
 }) {
   const [submitter, setSubmitter] = useState("");
   const [raider, setRaider] = useState("");
@@ -35,6 +38,8 @@ export default function ReviewForm({
   const [operationNodes, setOperationNodes] = useState(
     episodeObject.childNodes
   );
+
+  const isReviewPage = window.location.href.includes("/admin/review");
 
   useEffect(() => {
     setRecord((prev) => {
@@ -275,15 +280,10 @@ export default function ReviewForm({
     }
   }, [episodeObject]);
 
-  useEffect(() => {
-    if (operationNodes) {
-      for (let object of operationNodes) {
-        if (object.operation === operation) {
-          setCnName(object.cn_name);
-        }
-      }
-    }
-  }, [operation, operationNodes]);
+  function OperationPreview() {
+    const query = { operation: operation, cn_name: cnName };
+    return <QueryRecords query={query} cardStyle="showCategory" />;
+  }
 
   return (
     <form id="record_review_form">
@@ -338,22 +338,47 @@ export default function ReviewForm({
         </select>
         <label htmlFor="review_episode">章节名称</label>
       </div>
-      <div className="form-floating mb-3">
-        <select
-          className="form-select"
-          id="review_operation"
-          value={operation}
-          onChange={(evt) => setOperation(evt.target.value)}
-          disabled={!record}
-          required
+      <div className="mb-3 d-flex">
+        <div
+          className={
+            "form-floating flex-grow-1" + (isReviewPage ? " me-3" : "")
+          }
         >
-          {operationNodes.map((operation, index) => (
-            <option value={operation.operation} key={"Operation-" + index}>
-              {operation.operation + " " + operation.cn_name}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="submit_operation">关卡名称</label>
+          <select
+            className="form-select"
+            id="review_operation"
+            value={operation + "+" + cnName}
+            onChange={(evt) => {
+              const targetOp = evt.target.value.split("+")[0];
+              const targetCN = evt.target.value.split("+")[1];
+              setOperation(targetOp);
+              setCnName(targetCN);
+            }}
+            disabled={!record}
+            required
+          >
+            {operationNodes.map((operation, index) => (
+              <option
+                value={operation.operation + "+" + operation.cn_name}
+                key={"Operation-" + index}
+              >
+                {operation.operation + " " + operation.cn_name}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="submit_operation">关卡名称</label>
+        </div>
+        {isReviewPage ? (
+          <button
+            className="btn btn-primary d-flex flex-column justify-content-center"
+            data-bs-toggle="modal"
+            data-bs-target="#operation_preview"
+            disabled={!record}
+            onClick={(evt) => evt.preventDefault()}
+          >
+            <i className="bi bi-window" />
+          </button>
+        ) : null}
       </div>
       <FloatingInputBox
         id="review_user_op"
@@ -392,6 +417,7 @@ export default function ReviewForm({
             required={true}
             id="review_category"
             label="流派分类"
+            disabled={!record}
           />
         </div>
         <button
@@ -400,6 +426,7 @@ export default function ReviewForm({
             evt.preventDefault();
             setEditCategory((prev) => !prev);
           }}
+          disabled={!record}
         >
           {editCategory ? (
             <i className="bi bi-chevron-double-down" />
@@ -425,7 +452,7 @@ export default function ReviewForm({
                   }
                   setCategory(tmp);
                 }}
-                defaultChecked={category.includes(item)}
+                checked={category.includes(item)}
               />
               <label htmlFor={item} className="form-check-label">
                 {item}
@@ -467,8 +494,9 @@ export default function ReviewForm({
         />
         <label htmlFor="review_group">纪录分组</label>
         <datalist id="review_group_datalist">
-          <option value="bug修复记录失效" />
-          <option value="开荒记录（不使用关卡实装后才上线的干员）" />
+          {groupArray.map((item) => (
+            <option value={item} key={item} />
+          ))}
         </datalist>
       </div>
       <div className="d-flex">
@@ -577,6 +605,13 @@ export default function ReviewForm({
             <div className="d-none" ref={card_feedback} />
           </div>
         </div>
+      ) : null}
+      {isReviewPage ? (
+        <Modal
+          id="operation_preview"
+          header={operation + " " + cnName}
+          Content={OperationPreview}
+        />
       ) : null}
     </form>
   );

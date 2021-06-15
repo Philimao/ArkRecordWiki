@@ -13,6 +13,11 @@ export default function ReviewPage({ operators, refresh, menu, categories }) {
   const [reviewMsg, setReviewMsg] = useState("");
   const [record, setRecord] = useState();
 
+  const [groupArray, setGroupArray] = useState([
+    "bug修复记录失效",
+    "开荒记录（不使用关卡实装后才上线的干员）",
+  ]);
+
   useEffect(() => {
     fetch("/record/all-pending").then((resRaw) => {
       if (!resRaw.ok) {
@@ -132,6 +137,13 @@ export default function ReviewPage({ operators, refresh, menu, categories }) {
       return indexA - indexB;
     });
 
+    // add new group to the datalist
+    setGroupArray((prev) => {
+      const set = new Set(prev);
+      set.add(record.group);
+      return Array.from(set);
+    });
+
     const resRaw = await fetch("/record/accept-pending", {
       method: "POST",
       headers: {
@@ -231,6 +243,7 @@ export default function ReviewPage({ operators, refresh, menu, categories }) {
         categories={categories}
         record={record}
         setRecord={setRecord}
+        groupArray={groupArray}
       />
       <ReviewFormControl
         record={record}
@@ -245,13 +258,21 @@ export default function ReviewPage({ operators, refresh, menu, categories }) {
       </div>
       <Modal
         id="approve_message_modal"
-        handleSubmit={handleSubmit}
+        handleSubmit={() => {
+          if (reviewMsg.length !== 0) {
+            handleSubmit().catch(console.log);
+          }
+        }}
         Content={reviewMessage}
         header="通过纪录-审核反馈"
       />
       <Modal
         id="reject_message_modal"
-        handleDelete={handleDelete}
+        handleDelete={() => {
+          if (reviewMsg.length !== 0) {
+            handleDelete().catch(console.log);
+          }
+        }}
         Content={reviewMessage}
         header="删除纪录-审核反馈"
       />

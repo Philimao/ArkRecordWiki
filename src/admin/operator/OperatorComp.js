@@ -153,7 +153,7 @@ export default function OperatorComp() {
       name1: name1,
       name2: name2,
       class: opClass,
-      star: star,
+      star: parseInt(star),
       _id: _id,
     };
     const resRaw = await fetch("/operator/update-operator", {

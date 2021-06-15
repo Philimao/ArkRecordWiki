@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Menu from "./Menu";
 import ContactForm from "./ContactForm";
 import DefaultIndexContent from "./content/DefaultIndexContent";
 import RecordsByOperation from "./content/RecordsByOperation";
 import "../stylesheets/Index.css";
 import LoadingComp from "../shared/LoadingComp";
-import { useHistory } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import RecordsByOperator from "./content/RecordsByOperator";
+import LinksComp from "./content/LinksComp";
 
 export default function IndexPage({
   user,
@@ -15,52 +16,15 @@ export default function IndexPage({
   menuButtons,
   activeButton,
   collapseMenu,
-  operator,
   operators,
   categories,
-  operation,
-  setOperation,
 }) {
-  const [records, setRecords] = useState();
-  const [story, setStory] = useState();
-  const [episode, setEpisode] = useState();
-  const [news, setNews] = useState(true);
-
   let history = useHistory();
 
   // for new-password
   if (history.location.hash.startsWith("#")) {
     history.push(history.location.hash.replace("#", ""));
   }
-
-  useEffect(() => {
-    if (menu && operation) {
-      for (let storyObject of menu.childNodes) {
-        for (let episodeObject of storyObject.childNodes) {
-          if (episodeObject.childNodes) {
-            for (let operationObject of episodeObject.childNodes) {
-              if (
-                operationObject.operation === operation.operation &&
-                operationObject.cn_name === operation.cn_name
-              ) {
-                setStory(storyObject.story);
-                setEpisode(episodeObject.episode);
-                break;
-              }
-            }
-          }
-        }
-      }
-    }
-  }, [menu, operation]);
-
-  useEffect(() => {
-    if (operator || (operation && records)) {
-      setNews(false);
-    } else {
-      setNews(true);
-    }
-  }, [operation, operator, records]);
 
   function MobileButtons() {
     return (
@@ -86,53 +50,38 @@ export default function IndexPage({
     );
   }
 
-  function renderContent() {
-    if (records && operation) {
-      return (
-        <RecordsByOperation
-          story={story}
-          episode={episode}
-          operation={operation}
-          user={user}
-          setUser={setUser}
-          menu={menu}
-          records={records}
-          menuButtons={menuButtons}
-          operators={operators}
-          categories={categories}
-        />
-      );
-    } else if (operator) {
-      return (
-        <RecordsByOperator
-          user={user}
-          setUser={setUser}
-          operator={operator}
-          menu={menu}
-          operators={operators}
-          categories={categories}
-        />
-      );
-    } else {
-      return <DefaultIndexContent />;
-    }
-  }
-
-  if (!menu) {
+  if (!menu || !operators || !categories) {
     return <LoadingComp />;
   }
   return (
     <div className="container-xxl pt-2 pt-md-3 d-md-flex">
-      <Menu
-        menu={menu}
-        setRecords={setRecords}
-        setOperation={setOperation}
-        activeButton={activeButton}
-        menuButtons={menuButtons}
-        news={news}
-      />
+      <Menu menu={menu} activeButton={activeButton} menuButtons={menuButtons} />
       <div className="ms-md-4 mt-5 mt-md-0" id="content">
-        {renderContent()}
+        <Switch>
+          <Route path="/links">
+            <LinksComp />
+          </Route>
+          <Route path="/operation/">
+            <RecordsByOperation
+              user={user}
+              setUser={setUser}
+              menu={menu}
+              menuButtons={menuButtons}
+              operators={operators}
+              categories={categories}
+            />
+          </Route>
+          <Route path="/operator/:op">
+            <RecordsByOperator
+              user={user}
+              setUser={setUser}
+              menu={menu}
+              operators={operators}
+              categories={categories}
+            />
+          </Route>
+          <Route path="/" children={<DefaultIndexContent />} />
+        </Switch>
       </div>
       <ContactForm />
       <MobileButtons />

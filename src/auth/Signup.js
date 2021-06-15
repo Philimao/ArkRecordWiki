@@ -125,7 +125,7 @@ export default function Signup({ setCode }) {
             返回登录页
           </Link>
         </div>
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end mb-2">
           <OverlayTrigger
             placement="auto"
             overlay={
@@ -139,6 +139,28 @@ export default function Signup({ setCode }) {
             }
           >
             <span>关于数据安全</span>
+          </OverlayTrigger>
+        </div>
+        <div
+          className="d-flex justify-content-end mb-2"
+          onClick={() => {
+            navigator.clipboard.writeText("1029020121").then(() => {
+              toast.info("复制成功！");
+            });
+          }}
+          role="button"
+        >
+          <OverlayTrigger
+            placement="auto"
+            overlay={
+              <Tooltip id="security-tooltip">
+                <div className="text-start p-2">
+                  首先请尝试更换现代浏览器（Chrome/Firefox/Edge等）访问，如果依然无法注册请通过主页联络表格联系我们，或是添加客服娘QQ：1029020121，单击即可复制
+                </div>
+              </Tooltip>
+            }
+          >
+            <span>注册遇到问题</span>
           </OverlayTrigger>
         </div>
       </div>

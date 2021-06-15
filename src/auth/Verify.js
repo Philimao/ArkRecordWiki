@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 export default function Verify({ serverCode }) {
   const [code, setCode] = useState("");
@@ -58,6 +59,28 @@ export default function Verify({ serverCode }) {
         <button type="submit" className="btn btn-primary">
           提交
         </button>
+      </div>
+      <div
+        className="d-flex justify-content-end mb-2"
+        onClick={() => {
+          navigator.clipboard.writeText("1029020121").then(() => {
+            toast.info("复制成功！");
+          });
+        }}
+        role="button"
+      >
+        <OverlayTrigger
+          placement="auto"
+          overlay={
+            <Tooltip id="security-tooltip">
+              <div className="text-start p-2">
+                首先请尝试更换现代浏览器（Chrome/Firefox/Edge等）访问，如果依然无法注册请通过主页联络表格联系我们，或是添加客服娘QQ：1029020121，单击即可复制
+              </div>
+            </Tooltip>
+          }
+        >
+          <span>验证码不正确</span>
+        </OverlayTrigger>
       </div>
     </form>
   );

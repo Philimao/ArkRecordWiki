@@ -19,7 +19,11 @@ export default function ContactForm() {
           遇到网站无法使用的问题，请先确定您是否使用的是现代浏览器。如果更换浏览器不能解决问题，请将引起问题的操作和页面情况、错误消息等提供在下方的正文内容中，网站管理员会尽快与您联络。
           <br />
           <br />
-          如果问题比较复杂希望能够即时交流，可以添加客服娘的QQ：1029020121，我们会尽快与您联络。
+          如果问题比较复杂希望能够即时交流，可以添加客服娘的QQ：
+          <span className="fw-bold">1029020121</span>
+          ，或是访问
+          <a href="https://mew.fun/n/arkrec">Mew少人Wiki用户反馈专版</a>
+          留言（也可以使用反馈版的聊天室）。
         </div>
         <InputBox
           value={contactUser}
