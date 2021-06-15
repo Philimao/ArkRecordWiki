@@ -4,6 +4,7 @@ import RecordsByGroup from "../index/content/RecordsByGroup";
 import { toast } from "react-toastify";
 import LoadingComp from "./LoadingComp";
 import QuickEditModal from "./QuickEditModal";
+import ReportRecordModal from "./ReportRecordModal";
 
 export default function QueryRecords({
   user,
@@ -27,7 +28,9 @@ export default function QueryRecords({
   const loadingFlag = useRef(true);
   const container = useRef();
 
+  const [refresh, setRefresh] = useState(true);
   const [record, setRecord] = useState();
+  const [reportRecord, setReportRecord] = useState();
 
   useEffect(() => {
     (async function () {
@@ -86,7 +89,7 @@ export default function QueryRecords({
         });
       }
     })();
-  }, [limit, query, user]);
+  }, [limit, query, user, refresh]);
 
   useEffect(() => {
     if (filter && filter.length !== 0) {
@@ -215,7 +218,9 @@ export default function QueryRecords({
           categories={categories}
           cardStyle={cardStyle ? cardStyle : ""}
           setRecord={setRecord}
+          setReportRecord={setReportRecord}
           showOperation={true}
+          setRefresh={setRefresh}
         />
       </div>
       <MyPage />
@@ -227,6 +232,7 @@ export default function QueryRecords({
         record={record}
         setRecord={setRecord}
       />
+      <ReportRecordModal user={user} reportRecord={reportRecord} />
     </div>
   );
 }

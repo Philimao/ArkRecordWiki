@@ -3,17 +3,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import SearchForm from "../index/SearchForm";
 import { toast } from "react-toastify";
 
-export default function Nav({
-  user,
-  menuArray,
-  handleSearch,
-  searchValue,
-  setSearchValue,
-  searchType,
-  setSearchType,
-  operatorArray,
-  resetPage,
-}) {
+export default function Nav({ user, menuArray, operatorArray }) {
   const su = user && user.role === "su";
   const admin = user && (su || user.role === "admin");
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -85,7 +75,7 @@ export default function Nav({
     }
   }
 
-  const favicon = "../favicon/favicon-32x32.png";
+  const favicon = window.location.origin + "/favicon/favicon-32x32.png";
 
   return (
     <nav
@@ -98,7 +88,7 @@ export default function Nav({
       }}
     >
       <div className="container-fluid d-flex">
-        <Link className="navbar-brand" to="/" onClick={() => resetPage()}>
+        <Link className="navbar-brand" to="/">
           <img
             src={favicon}
             alt="favicon"
@@ -170,8 +160,9 @@ export default function Nav({
                     className="rounded-circle profile-photo"
                     src={
                       user
-                        ? user.profile_photo
-                        : "../images/profile-photo/default-profile-photo.jpg"
+                        ? window.location.origin + "/" + user.profile_photo
+                        : window.location.origin +
+                          "/images/profile-photo/default-profile-photo.jpg"
                     }
                     alt="profile"
                     width="32px"
@@ -185,17 +176,16 @@ export default function Nav({
                   </div>
                 </Link>
               </div>
-              <Route exact path="/">
-                <SearchForm
-                  menuArray={menuArray}
-                  handleSearch={handleSearch}
-                  searchValue={searchValue}
-                  setSearchValue={setSearchValue}
-                  searchType={searchType}
-                  setSearchType={setSearchType}
-                  operatorArray={operatorArray}
-                />
-              </Route>
+              <Route
+                exact
+                path={["/operation/:op", "/operator/:op", "/"]}
+                children={
+                  <SearchForm
+                    menuArray={menuArray}
+                    operatorArray={operatorArray}
+                  />
+                }
+              />
             </Route>
           </Switch>
         </div>

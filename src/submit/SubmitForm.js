@@ -11,6 +11,8 @@ export default function SubmitForm({
   pStory,
   pEpisode,
   pOperation,
+  pCnName,
+  setRefresh,
 }) {
   const [story, setStory] = useState(menu.childNodes[0].story);
   const [storyObject, setStoryObject] = useState(menu.childNodes[0]);
@@ -29,6 +31,10 @@ export default function SubmitForm({
   const [category, setCategory] = useState([categories[0]]);
   const [editCategory, setEditCategory] = useState(false);
   const [group, setGroup] = useState("");
+  const [groupArray, setGroupArray] = useState([
+    "bug修复记录失效",
+    "开荒记录（不使用关卡实装后才上线的干员）",
+  ]);
   const [remark0, setRemark0] = useState("");
   const [remark1, setRemark1] = useState("");
 
@@ -83,39 +89,46 @@ export default function SubmitForm({
   useEffect(() => {
     if (operationNodes[0]) {
       setOperation(operationNodes[0].operation);
+      setCnName(operationNodes[0].cn_name);
     } else {
       setOperation("");
+      setCnName("");
     }
   }, [operationNodes]);
 
   useEffect(() => {
-    if (pOperation) {
+    if (pOperation && pCnName) {
       setOperation(pOperation);
+      setCnName(pCnName);
     }
-  }, [pOperation, operationNodes]);
-
-  useEffect(() => {
-    for (let object of operationNodes) {
-      if (object.operation === operation) {
-        setCnName(object.cn_name);
-        break;
-      }
-    }
-  }, [operation, operationNodes]);
+  }, [pOperation, pCnName, operationNodes]);
 
   async function handleSubmit(evt) {
     evt.preventDefault();
+
+    if (!user.username) {
+      return toast.warning("用户身份丢失，请刷新网页重新提交");
+    }
 
     if (url.indexOf("？") >= 0) {
       return toast.warning("链接中含有中文问号字符，请确认");
     }
 
+    if (team.includes("＋")) {
+      return toast.warning("组队中含有中文加号字符，请确认");
+    }
+
+    // if the url is a short bv link, make it a full link
     let newURL = url.trim();
+    if (newURL.startsWith("www")) {
+      newURL = "https://" + newURL;
+    }
     if (newURL.indexOf("bv") === 0) {
       newURL = "https://www.bilibili.com/video/" + newURL.replace("bv", "BV");
     } else if (newURL.indexOf("BV") === 0) {
       newURL = "https://www.bilibili.com/video/" + newURL;
     }
+    // leave out all queries but p
     if (newURL.includes("BV") && newURL.includes("?")) {
       const newURLArray = newURL.split("?");
       newURL = newURLArray[0];
@@ -130,10 +143,7 @@ export default function SubmitForm({
     }
     newURL = newURL.trim();
 
-    if (!user.username) {
-      return toast.warning("用户身份丢失，请刷新网页重新提交");
-    }
-
+    // sort category
     if (category.length === 0) {
       category.push("常规队");
     }
@@ -141,6 +151,27 @@ export default function SubmitForm({
       const indexA = categories.indexOf(a);
       const indexB = categories.indexOf(b);
       return indexA - indexB;
+    });
+
+    // validate operator name
+    for (let op of team.split("+")) {
+      let flag = true;
+      for (let opObj of operators) {
+        if (opObj.name1 === op.slice(0, op.length - 1) || opObj.name1 === op) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) {
+        return toast.warning("队伍组成中 " + op + " 无法解析，请检查");
+      }
+    }
+
+    // add new group to the datalist
+    setGroupArray((prev) => {
+      const set = new Set(prev);
+      set.add(group);
+      return Array.from(set);
     });
 
     const data = {
@@ -169,7 +200,7 @@ export default function SubmitForm({
     let resRaw;
     // admin submit form
     if (admin) {
-      resRaw = await fetch("record/admin-submit-record", {
+      resRaw = await fetch("/record/admin-submit-record", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -183,7 +214,7 @@ export default function SubmitForm({
         episode === "#5光谱行动" &&
         operation.indexOf("常驻") < 0)
     ) {
-      resRaw = await fetch("record/review-free-submit-record", {
+      resRaw = await fetch("/record/review-free-submit-record", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -193,7 +224,7 @@ export default function SubmitForm({
     }
     // user submit form
     else {
-      resRaw = await fetch("record/submit-record", {
+      resRaw = await fetch("/record/submit-record", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -206,6 +237,9 @@ export default function SubmitForm({
       toast.warning(res);
     } else {
       toast.info(res);
+    }
+    if (setRefresh) {
+      setRefresh((prev) => !prev);
     }
   }
 
@@ -286,13 +320,19 @@ export default function SubmitForm({
           <select
             className="form-select"
             id="submit_operation"
-            value={operation}
-            onChange={(evt) => setOperation(evt.target.value)}
+            value={operation + "+" + cnName}
+            onChange={(evt) => {
+              setOperation(evt.target.value.split("+")[0]);
+              setCnName(evt.target.value.split("+")[1]);
+            }}
             required
             disabled={pOperation !== undefined}
           >
             {operationNodes.map((operation, index) => (
-              <option value={operation.operation} key={"Operation-" + index}>
+              <option
+                value={operation.operation + "+" + operation.cn_name}
+                key={"Operation-" + index}
+              >
                 {operation.operation + " " + operation.cn_name}
               </option>
             ))}
@@ -367,7 +407,7 @@ export default function SubmitForm({
                     }
                     setCategory(tmp);
                   }}
-                  defaultChecked={category.includes(item)}
+                  checked={category.includes(item)}
                 />
                 <label htmlFor={item} className="form-check-label">
                   {item}
@@ -395,8 +435,9 @@ export default function SubmitForm({
             />
             <label htmlFor="submit_group">纪录分组</label>
             <datalist id="submit_group_datalist">
-              <option value="bug修复记录失效" />
-              <option value="开荒记录（不使用关卡实装后才上线的干员）" />
+              {groupArray.map((item) => (
+                <option value={item} key={item} />
+              ))}
             </datalist>
           </div>
         ) : null}

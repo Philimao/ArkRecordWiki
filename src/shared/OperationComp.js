@@ -1,63 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import propTypes from "prop-types";
-import Modal from "./Modal";
-import SubmitForm from "../submit/SubmitForm";
 
-export default function OperationComp({
-  user,
-  story,
-  episode,
-  operation,
-  menu,
-  menuButtons,
-  operators,
-  categories,
-}) {
-  const custom = operation.custom ? operation.custom : [];
+export default function OperationComp({ user, operationObject, menuButtons }) {
+  const custom = operationObject.custom ? operationObject.custom : [];
+  const [currentId, setCurrentId] = useState();
+  const history = useHistory();
 
-  const full_operation = operation.operation + " " + operation.cn_name;
-  const current_id = menuButtons.current[full_operation].index;
+  useEffect(() => {
+    const full_operation =
+      operationObject.operation + " " + operationObject.cn_name;
+    setCurrentId(() => {
+      for (let key of Object.keys(menuButtons.current)) {
+        if (menuButtons.current[key] === full_operation) {
+          return parseInt(key);
+        }
+      }
+    });
+  }, [menuButtons, operationObject]);
 
   function prevButton() {
-    const prev_id = current_id - 1;
-    if (prev_id % 100 !== 0) {
-      const prev = document.querySelector("#btn" + prev_id);
-      prev.click();
+    const prev_id = currentId - 1;
+    if (prev_id % 100 !== 0 && menuButtons.current[prev_id]) {
+      history.push(
+        "/operation/" +
+          menuButtons.current[prev_id]
+            .replace(" ", "+")
+            .replace("/", "_")
+            .replace("/", "_")
+      );
     }
   }
 
   function nextButton() {
-    const next_id = current_id + 1;
-    if (next_id % 100 !== 0) {
-      const next = document.querySelector("#btn" + next_id);
-      if (next) {
-        next.click();
-      }
+    const next_id = currentId + 1;
+    if (next_id % 100 !== 0 && menuButtons.current[next_id]) {
+      history.push(
+        "/operation/" +
+          menuButtons.current[next_id]
+            .replace(" ", "+")
+            .replace("/", "_")
+            .replace("/", "_")
+      );
     }
-  }
-
-  function quickSubmit() {
-    return (
-      <SubmitForm
-        user={user}
-        menu={menu}
-        operators={operators}
-        categories={categories}
-        pStory={story}
-        pEpisode={episode}
-        pOperation={operation.operation}
-      />
-    );
-  }
-
-  function handleModalClose() {
-    document.querySelector("#btn" + current_id).click();
   }
 
   return (
     <div className="operation-comp mb-3">
       <div className="d-lg-flex">
-        <h3 className="fw-bold me-auto mb-2 text-nowrap">{full_operation}</h3>
+        <h3 className="fw-bold me-auto mb-2 text-nowrap">
+          {operationObject.operation + " " + operationObject.cn_name}
+        </h3>
         <div className="mb-2 operation-buttons">
           {user ? (
             <button
@@ -77,8 +70,12 @@ export default function OperationComp({
           </button>
         </div>
       </div>
-      <div className="fw-light mb-3">{operation.description}</div>
-      <img src={operation.preview} alt="preview" className="img-fluid mb-3" />
+      <div className="fw-light mb-3">{operationObject.description}</div>
+      <img
+        src={operationObject.preview}
+        alt="preview"
+        className="img-fluid mb-3"
+      />
       <div>
         {custom.map((item, index) => (
           <div key={"custom" + index} className="mb-3">
@@ -87,18 +84,10 @@ export default function OperationComp({
           </div>
         ))}
       </div>
-      {user ? (
-        <Modal
-          id="quick_submit"
-          header="快速提交"
-          Content={quickSubmit}
-          handleClose={handleModalClose}
-        />
-      ) : null}
     </div>
   );
 }
 
 OperationComp.propTypes = {
-  operation: propTypes.object.isRequired,
+  operationObject: propTypes.object.isRequired,
 };

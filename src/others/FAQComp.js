@@ -47,6 +47,10 @@ export default function FAQComp() {
           <li>
             大部分问题可以通过更换浏览器/刷新网页解决，遇到错误可以先尝试这两个操作。
           </li>
+          <li>
+            无法注册可以联系客服QQ：<span className="fw-bold">1029020121</span>
+            ，客服娘会尽快联系您。
+          </li>
         </ul>
 
         <li>链接B站账号时出错怎么办？</li>

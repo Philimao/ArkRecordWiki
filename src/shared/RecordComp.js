@@ -23,6 +23,16 @@ export default function RecordComp(props) {
     cardStyle = "";
   }
 
+  const hideCategory =
+    !(
+      props.record &&
+      props.record.category &&
+      props.record.category.length !== 1
+    ) && !cardStyle.includes("showCategory");
+
+  const hideTeam =
+    !cardStyle.includes("detailed") && !cardStyle.includes("showTeam");
+
   const report = window.location.origin + "/images/icon/report.svg";
   const edit = window.location.origin + "/images/icon/edit.svg";
   const del = window.location.origin + "/images/icon/delete.svg";
@@ -38,7 +48,7 @@ export default function RecordComp(props) {
   }, [props.record, props.user]);
 
   async function deleteRecord() {
-    if (!props.updateList) return;
+    if (!props.setRefresh) return;
     if (window.confirm("确认删除？")) {
       if (window.confirm("请再次确认是否删除")) {
         const resRaw = await fetch("/record/delete-record", {
@@ -54,7 +64,7 @@ export default function RecordComp(props) {
           });
         } else {
           toast.info("纪录已删除");
-          props.updateList();
+          props.setRefresh((prev) => !prev);
         }
       }
     }
@@ -75,7 +85,7 @@ export default function RecordComp(props) {
           });
         } else {
           toast.info("纪录已发回审核页");
-          props.updateList();
+          props.setRefresh((prev) => !prev);
         }
       });
     }
@@ -201,7 +211,7 @@ export default function RecordComp(props) {
       });
     } else {
       toast.info("纪录已验证通过");
-      props.updateList();
+      props.setRefresh((prev) => !prev);
     }
   }
 
@@ -217,7 +227,7 @@ export default function RecordComp(props) {
     const color2 = cc_color_theme[index].color2;
     const color3 = cc_color_theme[index].color3;
     const color4 = cc_color_theme[index].color4;
-    const logo = cc_color_theme[index].logo;
+    const logo = window.location.origin + cc_color_theme[index].logo;
 
     const btnStyle = {
       backgroundColor: color1,
@@ -259,11 +269,11 @@ export default function RecordComp(props) {
             }}
           >
             <h5 className="me-auto align-self-center mb-0">{cardHeader()}</h5>
-            {props.user && props.modalId ? (
+            {props.user ? (
               <button
                 className="btn p-0 mx-1 fs-5 btn-opacity svg-btn"
                 data-bs-toggle="modal"
-                data-bs-target={"#" + props.modalId}
+                data-bs-target="#report_record"
                 onClick={() => props.setReportRecord(props.record)}
                 title="反馈问题"
                 style={{
@@ -271,7 +281,7 @@ export default function RecordComp(props) {
                 }}
               />
             ) : null}
-            {admin && props.updateList ? (
+            {admin && props.setRefresh ? (
               <div>
                 <button
                   className="btn p-0 mx-1 fs-5 btn-opacity svg-btn"
@@ -415,11 +425,11 @@ export default function RecordComp(props) {
       <div className="card">
         <div className="card-header d-flex align-content-center">
           <h5 className="me-auto align-self-center mb-0">{cardHeader()}</h5>
-          {props.user && props.modalId ? (
+          {props.user ? (
             <button
               className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
               data-bs-toggle="modal"
-              data-bs-target={"#" + props.modalId}
+              data-bs-target="#report_record"
               onClick={() => props.setReportRecord(props.record)}
               title="反馈问题"
               style={{
@@ -427,31 +437,30 @@ export default function RecordComp(props) {
               }}
             />
           ) : null}
-          {admin && props.updateList ? (
+          {admin && props.setRefresh ? (
             <div>
-              <button
-                className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
-                data-bs-toggle="modal"
-                data-bs-target="#quick_edit"
-                onClick={() => {
-                  if (cardStyle.includes("archive")) {
-                    restoreRecord(props.record);
-                  } else {
-                    props.setRecord(props.record);
-                  }
-                }}
-                title="编辑纪录"
-                style={{
-                  backgroundImage: `url(${edit})`,
-                }}
-              />
+              {cardStyle.includes("archive") ? (
+                <button
+                  className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
+                  onClick={() => restoreRecord(props.record)}
+                  title="恢复归档纪录"
+                  style={{ backgroundImage: `url(${edit})` }}
+                />
+              ) : (
+                <button
+                  className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_edit"
+                  onClick={() => props.setRecord(props.record)}
+                  title="编辑纪录"
+                  style={{ backgroundImage: `url(${edit})` }}
+                />
+              )}
               <button
                 className="btn p-0 mx-1 fs-5 btn-opacity svg-btn svg-btn-invert"
                 onClick={deleteRecord}
                 title="删除记录"
-                style={{
-                  backgroundImage: `url(${del})`,
-                }}
+                style={{ backgroundImage: `url(${del})` }}
               />
             </div>
           ) : null}
@@ -461,11 +470,16 @@ export default function RecordComp(props) {
           style={{ minHeight: "140px" }}
         >
           <div className="mb-2 ms-2 fs-6">{props.record.raider}</div>
-          {!cardStyle.includes("detailed") ? null : (
+          {hideTeam ? null : (
             <div className="mb-2 ms-2 fs-6 fw-light">
               {Array.isArray(props.record.team)
                 ? props.record.team.join("+")
                 : props.record.team}
+            </div>
+          )}
+          {hideCategory ? null : (
+            <div className="ms-2 text-secondary" style={{ fontSize: "0.8rem" }}>
+              {props.record.category.join("，")}
             </div>
           )}
           <div className="ms-2 text-secondary" style={{ fontSize: "0.8rem" }}>
@@ -542,7 +556,7 @@ RecordComp.propTypes = {
   user: propTypes.object,
   setUser: propTypes.func,
   record: propTypes.object.isRequired,
-  updateList: propTypes.func,
+  setRefresh: propTypes.func,
   operators: propTypes.array,
   showOperation: propTypes.bool,
   cardStyle: propTypes.string,

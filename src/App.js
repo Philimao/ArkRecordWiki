@@ -8,7 +8,7 @@ import {
 import Nav from "./shared/Nav";
 import IndexPage from "./index/IndexPage";
 import Auth from "./auth/Auth";
-import Footer from "./shared/Footer";
+import Footer from "./others/Footer";
 import HomePage from "./home/HomePage";
 import AdminPage from "./admin/AdminPage";
 import { ToastContainer } from "react-toastify";
@@ -28,6 +28,7 @@ import SubmitGuideDetailed from "./index/SubmitGuideDetailed";
 import AboutModal from "./others/AboutModal";
 import FAQComp from "./others/FAQComp";
 import Announcement from "./intro/Announcement";
+import CardPreview from "./others/CardPreview";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -37,12 +38,8 @@ export default function App() {
   const [menuArray, setMenuArray] = useState([]);
   const activeButton = useRef([undefined, undefined]);
   const [operators, setOperators] = useState();
-  const [operator, setOperator] = useState();
   const [operatorArray, setOperatorArray] = useState();
-  const [operation, setOperation] = useState();
   const [categories, setCategories] = useState();
-  const [searchValue, setSearchValue] = useState("");
-  const [searchType, setSearchType] = useState("关卡");
   const content = useRef();
 
   const [visitorIntroEnabled, setVisitorIntroEnabled] = useState(false);
@@ -61,7 +58,7 @@ export default function App() {
       .then(() => {
         const interval_id = setInterval(() => {
           if (Object.keys(menuButtons.current).length > 0) {
-            setMenuArray(Object.keys(menuButtons.current));
+            setMenuArray(Object.values(menuButtons.current));
             clearInterval(interval_id);
           }
         }, 500);
@@ -134,79 +131,6 @@ export default function App() {
     }
   }, [menu, user]);
 
-  function searchOperation() {
-    collapseMenu();
-
-    let button0, button1, targetButton;
-    for (let name of menuArray) {
-      const button = menuButtons.current[name];
-      if (button.index % 10000 === 0) {
-        button0 = button;
-        button1 = undefined;
-      } else if (button.index % 100 === 0) {
-        button1 = button;
-      }
-      if (name.includes(searchValue)) {
-        targetButton = button;
-        break;
-      }
-    }
-
-    // no match
-    if (!targetButton) return;
-
-    setTimeout(() => {
-      if (button0) {
-        button0 = document.querySelector("#btn" + button0.index);
-        button0.click();
-      }
-      if (button1) {
-        setTimeout(() => {
-          button1 = document.querySelector("#btn" + button1.index);
-          button1.click();
-          setTimeout(() => {
-            targetButton = document.querySelector("#btn" + targetButton.index);
-            targetButton.focus();
-            if (!window.matchMedia("(min-width: 768px)").matches) {
-              const scrollTo = targetButton.getBoundingClientRect().top;
-              window.scrollTo({ top: scrollTo - 58, behavior: "smooth" });
-            }
-          }, 500);
-        }, 500);
-      }
-    }, 500);
-  }
-
-  function searchOperator() {
-    for (let operator of operators) {
-      if (operator.name1 === searchValue) {
-        setOperator(operator);
-        break;
-      }
-    }
-  }
-
-  function handleSearch(evt) {
-    evt.preventDefault();
-    setSearchValue("");
-
-    const collapseBtn = document.querySelector("button.navbar-toggler");
-    if (!collapseBtn.classList.contains("collapsed")) collapseBtn.click();
-
-    if (searchType === "关卡") {
-      setOperator(undefined);
-      searchOperation();
-    } else if (searchType === "干员") {
-      setOperation(undefined);
-      searchOperator();
-    }
-  }
-
-  function resetPage() {
-    setOperation(undefined);
-    setOperator(undefined);
-  }
-
   function collapseMenu() {
     // console.log(activeButton.current);
     if (activeButton.current[0]) {
@@ -220,17 +144,7 @@ export default function App() {
   return (
     <Router>
       <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
-        <Nav
-          user={user}
-          menuArray={menuArray}
-          handleSearch={handleSearch}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          searchType={searchType}
-          setSearchType={setSearchType}
-          operatorArray={operatorArray}
-          resetPage={resetPage}
-        />
+        <Nav user={user} menuArray={menuArray} operatorArray={operatorArray} />
         <div
           className="flex-grow-1"
           ref={content}
@@ -276,6 +190,9 @@ export default function App() {
             <Route path="/changelog">
               <Changelog />
             </Route>
+            <Route path="/card-preview">
+              <CardPreview operators={operators} />
+            </Route>
             <Route path="/FAQ">
               <FAQComp />
             </Route>
@@ -287,11 +204,8 @@ export default function App() {
                 menuButtons={menuButtons}
                 activeButton={activeButton}
                 collapseMenu={collapseMenu}
-                operator={operator}
                 operators={operators}
                 categories={categories}
-                operation={operation}
-                setOperation={setOperation}
               />
             </Route>
           </Switch>
@@ -320,7 +234,7 @@ export default function App() {
           setEnable={setAnnouncementEnabled}
         />
         <AboutModal />
-        <ToastContainer autoClose={3000} />
+        <ToastContainer autoClose={5000} />
       </div>
     </Router>
   );

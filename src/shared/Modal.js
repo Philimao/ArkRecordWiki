@@ -8,6 +8,7 @@ import propTypes from "prop-types";
  * @param props.handleSubmit
  * @param props.handleDelete
  * @param props.handleClose
+ * @param props.backButton
  * @param props.customButton
  * @returns {JSX.Element}
  */
@@ -40,6 +41,7 @@ export default function Modal(props) {
           </div>
           <div className="modal-body">{props.Content()}</div>
           <div className="modal-footer">
+            {props.backButton ? props.backButton() : null}
             <button
               type="button"
               className="btn btn-secondary"
@@ -89,5 +91,6 @@ Modal.propTypes = {
   handleSubmit: propTypes.func,
   handleDelete: propTypes.func,
   handleClose: propTypes.func,
+  backButton: propTypes.elementType,
   customButton: propTypes.elementType,
 };

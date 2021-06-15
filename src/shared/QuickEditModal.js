@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "./Modal";
 import ReviewForm from "../admin/review/ReviewForm";
 import { toast } from "react-toastify";
@@ -10,7 +10,13 @@ export default function QuickEditModal({
   categories,
   record,
   setRecord,
+  setRefresh,
 }) {
+  const [groupArray, setGroupArray] = useState([
+    "bug修复记录失效",
+    "开荒记录（不使用关卡实装后才上线的干员）",
+  ]);
+
   async function handleSubmit() {
     if (record.category.length === 0) {
       record.category.push("常规队");
@@ -20,6 +26,14 @@ export default function QuickEditModal({
       const indexB = categories.indexOf(b);
       return indexA - indexB;
     });
+
+    // add new group to the datalist
+    setGroupArray((prev) => {
+      const set = new Set(prev);
+      set.add(record.group);
+      return Array.from(set);
+    });
+
     const resRaw = await fetch("/record/update-record", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -30,7 +44,7 @@ export default function QuickEditModal({
       toast.warning("更新失败\n" + res);
     } else {
       setRecord(undefined);
-      // setRefresh((prev) => !prev);
+      setRefresh((prev) => !prev);
       toast.info(res);
     }
   }
@@ -43,6 +57,7 @@ export default function QuickEditModal({
         categories={categories}
         record={record}
         setRecord={setRecord}
+        groupArray={groupArray}
       />
     );
   }
@@ -57,9 +72,9 @@ export default function QuickEditModal({
       Content={quickReview}
       handleSubmit={record ? handleSubmit : undefined}
       handleClose={(evt) => {
-        evt.preventDefault();
+        if (evt) evt.preventDefault();
         setRecord(undefined);
-        // setRefresh((prev) => !prev);
+        setRefresh((prev) => !prev);
       }}
     />
   );

@@ -156,6 +156,15 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.link-flush {
+  color: white;
+  text-decoration: none;
+}
+
+.link-flush:hover {
+  color: white;
+}
+
 p.text-white a {
   color: white;
   text-decoration: none;

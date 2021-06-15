@@ -8,6 +8,64 @@ export default function Changelog() {
         <div className="col">
           {/*CHANGELOG*/}
           <h4 className="fw-bold mb-5">变更日志</h4>
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.12</div>
+              <div className="col-12 col-sm-8">2021.06.16</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增功能与修复：</div>
+              <ul>
+                <li>架构更新，使用URL对关卡和干员页进行路由</li>
+                <li>更新了关卡搜索和干员搜索的工作逻辑</li>
+                <li>更新了对卡片进行更改时的页面更新逻辑</li>
+                <li>更新了含有/的日替关卡的跳转路径</li>
+                <li>修复了部分函数在低版本安卓浏览器上无法响应的问题</li>
+                <li>修复了关卡详情页无法切换前后关卡的问题</li>
+                <li>对提交页干员名称进行强制检查</li>
+                <li>更新投稿指引</li>
+                <li>将战报升级为网站公告，并实现了两种类型的公告发布与浏览</li>
+                <li>修复了图片与资源无法固定从服务器根路径加载的问题</li>
+                <li>修复了审核页留言小窗能够连续通过的问题</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.11.4</div>
+              <div className="col-12 col-sm-8">2021.06.13</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">修复问题：</div>
+              <ul>
+                <li>
+                  修复了快速提交中当关卡名称重复时，关卡没有正确加载的问题
+                </li>
+                <li>修复了问题反馈页ID重复的问题</li>
+                <li>修复了流派显示的逻辑问题</li>
+                <li>新增了分组的临时补全功能</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-3 col-sm-4 px-0 row align-self-center">
+              <div className="col-12 col-sm-4 mb-3 fw-bold">v2.11.3</div>
+              <div className="col-12 col-sm-8">2021.06.11</div>
+            </div>
+            <div className="col" style={{ marginBottom: "1rem" }}>
+              <div className="mb-1">新增功能与修复：</div>
+              <ul>
+                <li>修复了流派选择更新滞后的问题</li>
+                <li>新增查看历史处理联络的功能</li>
+                <li>修改了用户联络的权限</li>
+                <li>新增了友情链接页面</li>
+                <li>审核页新增了关卡预览功能</li>
+                <li>关卡详情页新增按照星级排序功能</li>
+              </ul>
+            </div>
+          </div>
 
           <div className="row">
             <div className="col-3 col-sm-4 px-0 row align-self-center">
@@ -22,6 +80,7 @@ export default function Changelog() {
                 <li>将流派页改进为可多选</li>
                 <li>增加了客服的联系方式</li>
                 <li>修复了系统消息过期不会自动删除的问题</li>
+                <li>新增卡背预览</li>
               </ul>
             </div>
           </div>
